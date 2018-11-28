@@ -1,11 +1,13 @@
 {
-	"name": "refo-handle-handlebars",
-	"version": "0.0.3",
-	"dependencies": {
-		"fs-extra": "7.x",
-		"handlebars": "4.x",
-		"klaw-sync": "6.x",
-		"refo-directory-to-other-directory": "0.x",
-		"refo-handle-json": "0.x"
+	"name": "refo-handle-handlebars"
+	, "version": "0.0.2"
+	, "dependencies": {
+		"fs-extra": "7.x"
+		, "klaw-sync": "6.x"
+
+		, "refo-directory-to-other-directory": "0.x"
+
+		, "handlebars": "4.x"
+		, "refo-handle-json": "0.x"
 	}
 }
