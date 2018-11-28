@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"bootstrap": "lerna bootstrap"
+	}
+	, "devDependencies": {
+		"lerna": "3.x"
+	}
+	, "private": true
+	, "workspaces": [
+		"packages/*"
+	]
+}
