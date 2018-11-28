@@ -1,9 +1,8 @@
 {
-	"name": "refo-core"
-	, "version": "0.0.0"
-	, "dependencies": {
-		"refo-core-build": "0.x"
-
-		, "refo-core-watch": "0.x"
+	"name": "refo-core",
+	"version": "0.0.0",
+	"dependencies": {
+		"refo-core-build": "^0.0.0",
+		"refo-core-watch": "^0.0.0"
 	}
 }
