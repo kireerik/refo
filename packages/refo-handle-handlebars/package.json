@@ -4,5 +4,8 @@
 	, "dependencies": {
 		"fs-extra": "7.x"
 		, "klaw-sync": "6.x"
+
+		, "refo-directory-to-other-directory": "0.x"
+		, "refo-handle-json": "0.x"
 	}
 }

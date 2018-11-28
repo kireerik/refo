@@ -1,8 +1,8 @@
 const watchChanges = process.argv[2]
 
-, build = require('./main/build')
+, build = require('refo-core-build')
 if (watchChanges)
-	var {watchedFileSource, watch} = require('./main/watch')
+	var {watchedFileSource, watch} = require('refo-core-watch')
 
 var assetDirectory, siteDirectory, staticDirectory
 

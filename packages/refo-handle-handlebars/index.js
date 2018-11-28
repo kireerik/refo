@@ -2,10 +2,10 @@ const path = require('path')
 , fs = require('fs-extra')
 , klawSync = require('klaw-sync')
 
-, getToAssetDirectory = require('./directoryToOtherDirectory')
+, getToAssetDirectory = require('refo-directory-to-other-directory')
 
 , handlebars = require('handlebars')
-, handleJSON = require('./handleJSON')
+, handleJSON = require('refo-handle-json')
 
 , getFileName = filePath => path.basename(filePath, path.extname(filePath))
 , readFile = filePath => fs.readFileSync(filePath, 'UTF-8')

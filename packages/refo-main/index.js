@@ -1,6 +1,6 @@
-const main = require('../core')
+const core = require('refo-core')
 
 , handlers = require('./handlers')
 
 module.exports = options =>
-	main(handlers, options)
+	core(handlers, options)

@@ -1,7 +1,7 @@
 const path = require('path')
 , fs = require('fs-extra')
 
-, getToStaticDirectory = require('../directoryToOtherDirectory')
+, getToStaticDirectory = require('refo-directory-to-other-directory')
 
 , {inlineSource} = require('inline-source')
 , {minify} = require('html-minifier')
@@ -9,9 +9,9 @@ const path = require('path')
 , minifyJS = require('uglify-js').minify
 , bundle = require('bundle-js')
 
-, handleHandlebars = require('../handleHandlebars')
+, handleHandlebars = require('refo-handle-handlebars')
 
-, getPdfSourceChangeHandler = require('./pdfSourceChangeHandler')
+, getPdfSourceChangeHandler = require('refo-pdf-source-change-handler')
 
 module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSource, pdfSourceChangeHandler, handlebarsHandler}) => {
 	String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
