@@ -6,6 +6,8 @@
 		, "klaw-sync": "6.x"
 
 		, "refo-directory-to-other-directory": "0.x"
+
+		, "handlebars": "4.x"
 		, "refo-handle-json": "0.x"
 	}
 }
