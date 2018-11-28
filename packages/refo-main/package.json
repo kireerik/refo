@@ -1,6 +1,6 @@
 {
 		"name": "refo-main",
-		"version": "0.0.1",
+		"version": "0.0.2",
 		"dependencies": {
 				"bundle-js": "1.x",
 				"fs-extra": "7.x",
