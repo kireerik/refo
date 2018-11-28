@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs')
-, optionsFile = './refo.json'
+, optionsFile = './refo.js'
 
 if (fs.existsSync(optionsFile))
 	var options = require(optionsFile)
