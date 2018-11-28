@@ -3,7 +3,7 @@ const fs = require('fs')
 , optionsFile = './refo.js'
 
 if (fs.existsSync(optionsFile))
-	var options = require(optionsFile)
+	var options = eval(fs.readFileSync(optionsFile, 'UTF-8'))
 
 const main = require('refo-main')
 
