@@ -36,6 +36,13 @@ async-limiter@~1.0.0:
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
   integrity sha512-jp/uFnooOiO+L211eZOoSyzpOITMXx1rBITauYykG3BRYPu8h0UcxsPNB04RR5vo4Tyz3+ay17tR6JVf9qzYWg==
 
+async@^2.5.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
+  integrity sha512-fNEiL2+AZt6AlAw/29Cr0UDe4sRAHCpEHh54WMz+Bb7QfNcFw4h3loofyJpLeQs4Yx7yuqu/2dLgM5hKOs6HlQ==
+  dependencies:
+    lodash "^4.17.10"
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -417,6 +424,17 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
 
+handlebars@4.x:
+  version "4.0.12"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.12.tgz#2c15c8a96d46da5e266700518ba8cb8d919d5bc5"
+  integrity sha512-RhmTekP+FZL+XNhwS1Wf+bTTZpdLougwt5pcgA1tuz6Jcx0fpH/7z0qd71RKnZHBCxIRBHfBOnio4gViPemNzA==
+  dependencies:
+    async "^2.5.0"
+    optimist "^0.6.1"
+    source-map "^0.6.1"
+  optionalDependencies:
+    uglify-js "^3.1.4"
+
 has-symbols@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.0.tgz#ba1a8f1af2a0fc39650f5c850367704122063b44"
@@ -564,7 +582,7 @@ linkify-it@^2.0.0:
   dependencies:
     uc.micro "^1.0.1"
 
-lodash@~4.17.10:
+lodash@^4.17.10, lodash@~4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
@@ -843,7 +861,7 @@ readable-stream@^2.0.2, readable-stream@^2.2.2, readable-stream@^2.3.5:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
-refo-core-build@^0.0.0:
+refo-core-build@0.x:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/refo-core-build/-/refo-core-build-0.0.0.tgz#0200d1aaeb623356a9def5db598018d8194ae7ee"
   integrity sha512-gif1Zr9bXF432hgp620XSsSg2ARzugcDKCH6o7SUlBKS0vqQOei8nToTLN4O0On+baoWVy+V+1JmTePMZATQyg==
@@ -851,38 +869,40 @@ refo-core-build@^0.0.0:
     fs-extra "7.x"
     klaw-sync "6.x"
 
-refo-core-watch@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/refo-core-watch/-/refo-core-watch-0.0.0.tgz#46c479f187240a0ccac23d6655d82bc558f48986"
-  integrity sha512-SyXtnPAXwr48DFYTQD6RBOKb+q2rWyffdNSW9S7ykv+n+ADN1dTx7xbn6WfXQk97pmKzSCKYt2scEDD2p+Ckng==
+refo-core-watch@0.x:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/refo-core-watch/-/refo-core-watch-0.0.2.tgz#0274ab1c1080fc872c11ad8e5474c97e58b30ab5"
+  integrity sha512-37ddKJnlI293MM/hAK3NvtVYR/Eh5Zc6azO/3Nq+46tiJkZsIPyzGD6K31L5ynigbaeo90rkASjuYV1LGqDvvw==
   dependencies:
     fs-extra "7.x"
     gaze "1.x"
+    refo-directory-to-other-directory "0.x"
 
-refo-core@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/refo-core/-/refo-core-0.0.0.tgz#56c647aab082dc353df0dee82ca54b271850c88f"
-  integrity sha512-YN68NtuG95fWj7FwRwpsnC6D0E8Hw1NfYHUiRzdR51+kit4zYCmt/JG+lIuMamlMy4GfHVtKDjWtuPOv8q5KcA==
+refo-core@0.x:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/refo-core/-/refo-core-0.0.2.tgz#7463014ce3b1e14177855860b4a570afe7c3ca01"
+  integrity sha512-hjbO1Sed7FG+fwMArWkK3JLQYK2FgMqs3KKzgHcvSH4S7tqn6P9nUNPWGthI8Igrh7k+12qN+qn9/gYi62bE5w==
   dependencies:
-    refo-core-build "^0.0.0"
-    refo-core-watch "^0.0.0"
+    refo-core-build "0.x"
+    refo-core-watch "0.x"
 
-refo-directory-to-other-directory@^0.0.0:
+refo-directory-to-other-directory@0.x:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/refo-directory-to-other-directory/-/refo-directory-to-other-directory-0.0.0.tgz#9f3df3efbe9944909aab6a5832b8a90023a31627"
   integrity sha512-YzB+AaXLuPUjf+eGl7prxMrsbUHSacphS9hkTzK63TPzawK1SzA7RLhNvxmvN15i+2s/+aqBmayZJ8Kh+siS8w==
 
-refo-handle-handlebars@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/refo-handle-handlebars/-/refo-handle-handlebars-0.0.0.tgz#82587176ad75184556d09aff15263cb6ecabd24b"
-  integrity sha512-pWt67TjIcmuE9Vr3llP+45R6F0OJj4W7K12zQwUkFN3nrsR+f+KxmmWike1ZUXDcW2+NCL3M/SPstChdp9/PcA==
+refo-handle-handlebars@0.x:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/refo-handle-handlebars/-/refo-handle-handlebars-0.0.4.tgz#2c291ae5561e4c22813813a73ceb65cd5aff6e0c"
+  integrity sha512-cHUfi0gyNHYrigQiw3e+8omyKod9KPGR2c4yvg0Z8yHCPPyWvMqDi1Gyt2ch2w019S/lpvb9U71YaYOBhkA3GA==
   dependencies:
     fs-extra "7.x"
+    handlebars "4.x"
     klaw-sync "6.x"
-    refo-directory-to-other-directory "^0.0.0"
-    refo-handle-json "^0.0.0"
+    refo-directory-to-other-directory "0.x"
+    refo-handle-json "0.x"
 
-refo-handle-json@^0.0.0:
+refo-handle-json@0.x:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/refo-handle-json/-/refo-handle-json-0.0.0.tgz#56923c834cd810ff798aca919191a9d397b55cda"
   integrity sha512-CpTK7yfn+SNmD9b3W2d7uzhEbbdMPNRP7PEs8t6saLOpMAMXVZ3gUlt2TXi00Tzkh8qbGb+GEqjepaL2xgNdqg==
@@ -891,21 +911,21 @@ refo-handle-json@^0.0.0:
     moment "2.x"
 
 refo-main@0.x:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/refo-main/-/refo-main-0.0.2.tgz#b8d9cb17fa4d5b7ab8c56c1c1eb9d190e15300cb"
-  integrity sha512-Et6SD0mUJYKHNu38oZFLeQHp64ph+37pEPNgK8D0C3zpQGQoOqDk8vrXq03sBX0C8PrRANZTPN6W6KDNnolbhg==
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/refo-main/-/refo-main-0.0.5.tgz#2c4d77e3520eab26e40eff82804e41aa523d5d14"
+  integrity sha512-kfBeVwtavA5NmPgaa5NYaV1dsF3++GR3yhE1DAC357GD40QHw3mYz5NF++KKQkdTHHZfTRbbkdsfzw7+rqPUCw==
   dependencies:
     bundle-js "1.x"
     fs-extra "7.x"
     html-minifier "3.x"
     inline-source "6.x"
-    refo-core "^0.0.0"
-    refo-directory-to-other-directory "^0.0.0"
-    refo-handle-handlebars "^0.0.0"
-    refo-pdf-source-change-handler "^0.0.0"
+    refo-core "0.x"
+    refo-directory-to-other-directory "0.x"
+    refo-handle-handlebars "0.x"
+    refo-pdf-source-change-handler "0.x"
     uglify-js "3.x"
 
-refo-pdf-source-change-handler@^0.0.0:
+refo-pdf-source-change-handler@0.x:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/refo-pdf-source-change-handler/-/refo-pdf-source-change-handler-0.0.0.tgz#86db6f442dfbabc6e51670d79dd057470a6a889e"
   integrity sha512-lnAuShXIjd+oWcHpWeUQXKfSnhsVVnJr7QQJHkmftmtBDIQRVqkYPH19psuv0M8/CYGdwZmj1rnZJmEeVn1WGQ==
@@ -956,7 +976,7 @@ source-map@^0.5.3:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
 
-source-map@~0.6.0, source-map@~0.6.1:
+source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
@@ -1024,7 +1044,7 @@ uc.micro@^1.0.1, uc.micro@^1.0.5:
   resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.5.tgz#0c65f15f815aa08b560a61ce8b4db7ffc3f45376"
   integrity sha512-JoLI4g5zv5qNyT09f4YAvEZIIV1oOjqnewYg5D38dkQljIzpPT296dbIGvKro3digYI1bkb7W6EP1y4uDlmzLg==
 
-uglify-js@3.4.x, uglify-js@3.x, uglify-js@~3.4.6:
+uglify-js@3.4.x, uglify-js@3.x, uglify-js@^3.1.4, uglify-js@~3.4.6:
   version "3.4.9"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.4.9.tgz#af02f180c1207d76432e473ed24a28f4a782bae3"
   integrity sha512-8CJsbKOtEbnJsTyv6LE6m6ZKniqMiFWmm9sRbopbkGs3gMPPfd3Fh8iIA4Ykv5MgaTbqHr4BaoGLJLZNhsrW1Q==
