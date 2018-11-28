@@ -891,9 +891,9 @@ refo-directory-to-other-directory@0.x:
   integrity sha512-YzB+AaXLuPUjf+eGl7prxMrsbUHSacphS9hkTzK63TPzawK1SzA7RLhNvxmvN15i+2s/+aqBmayZJ8Kh+siS8w==
 
 refo-handle-handlebars@0.x:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/refo-handle-handlebars/-/refo-handle-handlebars-0.0.3.tgz#a04a265b46f69e38e11862314c4e0d319b4e4360"
-  integrity sha512-u0c+DYAbLe7Qweph9ruc5RJWP6Qc0oYrNFw9MpUTUBKOup1TU7FzjqDd7Jqq3CXkJZsER/u9mSnNGwFohSYG8w==
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/refo-handle-handlebars/-/refo-handle-handlebars-0.0.4.tgz#2c291ae5561e4c22813813a73ceb65cd5aff6e0c"
+  integrity sha512-cHUfi0gyNHYrigQiw3e+8omyKod9KPGR2c4yvg0Z8yHCPPyWvMqDi1Gyt2ch2w019S/lpvb9U71YaYOBhkA3GA==
   dependencies:
     fs-extra "7.x"
     handlebars "4.x"
