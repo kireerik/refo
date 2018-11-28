@@ -861,7 +861,7 @@ readable-stream@^2.0.2, readable-stream@^2.2.2, readable-stream@^2.3.5:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
-refo-core-build@^0.0.0:
+refo-core-build@0.x:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/refo-core-build/-/refo-core-build-0.0.0.tgz#0200d1aaeb623356a9def5db598018d8194ae7ee"
   integrity sha512-gif1Zr9bXF432hgp620XSsSg2ARzugcDKCH6o7SUlBKS0vqQOei8nToTLN4O0On+baoWVy+V+1JmTePMZATQyg==
@@ -869,21 +869,22 @@ refo-core-build@^0.0.0:
     fs-extra "7.x"
     klaw-sync "6.x"
 
-refo-core-watch@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/refo-core-watch/-/refo-core-watch-0.0.0.tgz#46c479f187240a0ccac23d6655d82bc558f48986"
-  integrity sha512-SyXtnPAXwr48DFYTQD6RBOKb+q2rWyffdNSW9S7ykv+n+ADN1dTx7xbn6WfXQk97pmKzSCKYt2scEDD2p+Ckng==
+refo-core-watch@0.x:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/refo-core-watch/-/refo-core-watch-0.0.2.tgz#0274ab1c1080fc872c11ad8e5474c97e58b30ab5"
+  integrity sha512-37ddKJnlI293MM/hAK3NvtVYR/Eh5Zc6azO/3Nq+46tiJkZsIPyzGD6K31L5ynigbaeo90rkASjuYV1LGqDvvw==
   dependencies:
     fs-extra "7.x"
     gaze "1.x"
+    refo-directory-to-other-directory "0.x"
 
 refo-core@0.x:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/refo-core/-/refo-core-0.0.0.tgz#56c647aab082dc353df0dee82ca54b271850c88f"
-  integrity sha512-YN68NtuG95fWj7FwRwpsnC6D0E8Hw1NfYHUiRzdR51+kit4zYCmt/JG+lIuMamlMy4GfHVtKDjWtuPOv8q5KcA==
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/refo-core/-/refo-core-0.0.2.tgz#7463014ce3b1e14177855860b4a570afe7c3ca01"
+  integrity sha512-hjbO1Sed7FG+fwMArWkK3JLQYK2FgMqs3KKzgHcvSH4S7tqn6P9nUNPWGthI8Igrh7k+12qN+qn9/gYi62bE5w==
   dependencies:
-    refo-core-build "^0.0.0"
-    refo-core-watch "^0.0.0"
+    refo-core-build "0.x"
+    refo-core-watch "0.x"
 
 refo-directory-to-other-directory@0.x:
   version "0.0.0"

@@ -4,7 +4,7 @@ const path = require('path')
 , {Gaze} = require('gaze')
 , watch = (directory, eventHandler) => (new Gaze(directory + '/**')).on('all', eventHandler)
 
-, getToStaticDirectory = require('../../directoryToOtherDirectory')
+, getToStaticDirectory = require('refo-directory-to-other-directory')
 
 var fileSources = {}
 

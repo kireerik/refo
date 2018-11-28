@@ -127,12 +127,18 @@ refo-core-build@0.x:
     klaw-sync "6.x"
 
 refo-core-watch@0.x:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/refo-core-watch/-/refo-core-watch-0.0.0.tgz#46c479f187240a0ccac23d6655d82bc558f48986"
-  integrity sha512-SyXtnPAXwr48DFYTQD6RBOKb+q2rWyffdNSW9S7ykv+n+ADN1dTx7xbn6WfXQk97pmKzSCKYt2scEDD2p+Ckng==
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/refo-core-watch/-/refo-core-watch-0.0.2.tgz#0274ab1c1080fc872c11ad8e5474c97e58b30ab5"
+  integrity sha512-37ddKJnlI293MM/hAK3NvtVYR/Eh5Zc6azO/3Nq+46tiJkZsIPyzGD6K31L5ynigbaeo90rkASjuYV1LGqDvvw==
   dependencies:
     fs-extra "7.x"
     gaze "1.x"
+    refo-directory-to-other-directory "0.x"
+
+refo-directory-to-other-directory@0.x:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/refo-directory-to-other-directory/-/refo-directory-to-other-directory-0.0.0.tgz#9f3df3efbe9944909aab6a5832b8a90023a31627"
+  integrity sha512-YzB+AaXLuPUjf+eGl7prxMrsbUHSacphS9hkTzK63TPzawK1SzA7RLhNvxmvN15i+2s/+aqBmayZJ8Kh+siS8w==
 
 universalify@^0.1.0:
   version "0.1.2"
