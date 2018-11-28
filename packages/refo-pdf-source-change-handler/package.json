@@ -1,7 +1,7 @@
 {
-	"name": "refo-pdf-source-change-handler"
-	, "version": "0.0.0"
-	, "dependencies": {
+	"name": "refo-pdf-source-change-handler",
+	"version": "0.0.0",
+	"dependencies": {
 		"puppeteer-html2pdf": "0.x"
 	}
 }

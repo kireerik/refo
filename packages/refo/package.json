@@ -1,10 +1,10 @@
 {
-	"name": "refo"
-	, "version": "0.0.0"
-	, "bin": {
+	"name": "refo",
+	"version": "0.0.0",
+	"bin": {
 		"refo": "index.js"
-	}
-	, "dependencies": {
-		"refo-main": "0.x"
+	},
+	"dependencies": {
+		"refo-main": "^0.0.0"
 	}
 }
