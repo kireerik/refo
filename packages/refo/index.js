@@ -2,7 +2,7 @@
 const fs = require('fs')
 , path = require('path')
 
-, optionsFile = './refo.js'
+, optionsFile = 'refo.js'
 
 if (fs.existsSync(optionsFile))
 	var options = require(path.resolve(fs.realpathSync(process.cwd()), optionsFile))
