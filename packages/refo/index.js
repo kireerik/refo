@@ -2,10 +2,11 @@
 const fs = require('fs')
 , path = require('path')
 
-, optionsFile = 'refo.js'
+, optionsFileName = './refo.config'
+, optionsFile = path.resolve(fs.realpathSync(process.cwd()), optionsFileName)
 
 if (fs.existsSync(optionsFile))
-	var options = require(path.resolve(fs.realpathSync(process.cwd()), optionsFile))
+	var options = require(optionsFile)
 
 const main = require('refo-main')
 
