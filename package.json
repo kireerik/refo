@@ -2,8 +2,10 @@
 	"name": "refo"
 	, "bolt": {
 		"workspaces": [
-			"packages/refo*"
-			, "packages/core/*"
+			"packages/refo/index"
+			, "packages/refo/main"
+			, "packages/refo/core/*"
+			, "packages/refo-*"
 		]
 	}
 	, "devDependencies": {
