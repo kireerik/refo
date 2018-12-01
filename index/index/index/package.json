@@ -1,6 +1,6 @@
 {
 	"name": "refo"
-	, "version": "0.1.3"
+	, "version": "0.1.5"
 	, "bin": {
 		"refo": "index.js"
 	}

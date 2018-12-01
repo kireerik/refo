@@ -1,6 +1,6 @@
 {
 	"name": "refo-handle-handlebars"
-	, "version": "0.0.4"
+	, "version": "0.0.5"
 	, "dependencies": {
 		"fs-extra": "7.x"
 		, "klaw-sync": "6.x"

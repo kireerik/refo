@@ -1,6 +1,6 @@
 {
 	"name": "refo-core-watch"
-	, "version": "0.0.2"
+	, "version": "0.0.4"
 	, "dependencies": {
 		"fs-extra": "7.x"
 
