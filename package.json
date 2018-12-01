@@ -1,0 +1,32 @@
+{
+	"name": "refo"
+	, "bolt": {
+		"workspaces": [
+			"packages/*"
+		]
+	}
+	, "devDependencies": {
+		"bolt": "0.22.x"
+
+		, "fs-extra": "7.x"
+
+		, "klaw-sync": "6.x"
+
+		, "gaze": "1.x"
+
+		, "handlebars": "4.x"
+
+		, "markdown-it": "8.x"
+		, "moment": "2.x"
+
+
+		, "html-minifier": "3.x"
+		, "inline-source": "6.x"
+
+		, "uglify-js": "3.x"
+		, "bundle-js": "1.x"
+
+
+		, "puppeteer-html2pdf": "0.x"
+	}
+}
