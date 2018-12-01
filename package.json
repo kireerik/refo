@@ -2,10 +2,17 @@
 	"name": "refo"
 	, "bolt": {
 		"workspaces": [
-			"packages/refo/index"
-			, "packages/refo/main"
-			, "packages/refo/core/*"
-			, "packages/refo-*"
+			"index/index/index"
+
+			, "index/index/core/*"
+
+			, "index/directory-to-other-directory"
+			, "index/handle-handlebars"
+			, "index/pdf-source-change-handler"
+
+			, "index/index/main"
+
+			, "index/handle-json"
 		]
 	}
 	, "devDependencies": {
