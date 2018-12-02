@@ -6,9 +6,8 @@ module.exports = (staticDirectory, watchChanges
 	, {
 		sourceDirectory = 'resume'
 
-		, fileNamePrefixum = ''
-		, getFileNamePrefixum = () => fileNamePrefixum
-		, fileNameSeparator = fileNamePrefixum == '' ? '' : '-'
+		, fileNameSeparator = '-'
+		, getFileNamePrefixum = async page => (await page.title()).split(fileNameSeparator)[0].split(' ').join('')
 		, mainFileName = sourceDirectory
 
 		, defaultFormat = 'Letter'
@@ -29,10 +28,14 @@ module.exports = (staticDirectory, watchChanges
 				if (folder == 'full' || format != defaultFormat)
 					currentText = currentText[0].toUpperCase() + currentText.substr(1)
 
-				return getFileNamePrefixum(filePath) + fileNameSeparator + (folder == 'full' ? 'full' : '') + (format == defaultFormat ? '' : format) + currentText + '.pdf'
+				return fileNameSeparator + (folder == 'full' ? 'full' : '') + (format == defaultFormat ? '' : format) + currentText + '.pdf'
 			}
-			, getPdfPath = (format = '') =>
-				staticDirectory + '/' + getPdfFileName(format)
+			, getPdfPath = (format = '') => {
+				var pdfFileName	= getPdfFileName(format)
+
+				return async page =>
+					staticDirectory + '/' + (await getFileNamePrefixum(page)) + pdfFileName
+			}
 
 			formats.forEach(format =>
 				generatePDF(filePath, getPdfPath(format), format)
