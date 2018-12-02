@@ -1,6 +1,9 @@
 {
 	"name": "refo-core"
-	, "version": "0.0.3"
+	, "version": "0.0.4"
+	, "bin": {
+		"refo-core": "index.js"
+	}
 	, "dependencies": {
 		"refo-core-build": "0.x"
 
