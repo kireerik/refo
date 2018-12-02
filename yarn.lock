@@ -1467,9 +1467,9 @@ pseudomap@^1.0.2:
   integrity sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
 
 puppeteer-html2pdf@0.x:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/puppeteer-html2pdf/-/puppeteer-html2pdf-0.1.0.tgz#7e013c7b36695a250d14b08420df0d89426ca5b7"
-  integrity sha512-WqvUKhtmXAnX5Szr2kwh75JjOp9fYd5y/tJ2HrZHWuRTc+Rht1SgO2BWd0R4tkJiwwhPoSemlsiUxlOlt7FO6g==
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/puppeteer-html2pdf/-/puppeteer-html2pdf-0.1.1.tgz#dc972f3dd3e013ab72e80d24685b4277baff2a54"
+  integrity sha512-jy/9p/Ui+qmYf3zkaTeAJgCXyRRFZrTUzDvRmvFTAy+vGBkOySS9p8HKdEqIRhrj/mA9pTeE1m+XYYd39YzjsQ==
   dependencies:
     puppeteer "1.x"
 
