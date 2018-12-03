@@ -3,8 +3,7 @@ const path = require('path')
 
 , getToStaticDirectory = require('refo-directory-to-other-directory')
 
-, {inlineSource} = require('inline-source')
-, {minify} = require('html-minifier')
+, getHtmlHandler = require('refo-handle-html')
 
 , minifyJS = require('uglify-js').minify
 , bundle = require('bundle-js')
@@ -18,33 +17,7 @@ var requiredModule = {}
 module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSource, pdfSourceChangeHandler, handlebarsHandler}) => {
 	String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
 
-	const handleHTML = async (filePath, html) => {
-		if (watchedFileSource)
-			watchedFileSource.init(filePath)
-
-		html = await inlineSource(html, {
-			rootpath: path.dirname(filePath)
-			, compress: false
-			, saveRemote: false
-			, handlers: [
-				source => {
-					if (watchedFileSource && source.filepath != '')
-						watchedFileSource.add(filePath, source.filepath)
-
-					return Promise.resolve()
-				}
-			]
-		})
-
-		html = minify(html, {
-			collapseWhitespace: true
-			, removeComments: true
-			, minifyCSS: true
-			, minifyJS: true
-		})
-
-		return html
-	}
+	const handleHTML = getHtmlHandler(watchedFileSource)
 	, handlePdfSourceChange = getPdfSourceChangeHandler(staticDirectory, !!watchedFileSource, pdfSourceChangeHandler)
 
 	String.prototype.saveToStaticDirectory = function(html) {
