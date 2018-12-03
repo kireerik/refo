@@ -7,7 +7,6 @@
 			, "index/index/core/*"
 
 			, "index/directory-to-other-directory"
-			, "index/handle-handlebars"
 			, "index/pdf-source-change-handler"
 
 			, "index/index/main"
@@ -24,7 +23,7 @@
 
 		, "gaze": "1.x"
 
-		, "handlebars": "4.x"
+		, "hot-module-replacement": "3.x"
 
 		, "markdown-it": "8.x"
 		, "moment": "2.x"

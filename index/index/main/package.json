@@ -14,7 +14,7 @@
 		, "uglify-js": "3.x"
 		, "bundle-js": "1.x"
 
-		, "refo-handle-handlebars": "0.x"
+		, "hot-module-replacement": "3.x"
 
 		, "refo-pdf-source-change-handler": "0.x"
 	}

@@ -9,55 +9,84 @@ const path = require('path')
 , minifyJS = require('uglify-js').minify
 , bundle = require('bundle-js')
 
-, handleHandlebars = require('refo-handle-handlebars')
+require('hot-module-replacement')()
 
-, getPdfSourceChangeHandler = require('refo-pdf-source-change-handler')
+const getPdfSourceChangeHandler = require('refo-pdf-source-change-handler')
+
+var requiredModule = {}
 
 module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSource, pdfSourceChangeHandler, handlebarsHandler}) => {
 	String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
 
-	const handlePdfSourceChange = getPdfSourceChangeHandler(staticDirectory, !!watchedFileSource, pdfSourceChangeHandler)
+	const handleHTML = async (filePath, html) => {
+		if (watchedFileSource)
+			watchedFileSource.init(filePath)
+
+		html = await inlineSource(html, {
+			rootpath: path.dirname(filePath)
+			, compress: false
+			, saveRemote: false
+			, handlers: [
+				source => {
+					if (watchedFileSource && source.filepath != '')
+						watchedFileSource.add(filePath, source.filepath)
+
+					return Promise.resolve()
+				}
+			]
+		})
+
+		html = minify(html, {
+			collapseWhitespace: true
+			, removeComments: true
+			, minifyCSS: true
+			, minifyJS: true
+		})
+
+		return html
+	}
+	, handlePdfSourceChange = getPdfSourceChangeHandler(staticDirectory, !!watchedFileSource, pdfSourceChangeHandler)
+
+	String.prototype.saveToStaticDirectory = function(html) {
+		var staticFilePath = this.toStaticDirectory()
+
+		fs.writeFile(staticFilePath, html
+			, () => handlePdfSourceChange(staticFilePath)
+		)
+	}
 
 	return {
 		'.html':
 			async filePath => {
-				if (watchedFileSource)
-					watchedFileSource.init(filePath)
-
 				var html = fs.readFileSync(filePath, 'UTF-8')
 
-				html = handleHandlebars(filePath, html, assetDirectory, siteDirectory, watchedFileSource && watchedFileSource.add, handlebarsHandler)
+				html = await handleHTML(filePath, html)
 
-				html = await inlineSource(html, {
-					rootpath: path.dirname(filePath)
-					, compress: false
-					, saveRemote: false
-					, handlers: [
-						source => {
-							if (watchedFileSource && source.filepath != '')
-								watchedFileSource.add(filePath, source.filepath)
-
-							return Promise.resolve()
-						}
-					]
-				})
-
-				var staticFilePath = filePath.toStaticDirectory()
-
-				fs.writeFile(staticFilePath
-					, minify(html, {
-						collapseWhitespace: true
-						, removeComments: true
-						, minifyCSS: true
-						, minifyJS: true
-					})
-					, () => handlePdfSourceChange(staticFilePath)
-				)
+				filePath.saveToStaticDirectory(html)
 			}
 		, '.js':
-			filePath =>
-				fs.writeFile(filePath.toStaticDirectory()
-					, minifyJS(minifyJS(bundle({entry: filePath, disablebeautify: true})).code).code
-				)
+			filePath => {
+				if (filePath.replace(path.resolve(siteDirectory) + path.sep, '').split(path.sep)[0] == assetDirectory)
+					fs.writeFile(filePath.toStaticDirectory()
+						, minifyJS(minifyJS(bundle({entry: filePath, disablebeautify: true})).code).code
+					)
+				else
+					if (!requiredModule[filePath]) {
+						requiredModule[filePath] = true
+
+						let html
+						;(async function handleModule(path, firstCall) {
+							html = require(filePath)
+
+							if (firstCall)
+								module.hot.accept(filePath, handleModule)
+
+							html = await handleHTML(filePath, html)
+
+							filePath.replace('.js', '.html')
+								.saveToStaticDirectory(html)
+						})(undefined, true)
+					}
+			}
 	}
 }
