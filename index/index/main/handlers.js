@@ -26,8 +26,6 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSo
 		)
 	}
 
-	var requiredModule = {}
-
 	return {
 		'.html':
 			async filePath => {
@@ -37,8 +35,10 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSo
 
 				filePath.saveToStaticDirectory(html)
 			}
-		, '.js':
-			filePath => {
+		, '.js': (() => {
+			var requiredModule = {}
+
+			return filePath => {
 				if (filePath.replace(path.resolve(siteDirectory) + path.sep, '').split(path.sep)[0] == assetDirectory) {
 					let js = bundle({entry: filePath, disablebeautify: true})
 
@@ -64,5 +64,6 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSo
 						})(undefined, true)
 					}
 			}
+		})()
 	}
 }
