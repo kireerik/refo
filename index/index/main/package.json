@@ -10,8 +10,8 @@
 
 		, "refo-handle-html": "1.0.0"
 
-		, "uglify-js": "3.x"
 		, "bundle-js": "1.x"
+		, "uglify-js": "3.x"
 
 		, "hot-module-replacement": "3.x"
 

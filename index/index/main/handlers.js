@@ -5,8 +5,8 @@ const path = require('path')
 
 , getHtmlHandler = require('refo-handle-html')
 
-, minifyJS = require('uglify-js').minify
 , bundle = require('bundle-js')
+, minifyJS = require('uglify-js').minify
 
 require('hot-module-replacement')()
 
@@ -39,11 +39,14 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSo
 			}
 		, '.js':
 			filePath => {
-				if (filePath.replace(path.resolve(siteDirectory) + path.sep, '').split(path.sep)[0] == assetDirectory)
-					fs.writeFile(filePath.toStaticDirectory()
-						, minifyJS(minifyJS(bundle({entry: filePath, disablebeautify: true})).code).code
-					)
-				else
+				if (filePath.replace(path.resolve(siteDirectory) + path.sep, '').split(path.sep)[0] == assetDirectory) {
+					let js = bundle({entry: filePath, disablebeautify: true})
+
+					for (let i = 1; i <= 2; i++)
+						js = minifyJS(js).code
+
+					fs.writeFile(filePath.toStaticDirectory(), js)
+				} else
 					if (!requiredModule[filePath]) {
 						requiredModule[filePath] = true
 
