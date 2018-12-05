@@ -8,6 +8,12 @@ markdownIt.renderer.rules.link_open = (tokens, idx, options, env, self) => {
 	return self.renderToken(tokens, idx, options)
 }
 
+Number.prototype.round = function (step = 1) {
+	const ratio = 1 / step
+
+	return Math.round(this * ratio) / ratio
+}
+
 module.exports = (json, full) => {
 	(function traverse(object) {
 		for (let index in object) {
@@ -39,7 +45,7 @@ module.exports = (json, full) => {
 						} else {
 							var endDate = moment()
 
-							object[index].endDate = endDate.year().toString()
+							object[index].endDate = endDate.format(format)
 						}
 
 					if (object[index].startDate && object[index].endDate) {
@@ -47,11 +53,17 @@ module.exports = (json, full) => {
 
 						if (startDate.isValid() && endDate.isValid() && !object[index].hideDuration || object[index].hideEndDate) {
 							const duration = moment.duration(endDate.diff(startDate))
-							, years = duration.asYears()
-							, period = 1 < years ?
-								years.toFixed(1).replace('.0', '') + ' years'
-							:
-								duration.humanize().replace('a ', '1 ')
+							let years = duration.asYears()
+
+							if (1 < years) {
+								years = years.round(.5).toFixed(1).replace('.0', '')
+
+								var period = years + ' year'
+
+								if (1 < years)
+									period += 's'
+							} else
+								var period = duration.humanize().replace('a ', '1 ')
 
 							if (period == '1 few seconds')
 								delete object[index].startDate
