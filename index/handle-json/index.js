@@ -54,16 +54,17 @@ module.exports = (json, full) => {
 						if (startDate.isValid() && endDate.isValid() && !object[index].hideDuration || object[index].hideEndDate) {
 							const duration = moment.duration(endDate.diff(startDate))
 							let years = duration.asYears()
+							, period
 
 							if (1 < years) {
 								years = years.round(.5).toFixed(1).replace('.0', '')
 
-								var period = years + ' year'
+								period = years + ' year'
 
 								if (1 < years)
 									period += 's'
 							} else
-								var period = duration.humanize().replace('a ', '1 ')
+								period = duration.humanize().replace('a ', '1 ')
 
 							if (period == '1 few seconds')
 								delete object[index].startDate
