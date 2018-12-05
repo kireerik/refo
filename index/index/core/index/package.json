@@ -1,12 +1,12 @@
 {
 	"name": "refo-core"
-	, "version": "0.0.4"
+	, "version": "1.0.0"
 	, "bin": {
 		"refo-core": "index.js"
 	}
 	, "dependencies": {
-		"refo-core-build": "0.x"
+		"refo-core-build": "1.x"
 
-		, "refo-core-watch": "0.x"
+		, "refo-core-watch": "1.x"
 	}
 }

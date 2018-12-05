@@ -1,20 +1,20 @@
 {
 	"name": "refo-main"
-	, "version": "0.0.8"
+	, "version": "1.0.0"
 	, "dependencies": {
-		"refo-core": "0.x"
+		"refo-core": "1.x"
 
 		, "fs-extra": "7.x"
 
-		, "refo-directory-to-other-directory": "0.x"
+		, "refo-directory-to-other-directory": "1.x"
 
-		, "refo-handle-html": "1.0.0"
+		, "refo-handle-html": "1.x"
 
 		, "bundle-js": "1.x"
 		, "uglify-js": "3.x"
 
 		, "hot-module-replacement": "3.x"
 
-		, "refo-pdf-source-change-handler": "0.x"
+		, "refo-pdf-source-change-handler": "1.x"
 	}
 }

@@ -1,11 +1,11 @@
 {
 	"name": "refo-core-watch"
-	, "version": "0.0.4"
+	, "version": "1.0.0"
 	, "dependencies": {
 		"fs-extra": "7.x"
 
 		, "gaze": "1.x"
 
-		, "refo-directory-to-other-directory": "0.x"
+		, "refo-directory-to-other-directory": "1.x"
 	}
 }
