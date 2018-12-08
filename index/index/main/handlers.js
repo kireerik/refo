@@ -1,5 +1,4 @@
-const path = require('path')
-, fs = require('fs-extra')
+const fs = require('fs-extra')
 
 , getToStaticDirectory = require('refo-directory-to-other-directory')
 
@@ -36,6 +35,8 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSo
 				filePath.saveToStaticDirectory(html)
 			}
 		, '.js': (() => {
+			const path = require('path')
+
 			var requiredModule = {}
 
 			return filePath => {
