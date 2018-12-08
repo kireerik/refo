@@ -59,7 +59,7 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSo
 
 							html = await handleHTML(filePath, html)
 
-							filePath.replace('.js', '.html')
+							;(filePath.substring(0, filePath.lastIndexOf('.')) + '.html')
 								.saveToStaticDirectory(html)
 						})(undefined, true)
 					}
