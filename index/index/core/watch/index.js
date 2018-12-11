@@ -21,15 +21,15 @@ module.exports.watchedFileSource.add = (filePath, sourceFilePath) => {
 		fileSources[filePath].push(sourceFilePath)
 }
 
-const getHandler = filePath => handlers[path.extname(filePath)]
-, handleSourceChange = filePath =>
-	Object.entries(fileSources).forEach(source => {
-		if (source[1].includes(filePath))
-			getHandler(source[0])(source[0])
-	})
-
 module.exports.watch = (handlers, assetDirectory, siteDirectory, staticDirectory) => {
 	String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
+
+	const getHandler = filePath => handlers[path.extname(filePath)]
+	, handleSourceChange = filePath =>
+		Object.entries(fileSources).forEach(source => {
+			if (source[1].includes(filePath))
+				getHandler(source[0])(source[0])
+		})
 
 	watch(assetDirectory, (event, filePath) => handleSourceChange(filePath))
 	watch(siteDirectory, (event, filePath) => {
