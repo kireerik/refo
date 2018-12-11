@@ -11,7 +11,7 @@ require('hot-module-replacement')()
 
 const getPdfSourceChangeHandler = require('refo-pdf-source-change-handler')
 
-module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFilePath, watchedFileSource, pdfSourceChangeHandler, handlebarsHandler}) => {
+module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFilePath, watchedFileSource, pdfSourceChangeHandler}) => {
 	String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
 
 	const handleHTML = getHtmlHandler(watchedFileSource)
