@@ -54,6 +54,9 @@ module.exports.watch = (handlers, assetDirectory, siteDirectory, staticDirectory
 
 				if (staticFilePaths[filePath])
 					delete staticFilePaths[filePath]
+
+				if (fileSources[filePath])
+					delete fileSources[filePath]
 			break;
 		}
 	})
