@@ -40,15 +40,17 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 			var requiredModule = {}
 
 			return filePath => {
+				var staticFilePath = filePath.toStaticDirectory()
+
 				if (filePath.replace(path.resolve(siteDirectory) + path.sep, '').split(path.sep)[0] == assetDirectory) {
 					let js = bundle({entry: filePath, disablebeautify: true})
 
 					for (let i = 1; i <= 2; i++)
 						js = minifyJS(js).code
 
-					fs.writeFile(filePath.toStaticDirectory(), js)
+					fs.writeFile(staticFilePath, js)
 				} else {
-					let staticFilePath = (filePath.substring(0, filePath.lastIndexOf('.')) + '.html').toStaticDirectory()
+					staticFilePath = staticFilePath.substring(0, staticFilePath.lastIndexOf('.')) + '.html'
 
 					if (addStaticFilePath)
 						addStaticFilePath(filePath, staticFilePath)
