@@ -6,7 +6,13 @@ const path = require('path')
 
 , getToStaticDirectory = require('refo-directory-to-other-directory')
 
-var fileSources = {}
+var staticFilePaths = {}
+, fileSources = {}
+
+module.exports.addStaticFilePath = (filePath, staticFilePath) => {
+	if (!staticFilePaths[filePath])
+		staticFilePaths[filePath] = staticFilePath
+}
 
 module.exports.watchedFileSource = {}
 module.exports.watchedFileSource.init = filePath => fileSources[filePath] = []
@@ -38,7 +44,17 @@ module.exports.watch = (handlers, assetDirectory, siteDirectory, staticDirectory
 
 				handleSourceChange(filePath)
 			break;
-			case 'deleted': fs.unlink(filePath.toStaticDirectory()); break;
+			case 'deleted':
+				fs.unlink(
+					staticFilePaths[filePath] ?
+						staticFilePaths[filePath]
+					:
+						filePath.toStaticDirectory()
+				)
+
+				if (staticFilePaths[filePath])
+					delete staticFilePaths[filePath]
+			break;
 		}
 	})
 }

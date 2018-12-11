@@ -11,7 +11,7 @@ require('hot-module-replacement')()
 
 const getPdfSourceChangeHandler = require('refo-pdf-source-change-handler')
 
-module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSource, pdfSourceChangeHandler, handlebarsHandler}) => {
+module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFilePath, watchedFileSource, pdfSourceChangeHandler, handlebarsHandler}) => {
 	String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
 
 	const handleHTML = getHtmlHandler(watchedFileSource)
@@ -47,7 +47,11 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSo
 						js = minifyJS(js).code
 
 					fs.writeFile(filePath.toStaticDirectory(), js)
-				} else
+				} else {
+					let staticFilePath = (filePath.substring(0, filePath.lastIndexOf('.')) + '.html').toStaticDirectory()
+
+					addStaticFilePath(filePath, staticFilePath)
+
 					if (!requiredModule[filePath]) {
 						requiredModule[filePath] = true
 
@@ -60,10 +64,11 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, watchedFileSo
 
 							html = await handleHTML(filePath, html)
 
-							;(filePath.substring(0, filePath.lastIndexOf('.')) + '.html')
+							staticFilePath
 								.saveToStaticDirectory(html)
 						})(undefined, true)
 					}
+				}
 			}
 		})()
 	}
