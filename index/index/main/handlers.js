@@ -50,7 +50,8 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 				} else {
 					let staticFilePath = (filePath.substring(0, filePath.lastIndexOf('.')) + '.html').toStaticDirectory()
 
-					addStaticFilePath(filePath, staticFilePath)
+					if (addStaticFilePath)
+						addStaticFilePath(filePath, staticFilePath)
 
 					if (!requiredModule[filePath]) {
 						requiredModule[filePath] = true
