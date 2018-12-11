@@ -39,7 +39,7 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 
 			var requiredModule = {}
 
-			return filePath => {
+			return (filePath, sourceChange) => {
 				var staticFilePath = filePath.toStaticDirectory()
 
 				if (filePath.replace(path.resolve(siteDirectory) + path.sep, '').split(path.sep)[0] == assetDirectory) {
@@ -50,25 +50,26 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 
 					fs.writeFile(staticFilePath, js)
 				} else {
+					const handleModule = async () => {
+						var html = require(filePath)
+
+						html = await handleHTML(filePath, html)
+
+						staticFilePath.save(html)
+					}
+
 					staticFilePath = staticFilePath.substring(0, staticFilePath.lastIndexOf('.')) + '.html'
 
 					if (addStaticFilePath)
 						addStaticFilePath(filePath, staticFilePath)
 
+					if (!requiredModule[filePath] || sourceChange)
+						handleModule()
+
 					if (!requiredModule[filePath]) {
 						requiredModule[filePath] = true
 
-						let html
-						;(async function handleModule(path, firstCall) {
-							html = require(filePath)
-
-							if (firstCall)
-								module.hot.accept(filePath, handleModule)
-
-							html = await handleHTML(filePath, html)
-
-							staticFilePath.save(html)
-						})(undefined, true)
+						module.hot.accept(filePath, handleModule)
 					}
 				}
 			}

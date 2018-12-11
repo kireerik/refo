@@ -28,7 +28,7 @@ module.exports.watch = (handlers, assetDirectory, siteDirectory, staticDirectory
 	, handleSourceChange = filePath =>
 		Object.entries(fileSources).forEach(source => {
 			if (source[1].includes(filePath))
-				getHandler(source[0])(source[0])
+				getHandler(source[0])(source[0], true)
 		})
 
 	watch(assetDirectory, (event, filePath) => handleSourceChange(filePath))
