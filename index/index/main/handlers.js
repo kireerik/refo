@@ -17,11 +17,11 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 	const handleHTML = getHtmlHandler(watchedFileSource)
 	, handlePdfSourceChange = getPdfSourceChangeHandler(staticDirectory, !!watchedFileSource, pdfSourceChangeHandler)
 
-	String.prototype.saveToStaticDirectory = function(html) {
-		var staticFilePath = this.toStaticDirectory()
+	String.prototype.save = function(html) {
+		const filePath = this.toString()
 
-		fs.writeFile(staticFilePath, html
-			, () => handlePdfSourceChange(staticFilePath)
+		fs.writeFile(filePath, html
+			, () => handlePdfSourceChange(filePath)
 		)
 	}
 
@@ -32,7 +32,7 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 
 				html = await handleHTML(filePath, html)
 
-				filePath.saveToStaticDirectory(html)
+				filePath.toStaticDirectory().save(html)
 			}
 		, '.js': (() => {
 			const path = require('path')
@@ -65,8 +65,7 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 
 							html = await handleHTML(filePath, html)
 
-							staticFilePath
-								.saveToStaticDirectory(html)
+							staticFilePath.save(html)
 						})(undefined, true)
 					}
 				}
