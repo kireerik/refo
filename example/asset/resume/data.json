@@ -16,14 +16,12 @@
 		}
 		, "profiles": [
 			{
-				"network": "Twitter"
-				, "username": "neutralthoughts"
-				, "url": ""
+				"network": "LinkedIn"
+				, "url": "https://www.linkedin.com/in/richard-hendriks-ba474099"
 			}
 			, {
-				"network": "SoundCloud"
-				, "username": "dandymusicnl"
-				, "url": "https://soundcloud.com/dandymusicnl"
+				"network": "GitHub"
+				, "url": "https://github.com/piedpiperRichard"
 			}
 		]
 	}
@@ -86,26 +84,18 @@
 			, "summary": "Innovative middle-out compression algorithm that changes the way we store data."
 		}
 	]
-	, "skills": [
-		{
-			"name": "Web Development"
-			, "level": "Master"
-			, "keywords": [
-				"HTML"
-				, "CSS"
-				, "Javascript"
-			]
-		}
-		, {
-			"name": "Compression"
-			, "level": "Master"
-			, "keywords": [
-				"Mpeg"
-				, "MP4"
-				, "GIF"
-			]
-		}
-	]
+	, "skills": {
+		"Web Development": [
+			"HTML"
+			, "CSS"
+			, "Javascript"
+		]
+		, "Compression": [
+			"Mpeg"
+			, "MP4"
+			, "GIF"
+		]
+	}
 	, "languages": [
 		{
 			"language": "English"
