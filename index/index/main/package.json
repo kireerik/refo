@@ -1,6 +1,6 @@
 {
 	"name": "refo-main"
-	, "version": "1.0.1"
+	, "version": "1.0.2"
 	, "dependencies": {
 		"refo-core": "1.x"
 

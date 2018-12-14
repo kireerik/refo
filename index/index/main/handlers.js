@@ -66,7 +66,7 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 					if (!requiredModule[filePath] || sourceChange)
 						handleModule()
 
-					if (!requiredModule[filePath]) {
+					if (addStaticFilePath && !requiredModule[filePath]) {
 						requiredModule[filePath] = true
 
 						module.hot.accept(filePath, handleModule)
