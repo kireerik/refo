@@ -123,3 +123,10 @@ h2 {
 section:last-of-type .item:last-of-type {
 	margin: 0;
 }
+
+p.branding {
+	margin: 2.24em 0;
+}
+.branding a {
+	color: #1640de;
+}

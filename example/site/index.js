@@ -45,7 +45,10 @@ module.exports = `<!DOCTYPE HTML>
 		</header>
 
 		<main>
-			` + description + `
+			<p>` + description + `</p>
+			<p>
+				Created by <a title="Oengi.com" href="https://oengi.com/" target="_blank" rel="noopener">Erik Engi</a>
+			</p>
 		</main>
 	`, {index: true}) + `
 </html>`

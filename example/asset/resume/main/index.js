@@ -17,4 +17,7 @@ module.exports = json => main(`<main>
 		+ awards(json.awards)
 		+ publications(json.publications)
 	+ `
+	<p class="branding">
+		Designed by <a title="Oengi.com" href="https://oengi.com/" target="_blank" rel="noopener">Erik Engi</a>
+	</p>
 </main>`, {resume: true})
