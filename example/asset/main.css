@@ -30,9 +30,6 @@ body {
 #header a.selected {
 	color: #000;
 }
-#header a.brand {
-	letter-spacing: 0;
-}
 
 footer {
 	margin: 2.5em auto 40px auto;
