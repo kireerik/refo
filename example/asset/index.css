@@ -1,0 +1,36 @@
+body {
+	line-height: 1.6;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #444;
+}
+h1, h2, h3 {
+	line-height: 1.2;
+	font-weight: normal;
+}
+header {
+	margin: 0 0 2.34em 0;
+	text-align: center;
+}
+header h1 {
+	margin: .67em 0 .35em 0;
+}
+main {
+	margin: 0 auto;
+	padding: 0 10px;
+	display: block;
+	max-width: 377px;
+}
+main section {
+	margin: 2.24em 0;
+}
+main p, main div {
+	margin: 1em 0 2em 0;
+}
+main div p {
+	margin: .4em 0 2em 0;
+}
+a {
+	color: #1640de;
+	text-decoration: none;
+}
