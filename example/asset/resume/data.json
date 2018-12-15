@@ -40,19 +40,6 @@
 			]
 		}
 	]
-	, "volunteer": [
-		{
-			"organization": "CoderDojo"
-			, "position": "Teacher"
-			, "website": "https://coderdojo.com/"
-			, "startDate": "2012-01-01"
-			, "endDate": "2013-01-01"
-			, "summary": "Global movement of free coding clubs for young people."
-			, "highlights": [
-				"Awarded 'Teacher of the Month'"
-			]
-		}
-	]
 	, "education": [
 		{
 			"institution": "University of Oklahoma"
@@ -96,25 +83,4 @@
 			, "GIF"
 		]
 	}
-	, "languages": [
-		{
-			"language": "English"
-			, "fluency": "Native speaker"
-		}
-	]
-	, "interests": [
-		{
-			"name": "Wildlife"
-			, "keywords": [
-				"Ferrets"
-				, "Unicorns"
-			]
-		}
-	]
-	, "references": [
-		{
-			"name": "Erlich Bachman"
-			, "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
-		}
-	]
 }
