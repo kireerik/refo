@@ -24,6 +24,18 @@
 			}
 		]
 	}
+	, "skills": {
+		"Web Development": [
+			"HTML"
+			, "CSS"
+			, "Javascript"
+		]
+		, "Compression": [
+			"Mpeg"
+			, "MP4"
+			, "GIF"
+		]
+	}
 	, "work": [
 		{
 			"company": "Pied Piper"
@@ -69,16 +81,4 @@
 			, "summary": "Innovative middle-out compression algorithm that changes the way we store data."
 		}
 	]
-	, "skills": {
-		"Web Development": [
-			"HTML"
-			, "CSS"
-			, "Javascript"
-		]
-		, "Compression": [
-			"Mpeg"
-			, "MP4"
-			, "GIF"
-		]
-	}
 }
