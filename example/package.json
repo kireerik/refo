@@ -1,0 +1,21 @@
+{
+	"scripts": {
+		"dev": "concurrently \"refo watch\" \"superstatic --port 80\" --kill-others-on-fail"
+		, "start": "refo && superstatic --port 80"
+
+		, "static": "refo"
+		, "watch": "refo watch"
+		, "serve": "superstatic --port 80"
+
+		, "deploy": "refo && firebase deploy"
+	}
+	, "devDependencies": {
+		"concurrently": "4.x"
+
+		, "superstatic": "6.x"
+
+		, "common-tags": "1.x"
+		, "refo-handle-json": "1.x"
+		, "refo": "1.x"
+	}
+}
