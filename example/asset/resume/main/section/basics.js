@@ -12,7 +12,7 @@ module.exports = basics => {
 	, documentName = name + '’s ' + versionPart + resume
 	, pdfFileName = name + ' - ' + versionPart + resume + '.pdf'
 
-	, getPdfPath = (format = '') => '../' + name.split(' ').join('') + '-' + (version ? version : '') + format + (format || version ? Resume : resume) + '.pdf'
+	, getPdfPath = (format = '') => '../' + (linkPrefixum && version ? '../' : '') + name.split(' ').join('') + '-' + (version ? version : '') + format + (format || version ? Resume : resume) + '.pdf'
 
 	, pdfPath = getPdfPath()
 	, pdfPathA4 = getPdfPath('A4')
