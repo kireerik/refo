@@ -38,9 +38,8 @@
 	}
 	, "work": [
 		{
-			"company": "Pied Piper"
+			"company": "[Pied Piper](http://www.piedpiper.com)"
 			, "position": "CEO/President"
-			, "website": "https://piedpiper.com"
 			, "startDate": "2013-12-01"
 			, "endDate": "2014-12-01"
 			, "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression."
@@ -77,7 +76,7 @@
 			"name": "Video compression for 3d media"
 			, "publisher": "Hooli"
 			, "releaseDate": "2014-10-01"
-			, "website": "https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"
+			, "website": "[en.wikipedia.org/wiki/Silicon_Valley_(TV_series)](https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series))"
 			, "summary": "Innovative middle-out compression algorithm that changes the way we store data."
 		}
 	]
