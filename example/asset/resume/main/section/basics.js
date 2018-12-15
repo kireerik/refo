@@ -1,6 +1,6 @@
 const {html} = require('common-tags')
 
-, linkPrefixum = !process.argv[2] ? 'refo/' : ''
+, linkPrefixum = !process.argv[2] ? '/refo/' : ''
 
 module.exports = basics => {
 	const {name, version, label, website, profiles, summary, summaryFull, email, phone, location} = basics
@@ -12,7 +12,7 @@ module.exports = basics => {
 	, documentName = name + '’s ' + versionPart + resume
 	, pdfFileName = name + ' - ' + versionPart + resume + '.pdf'
 
-	, getPdfPath = (format = '') => '../' + linkPrefixum + name.split(' ').join('') + '-' + (version ? version : '') + format + (format || version ? Resume : resume) + '.pdf'
+	, getPdfPath = (format = '') => '../' + name.split(' ').join('') + '-' + (version ? version : '') + format + (format || version ? Resume : resume) + '.pdf'
 
 	, pdfPath = getPdfPath()
 	, pdfPathA4 = getPdfPath('A4')
@@ -20,9 +20,9 @@ module.exports = basics => {
 	return html`${basics && html`
 		<div class="controls flexContainer">
 			<div class="flexGrow">
-				${version ? `
-					<a title="View ${name}’s ${resume}" href="../${linkPrefixum}${resume}" rel="noopener" class="fontWeightNormal">View compact version</a>
-				` : `
+				${version ? html`
+					<a title="View ${name}’s ${resume}" href="../${!linkPrefixum && resume}" rel="noopener" class="fontWeightNormal">View compact version</a>
+				` : html`
 					<a title="View ${name}’s full ${resume}" href="${linkPrefixum}${resume}/full" rel="noopener" class="fontWeightNormal">View full version</a>
 				`}
 			</div>
