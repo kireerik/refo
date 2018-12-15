@@ -21,14 +21,8 @@ main {
 	display: block;
 	max-width: 377px;
 }
-main section {
-	margin: 2.24em 0;
-}
-main p, main div {
+main p {
 	margin: 1em 0 2em 0;
-}
-main div p {
-	margin: .4em 0 2em 0;
 }
 a {
 	color: #1640de;
