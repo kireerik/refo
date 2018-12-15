@@ -1,14 +1,9 @@
-const main = require('./main')
+const getHandledJson = require('./getHandledJson')
 
-, handleJSON = require('refo-handle-json')
+, main = require('./main')
 
 module.exports = version => {
-	var json = JSON.parse(JSON.stringify(require('./data')))
-
-	if (version && json.basics)
-		json.basics.version = version
-
-	json = handleJSON(json, version)
+	const json = getHandledJson(version)
 
 	return main(json, version)
 }
