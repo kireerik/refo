@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-	<img alt="Refo package downloads" src="https://img.shields.io/npm/dt/refo.svg">
+	<a title="Refo package downloads" href="https://www.npmjs.com/package/refo"><img alt="Refo package downloads" src="https://img.shields.io/npm/dt/refo.svg"></a>
 </p>
 
 ## Features
@@ -51,6 +51,14 @@
 - [pdf-source-change-handler](https://www.npmjs.com/package/refo-pdf-source-change-handler) `1.0.0` (=`0.0.2`)
 - [handle-json](https://www.npmjs.com/package/refo-handle-json) `1.0.0`
 
+## Usage
+
+### Main
+
+
+### Core
+
+
 ## Who is using Refo
 - <a title="Oengi.com" href="https://oengi.com/">Oengi.com</a> – Erik Engi's website and resume.
 
@@ -58,6 +66,9 @@
 
 ## Inspiration
 - <a title="JSON Resume" href="https://jsonresume.org/">JSON Resume</a>
+
+#### Technologes
+
 
 #### Author
 - <a title="Oengi.com" href="https://oengi.com/">Erik Engi</a>
