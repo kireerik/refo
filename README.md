@@ -41,15 +41,15 @@
 > [Propose file change](https://github.com/kireerik/refo/edit/master/README.md) to add your new example.
 
 ## Packages
-[refo](https://www.npmjs.com/package/refo) `1.0.2`
-- [core](https://www.npmjs.com/package/refo-core) `1.0.1`
-	- [build](https://www.npmjs.com/package/refo-core-build) `1.0.0` (=`0.0.0`)
-	- [watch](https://www.npmjs.com/package/refo-core-watch) `1.0.1`
-- [main](https://www.npmjs.com/package/refo-main) `1.0.2`
-- [directory-to-other-directory](https://www.npmjs.com/package/refo-directory-to-other-directory) `1.0.0` (=`0.0.0`)
-- [handle-html](https://www.npmjs.com/package/refo-handle-html) `1.0.0`
-- [pdf-source-change-handler](https://www.npmjs.com/package/refo-pdf-source-change-handler) `1.0.0` (=`0.0.2`)
-- [handle-json](https://www.npmjs.com/package/refo-handle-json) `1.0.0`
+[refo](https://www.npmjs.com/package/refo) `1.0.2` &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/index/index/index)
+- [core](https://www.npmjs.com/package/refo-core) `1.0.1` &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/index/index/core/index)
+	- [build](https://www.npmjs.com/package/refo-core-build) `1.0.0` (=`0.0.0`) &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/index/index/core/build)
+	- [watch](https://www.npmjs.com/package/refo-core-watch) `1.0.1` &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/index/index/core/watch)
+- [main](https://www.npmjs.com/package/refo-main) `1.0.2` &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/index/index/main)
+- [directory-to-other-directory](https://www.npmjs.com/package/refo-directory-to-other-directory) `1.0.0` (=`0.0.0`) &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/index/directory-to-other-directory)
+- [handle-html](https://www.npmjs.com/package/refo-handle-html) `1.0.0` &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/index/handle-html)
+- [pdf-source-change-handler](https://www.npmjs.com/package/refo-pdf-source-change-handler) `1.0.0` (=`0.0.2`) &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/index/pdf-source-change-handler)
+- [handle-json](https://www.npmjs.com/package/refo-handle-json) `1.0.0` &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/index/handle-json)
 
 ## Usage
 
