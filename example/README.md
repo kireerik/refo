@@ -40,4 +40,45 @@ yarn static
 ```
 Open the `index.html` within the `static` folder to access the website.
 
-### Deployment
+## Deployment
+
+### [GitHub Pages](https://pages.github.com/)
+You can deploy the static `../docs` folder as it is.
+
+You might want to change the `linkPrefixum` in the following files according to the name of your `project site` repository:
+- [asset/main.js#L5](https://github.com/kireerik/refo/blob/8fd9472fa9ef7ee0e00adb26be4dd99e7e775041/example/asset/main.js#L5)
+- [asset/resume/main/section/basics.js#L3](https://github.com/kireerik/refo/blob/8fd9472fa9ef7ee0e00adb26be4dd99e7e775041/example/asset/resume/main/section/basics.js#L3)
+
+You can completely remove the `linkPrefixum` in case you are publishing a `user or an organization site`.
+
+### [Firebase Hosting](https://firebase.google.com/products/hosting/)
+Remove the `linkPrefixum` from the files listed above under GitHub Pages Deployment.
+
+Install and set up the [Firebase CLI](https://firebase.google.com/docs/cli/).
+
+Add a `.firebaserc` file with your Firebase project ID:
+```JSON
+{
+	"projects": {
+		"default": "<projectId>"
+	}
+}
+```
+Now you can use the following command to deploy your site to Firebase Hosting:
+> ```shell
+> yarn deploy
+> ```
+
+You can remove the `refo.options.json` file to set the `staticDirectory` to the default if you wish.
+
+In this case you can change the deployed folder from `../docs` to `static` in the [firebase.json](https://github.com/kireerik/refo/blob/8fd9472fa9ef7ee0e00adb26be4dd99e7e775041/example/firebase.json#L3) file.
+
+## About
+
+This project uses [superstatic](https://github.com/firebase/superstatic) to serve the generated static files. You can use any similar library to serve the files or no library at all in case you would like to browse the files directly. This can be useful for offline documentations for example.
+
+You can remove superstatic and use [firebase-tools](https://github.com/firebase/firebase-tools) instead (which uses superstatic) if you prefer. In this case you can modify the `scripts` in the `package.json` file and replace `superstatic` with `firebase serve` commands.
+
+This project uses [concurrently](https://github.com/kimmobrunfeldt/concurrently) to run Refo in watch mode and serve the files with superstatic. You can use any similar library like [npm-run-all](https://github.com/mysticatea/npm-run-all) to run Refo and a server in paralell or no library at all if you don't need a file server.
+
+The `firebase.json` file could be named as `superstatic.json` if you prefer. This example does not depends on Firebase it self. Hovewer they provide one of the consistently fastest static hosting solution.
