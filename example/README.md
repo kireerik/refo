@@ -82,3 +82,89 @@ You can remove superstatic and use [firebase-tools](https://github.com/firebase/
 This project uses [concurrently](https://github.com/kimmobrunfeldt/concurrently) to run Refo in watch mode and serve the files with superstatic. You can use any similar library like [npm-run-all](https://github.com/mysticatea/npm-run-all) to run Refo and a server in paralell or no library at all if you don't need a file server.
 
 The `firebase.json` file could be named as `superstatic.json` if you prefer. This example does not depends on Firebase it self. Hovewer they provide one of the consistently fastest static hosting solution.
+
+### Templating
+JavaScript [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) are used for templating HTML documents.
+
+This example aso uses [common-tags](https://github.com/declandewet/common-tags) in certain templates which allows to use a shorter syntax in many cases.
+
+Here are some scenarios commonly used in this example:
+
+By default you can display an optional value and use a [conditional operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to prevent displaying false values like `undefined` for example:
+```JavaScript
+module.exports = `
+	${item ? item : ''}
+`
+```
+Common-tags does this for you. So you can use a shorter syntax with a tagged template literal:
+```JavaScript
+const {html} = require('common-tags')
+
+module.exports = html`
+	${item}
+`
+```
+
+By default you can display an optional template part and use a conditional operator to prevent displaying false values like `undefined` for example:
+```JavaScript
+module.exports = `
+	${item ? `
+		<div>
+			` + item + `
+		</div>
+	` : ''}
+`
+```
+With common-tags you can use a simple condition with a [logical operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators) to achive the same:
+```JavaScript
+const {html} = require('common-tags')
+
+module.exports = html`
+	${item && `
+		<div>
+			` + item + `
+		</div>
+	`}
+`
+```
+
+By default you can `join` the result when looping through an array of items to prevent displaying commas between the returned items:
+```JavaScript
+module.exports = `<section>
+	${items.map(item => `
+		<div>
+			${item}
+		</div>
+	`).join('')}
+</section>`
+```
+Common-tags does this for you. So you can use a shorter syntax:
+```JavaScript
+const {html} = require('common-tags')
+
+module.exports = html`<section>
+	${items.map(item => `
+		<div>
+			${item}
+		</div>
+	`)}
+</section>`
+```
+
+Wehn you are not using a tagged template literal with common-tags or with a similar library, then you can concatenate template parts with the `+` operator if you prefer:
+```JavaScript
+module.exports = `
+	<div>
+		` + item + `
+	</div>
+`
+```
+Or you can use a placeholder with the `${expression}` syntax instead:
+```JavaScript
+module.exports = `
+	<div>
+		${item}
+	</div>
+`
+```
+In some cases one of these can be easier to read than the other so you may use the style accordingto the context or you can choose one over the other and stay consistent. This example uses both.
