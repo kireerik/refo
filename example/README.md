@@ -25,6 +25,8 @@
 > yarn install
 > ```
 
+> Are you on some kind of Unix based system? Mac? Linux? If so you might want to change the `port` in the `scripts` within the [package.json](https://github.com/kireerik/refo/blob/master/example/package.json#L2-L11) file, which is set to `80` which works on Windows. [Superstatic](https://github.com/firebase/superstatic)'s default is `3474` so you can remove that line if you prefer.
+
 Start the server in development mode:
 > ```shell
 > yarn dev
@@ -72,6 +74,11 @@ You can completely remove the `linkPrefixum` in case you are publishing a `user 
 You can remove the `refo.options.json` file to set the `staticDirectory` to the default if you wish.
 
 In this case you can change the deployed folder from `../docs` to `static` in the [firebase.json](https://github.com/kireerik/refo/blob/8fd9472fa9ef7ee0e00adb26be4dd99e7e775041/example/firebase.json#L3) file.
+
+## Contribution
+It can  be useful to separate the resume template and publish it as a new Refo package.
+
+> [Open a new issue](https://github.com/kireerik/refo/issues/new) if you think so and let's discuss this. We can definitely implement this if it turns out to be useful.
 
 ## About
 
