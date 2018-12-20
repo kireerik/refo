@@ -105,6 +105,8 @@ module.exports = html`
 `
 ```
 
+&nbsp;
+
 By default you can display an optional template part and use a conditional operator to prevent displaying false values like `undefined` for example:
 ```JavaScript
 module.exports = `
@@ -128,6 +130,8 @@ module.exports = html`
 `
 ```
 
+&nbsp;
+
 By default you can `join` the result when looping through an array of items to prevent displaying commas between the returned items:
 ```JavaScript
 module.exports = `<section>
@@ -150,6 +154,8 @@ module.exports = html`<section>
 	`)}
 </section>`
 ```
+
+&nbsp;
 
 Wehn you are not using a tagged template literal with common-tags or with a similar library, then you can concatenate template parts with the `+` operator if you prefer:
 ```JavaScript
