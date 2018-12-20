@@ -54,7 +54,7 @@ You can completely remove the `linkPrefixum` in case you are publishing a `user 
 ### [Firebase Hosting](https://firebase.google.com/products/hosting/)
 - Initial steps
 	- Remove the `linkPrefixum` from the files listed above under GitHub Pages Deployment.
-	- Install and set up <a title="Firebase CLI" href="https://nodejs.org/en/"><img alt="Firebase" src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-standard.svg" width="" height="18"> CLI</a>.
+	- Install and set up <a title="Firebase CLI" href="https://firebase.google.com/docs/cli/"><img alt="Firebase" src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-standard.svg" width="" height="18"> CLI</a>.
 	- Add a `.firebaserc` file with your Firebase project ID:
 		```JSON
 		{
