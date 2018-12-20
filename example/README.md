@@ -52,19 +52,19 @@ You might want to change the `linkPrefixum` in the following files according to 
 You can completely remove the `linkPrefixum` in case you are publishing a `user or an organization site`.
 
 ### [Firebase Hosting](https://firebase.google.com/products/hosting/)
-Remove the `linkPrefixum` from the files listed above under GitHub Pages Deployment.
+- Initial steps
+	- Remove the `linkPrefixum` from the files listed above under GitHub Pages Deployment.
+	- Install and set up the [Firebase CLI](https://firebase.google.com/docs/cli/).
+	- Add a `.firebaserc` file with your Firebase project ID:
+		```JSON
+		{
+			"projects": {
+				"default": "<projectId>"
+			}
+		}
+		```
 
-Install and set up the [Firebase CLI](https://firebase.google.com/docs/cli/).
-
-Add a `.firebaserc` file with your Firebase project ID:
-```JSON
-{
-	"projects": {
-		"default": "<projectId>"
-	}
-}
-```
-Now you can use the following command to deploy your site to Firebase Hosting:
+> Deploy your site to Firebase Hosting:
 > ```shell
 > yarn deploy
 > ```
