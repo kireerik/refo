@@ -57,6 +57,14 @@
 
 ### Main
 
+#### Folder structure
+| variable				| default value | use case |
+| ---					| :---:		| --- |
+| `assetDirectory`			| `asset`	| Dependent HTML documents are regenerated when an inlined source changes. This variable is only used in watch mode by inline-source. |
+| `siteDirectory`			| `site`	| Node modules (not located in the `siteDirectory`/`assetDirectory` folder) and HTML files are processed with inline-source and HTMLMinifier and the result is saved to the `staticDirectory` folder as HTML. Other files are copied to the `staticDirectory` folder. |
+| <ul><li>`assetDirectory`</li></ul>	| `asset`	| JavaScript files in this folder are bundled with bundle-js and minified with UglifyJS and saved to the `staticDirectory`/`assetDirectory` folder. |
+| `staticDirectory`			| `static`	| Node modules (not located in the `siteDirectory`/`assetDirectory` folder) and HTML files from the `siteDirectory` folder are generated to this folder as HTML documents. Other files are copied to this folder from the `siteDirectory` folder. |
+
 
 ### Core
 
