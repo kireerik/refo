@@ -57,13 +57,24 @@
 
 ### Main
 
-#### Folder structure
-| variable				| default value | use case |
+#### Folder structure options
+| property name				| default value | use case |
 | ---					| :---:		| --- |
-| `assetDirectory`			| `asset`	| Dependent HTML documents are regenerated when an inlined source changes. This variable is only used in watch mode by inline-source. |
-| `siteDirectory`			| `site`	| Node modules (not located in the `siteDirectory`/`assetDirectory` folder) and HTML files are processed with inline-source and HTMLMinifier and the result is saved to the `staticDirectory` folder as HTML. Other files are copied to the `staticDirectory` folder. |
-| <ul><li>`assetDirectory`</li></ul>	| `asset`	| JavaScript files in this folder are bundled with bundle-js and minified with UglifyJS and saved to the `staticDirectory`/`assetDirectory` folder. |
-| `staticDirectory`			| `static`	| Node modules (not located in the `siteDirectory`/`assetDirectory` folder) and HTML files from the `siteDirectory` folder are generated to this folder as HTML documents. Other files are copied to this folder from the `siteDirectory` folder. |
+| `assetDirectory`			| `'asset'`	| Dependent HTML documents are regenerated when an inlined source changes. This property is only used in watch mode by inline-source. |
+| `siteDirectory`			| `'site'`	| Node modules (not located in the `siteDirectory`/`assetDirectory` folder) and HTML files are processed with inline-source and HTMLMinifier and the result is saved to the `staticDirectory` folder as HTML. Other files are copied to the `staticDirectory` folder. |
+| <ul><li>`assetDirectory`</li></ul>	| `'asset'`	| JavaScript files in this folder are bundled with bundle-js and minified with UglifyJS and saved to the `staticDirectory`/`assetDirectory` folder. |
+| `staticDirectory`			| `'static'`	| Node modules (not located in the `siteDirectory`/`assetDirectory` folder) and HTML files from the `siteDirectory` folder are generated to this folder as HTML documents. Other files are copied to this folder from the `siteDirectory` folder. |
+
+#### `pdfSourceChangeHandler` options
+
+| property name		| default value			| use case |
+| ---			| :---:				| --- |
+| `sourceDirectory`	| `'resume'`			| PDF files are generated from the HTML documents located in this folder within the `staticDirectory` folder. |
+| `fileNameSeparator`	| `'-'`				| Separator for the PDF file name. |
+| `getFileNamePrefixum`	| [`async page => ...`](https://github.com/kireerik/refo/blob/9c8dfb3f7e973372d08569f33e89217f8487d024/index/pdf-source-change-handler/index.js#L10) | A function which generates the prefixum for the PDF file name. The default function returns the HTML document title before the `fileNameSeparator` without spaces. |
+| `mainFileName`	| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sourceDirectory`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Main name for the PDF file name. |
+| `defaultFormat`	| `'Letter'`			| Default PDF page size format. This won't be included in the PDF file name by default. |
+| `formats`		| `[defaultFormat, 'A4']`	| An array of generated PDF page size formats. A HTML document is saved in 2 formats by default. |
 
 
 ### Core
