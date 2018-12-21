@@ -57,6 +57,41 @@
 
 ### Main
 
+You can use `refo` as global and or as a local command as you can see in the `scripts` in the [example package.json](https://github.com/kireerik/refo/blob/master/example/package.json) file.
+
+You can start Refo in `watch` mode by passing a `watch` parameter to the command. By default it creates a static build.
+
+You can create a `refo.options` `js` or `json` file to change default properties. Examples:
+
+`.js`:
+```JavaScript
+module.exports = {
+	staticDirectory: '../docs'
+	, pdfSourceChangeHandler: {
+		sourceDirectory: 'CV'
+	}
+}
+```
+
+`.json`:
+```JavaScript
+{
+	"staticDirectory": "../docs"
+	, "pdfSourceChangeHandler": {
+		"sourceDirectory": "CV"
+	}
+}
+```
+
+Creating a Node module can be useful, because you can define functions as well and use additional code if needed.
+
+You can also use Refo programmatically if you don't have a `refo.options` file in the folder where you require the `refo` package:
+```JavaScript
+const refo = require('refo')
+
+refo(/*options*/)
+```
+
 #### Folder structure options
 | property name				| default value | use case |
 | ---					| :---:		| --- |
@@ -76,6 +111,7 @@
 | `defaultFormat`	| `'Letter'`			| Default PDF page size format. This won't be included in the PDF file name by default. |
 | `formats`		| `[defaultFormat, 'A4']`	| An array of generated PDF page size formats. A HTML document is saved in 2 formats by default. |
 
+PDF files are saved to the root of the `staticDirectory` by default. You can modify this behaviour with a custom `getFileNamePrefixum` function.
 
 ### Core
 
