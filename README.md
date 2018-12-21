@@ -113,6 +113,31 @@ refo(/*options*/)
 
 PDF files are saved to the root of the `staticDirectory` by default. You can modify this behaviour with a custom `getFileNamePrefixum` function.
 
+### JSON handler
+
+The JSON handler can be used as you can see in the example ([asset/resume/getHandledJson.js](https://github.com/kireerik/refo/blob/ec14756dc0046ff7c007e0af1200f39678e3e632/example/asset/resume/getHandledJson.js#L9)) as well.
+
+```JavaScript
+const handleJSON = require('refo-handle-json')
+
+var json = JSON.parse(JSON.stringify(require('./data')))
+
+json = handleJSON(json)
+```
+
+It is recommended to create a copy of the required JSON using the `JSON.parse(JSON.stringify(json))` functions for example when you are using Refo in `watch` mode ([related comment](https://github.com/sidorares/hot-module-replacement/issues/10#issuecomment-447473770)), because the JSON hander is changing object properties.
+
+The JSON handler is parsing string object values as `Markdown` using markdown-it.
+
+Properties which are ending with `-private` are removed. Objects which have a property named `private` are removed too.
+
+Properties which are ending with `-full` are only included when a second true value parameter is passed to the handler function. Objects which have a property named `full` are only included when a second true value parameter is passed to the handler function.
+
+When an object contains a `startDate` properrty without an `endDate` property then a `hidePresent` property can be used to hide a present label and show the current year instead.
+<br>A `hideEndDate` property can be used to hide the current year shown instead of a present label.
+
+A `hideDuration` property can be used to hide the calculated duration. Otherwise a `duration` property is defined with the calculated duration (examples: 7 months, 1 year, 1.5 years, 2 years).
+
 ### Core
 
 
