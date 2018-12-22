@@ -56,12 +56,11 @@
 ## Usage
 
 ### Main
-
 You can use `refo` as global and or as a local command as you can see in the `scripts` in the [example package.json](https://github.com/kireerik/refo/blob/master/example/package.json) file.
 
 You can start Refo in `watch` mode by passing a `watch` parameter to the command. By default it creates a static build.
 
-You can create a `refo.options` `js` or `json` file to change default properties. Examples:
+You can create a `refo.options` `js` or `json` file to change the default properties. Examples:
 
 `.js`:
 ```JavaScript
@@ -92,6 +91,15 @@ const refo = require('refo')
 refo(/*options*/)
 ```
 
+You can define the 2. argument if you would like to use Refo programmatically in `watch` mode:
+```JavaScript
+process.argv[2] = 'watch'
+
+const refo = require('refo')
+
+refo(/*options*/)
+```
+
 #### Folder structure options
 | property name				| default value | use case |
 | ---					| :---:		| --- |
@@ -101,7 +109,6 @@ refo(/*options*/)
 | `staticDirectory`			| `'static'`	| Node modules (not located in the `siteDirectory`/`assetDirectory` folder) and HTML files from the `siteDirectory` folder are generated to this folder as HTML documents. Other files are copied to this folder from the `siteDirectory` folder. |
 
 #### `pdfSourceChangeHandler` options
-
 | property name		| default value			| use case |
 | ---			| :---:				| --- |
 | `sourceDirectory`	| `'resume'`			| PDF files are generated from the HTML documents located in this folder within the `staticDirectory` folder. |
@@ -114,7 +121,6 @@ refo(/*options*/)
 PDF files are saved to the root of the `staticDirectory` by default. You can modify this behaviour with a custom `getFileNamePrefixum` function.
 
 ### JSON handler
-
 The JSON handler can be used as you can see in the example ([asset/resume/getHandledJson.js](https://github.com/kireerik/refo/blob/ec14756dc0046ff7c007e0af1200f39678e3e632/example/asset/resume/getHandledJson.js#L9)) as well.
 
 ```JavaScript
@@ -139,7 +145,80 @@ When an object contains a `startDate` properrty without an `endDate` property th
 A `hideDuration` property can be used to hide the calculated duration. Otherwise a `duration` property is defined with the calculated duration (examples: 7 months, 1 year, 1.5 years, 2 years).
 
 ### Core
+You can use `refo-core` as global and or as a local command.
 
+You can start Refo core in `watch` mode by passing a `watch` parameter to the command. By default it creates a static build.
+
+You can create a `refo.core` `js` or `json` file to change the default properties. In general a `js` file is recommended, because you can define functions as well, but in some cases you might not need that.
+
+The `handlers` property is not defined by default. In this case all files are copied from the `siteDirectory` to the `staticDirectory` folder without any additional processing.
+
+The [folder structure options](https://github.com/kireerik/refo#folder-structure-options) are the same as for the main Refo package.
+
+Example `refo.core.js`:
+```JavaScript
+module.exports = {
+	handlers: {
+		'.html': () => {}
+	}
+	//, options: {}
+}
+```
+
+This example does nothing with each individual `.html` file. So these files are not saved to the `staticDirectory` folder.
+
+> As a propbably more meaningful but still simple example you could make some changes to the files and save them to a dedicated folder for example.
+
+The `handlers` property can be an object or a function. When it is a function the `options` property is passed as the first parameter to this function which can return the handler object.
+
+Example `refo.core.js`:
+```JavaScript
+const fs = require('fs')
+
+, getToStaticDirectory = require('refo-directory-to-other-directory')
+
+module.exports = {
+	handlers: ({siteDirectory, staticDirectory}) => {
+		String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
+
+		return {
+			'.html': filePath => {
+				var html = fs.readFileSync(filePath, 'UTF-8')
+
+				html = '<!DOCTYPE HTML>' + html
+
+				fs.writeFile(filePath.toStaticDirectory(), html)
+			}
+		}
+	}
+}
+```
+
+This example pre-appends `<!DOCTYPE HTML>` to each HTML document located in the `siteDirectory` folder and saves them to the `staticDirectory` folder keeping the folder structure they had in the `siteDirectory` folder.
+
+You can also use an [`addStaticFilePath`](https://github.com/kireerik/refo/blob/1f580272a79b5cb9b18528e98b749689370c65f0/index/index/core/watch/index.js#L12) function property in `watch` mode to register a new file path for the canged file. This can be useful when you are changing the extension of the result for example. For example you are saving `.js` as `.html` files just as the main refo package does. This function accepts 2 parameters. The original and the new static file path.
+
+You can also use a [`watchedFileSource`](https://github.com/kireerik/refo/blob/1f580272a79b5cb9b18528e98b749689370c65f0/index/index/core/watch/index.js#L18-L19) object property in `watch` mode to register dependencies of a certain file. When a dependency changes the dependent file is regenerated. The main refo package uses this object in the HTML handler ([index/handle-html/index.js#L6-L18](https://github.com/kireerik/refo/blob/1f580272a79b5cb9b18528e98b749689370c65f0/index/handle-html/index.js#L6-L18)) to add inlined sources as dependencies.
+
+> As a bit more complex example you can see Refo's main handlers: [index/index/main/handlers.js](https://github.com/kireerik/refo/blob/master/index/index/main/handlers.js)
+> 
+> <br>Feel free to make a copy to remove and add new features to it. You can publish your new handlers on NPM if you like the result so others can require and use your custom Refo handler too.
+
+You can also use Refo core programmatically if you don't have a `refo.core` file in the folder where you require the `refo-core` package:
+```JavaScript
+const refoCore = require('refo-core')
+
+refoCore(/*handlers, options*/)
+```
+
+You can define the 2. argument if you would like to use Refo core programmatically in `watch` mode:
+```JavaScript
+process.argv[2] = 'watch'
+
+const refoCore = require('refo-core')
+
+refoCore(/*handlers, options*/)
+```
 
 ## Who is using Refo
 - <a title="Oengi.com" href="https://oengi.com/">Oengi.com</a> – Erik Engi's website and resume.
