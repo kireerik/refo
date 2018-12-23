@@ -3,9 +3,9 @@
 
 
 "@types/node@^10.11.7":
-  version "10.12.15"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.15.tgz#20e85651b62fd86656e57c9c9bc771ab1570bc59"
-  integrity sha512-9kROxduaN98QghwwHmxXO2Xz3MaWf+I1sLVAA6KJDF5xix+IyXVhds0MAfdNwtcpSrzhaTsNB0/jnL86fgUhqA==
+  version "10.12.18"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"
+  integrity sha512-fh+pAqt4xRzPfqA6eh3Z2y6fyZavRIumvjhaCL753+TVkGKGhpPeyrJG2JftD0T9q4GF00KjefsQ+PQNDdWQaQ==
 
 "@types/q@^1.5.1":
   version "1.5.1"
@@ -515,9 +515,9 @@ debug@^3.1.0:
     ms "^2.1.1"
 
 debug@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.0.tgz#373687bffa678b38b1cd91f861b63850035ddc87"
-  integrity sha512-heNPJUJIqC+xB6ayLAMHaIrmN9HKa7aQO8MGqKpvCA+uJYVcvR6l5kgdrhRuwPFHU7P5/A1w0BjByPHwpfTDKg==
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
+  integrity sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
   dependencies:
     ms "^2.1.1"
 
@@ -1188,12 +1188,12 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-klaw-sync@6.x:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/klaw-sync/-/klaw-sync-6.0.0.tgz#1fd2cfd56ebb6250181114f0a581167099c2b28c"
-  integrity sha512-nIeuVSzdCCs6TDPTqI8w1Yre34sSq7AkZ4B3sfOBbI2CgVSB4Du4aLQijFU2+lhAFCwt9+42Hel6lQNIv6AntQ==
+klaw@3.x:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/klaw/-/klaw-3.0.0.tgz#b11bec9cf2492f06756d6e809ab73a2910259146"
+  integrity sha512-0Fo5oir+O9jnXu5EefYbVK+mHMBeEVEy2cmctR1O1NECcCkPRreJKrS6Qt/j3KC2C148Dfo9i3pCmCMsdqGr0g==
   dependencies:
-    graceful-fs "^4.1.11"
+    graceful-fs "^4.1.9"
 
 klaw@^1.0.0:
   version "1.3.1"
@@ -1675,7 +1675,7 @@ path-key@^2.0.0, path-key@^2.0.1:
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
   integrity sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
 
-path-parse@^1.0.5:
+path-parse@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
@@ -1737,17 +1737,10 @@ punycode@^1.3.2:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
   integrity sha1-wNWmOycYgArY4esPpSachN1BhF4=
 
-puppeteer-html2pdf@0.x:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/puppeteer-html2pdf/-/puppeteer-html2pdf-0.1.1.tgz#dc972f3dd3e013ab72e80d24685b4277baff2a54"
-  integrity sha512-jy/9p/Ui+qmYf3zkaTeAJgCXyRRFZrTUzDvRmvFTAy+vGBkOySS9p8HKdEqIRhrj/mA9pTeE1m+XYYd39YzjsQ==
-  dependencies:
-    puppeteer "1.x"
-
-puppeteer@1.x:
+puppeteer-core@^1.9.0:
   version "1.11.0"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-1.11.0.tgz#63cdbe12b07275cd6e0b94bce41f3fcb20305770"
-  integrity sha512-iG4iMOHixc2EpzqRV+pv7o3GgmU2dNYEMkvKwSaQO/vMZURakwSOn/EYJ6OIRFYOque1qorzIBvrytPIQB3YzQ==
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-1.11.0.tgz#34ad606115f2b1299aeec3cf68cd0dc4e2f26aa9"
+  integrity sha512-JTsJKCQdrk1RqEGZN3l2TyW7Rhy7GWRRzd3PftYyA3B35l0t0lLU+gdF7czemnpSVVMiAgHpM1Uk/iO6jLreMA==
   dependencies:
     debug "^4.1.0"
     extract-zip "^1.6.6"
@@ -1757,6 +1750,13 @@ puppeteer@1.x:
     proxy-from-env "^1.0.0"
     rimraf "^2.6.1"
     ws "^6.1.0"
+
+puppeteer-html2pdf@1.x:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/puppeteer-html2pdf/-/puppeteer-html2pdf-1.0.0.tgz#1c3f0cbfc9a5ddf6ffa320403bb3db621eaa1523"
+  integrity sha512-ZGCsBqezTWwS6Bp3E+0JX5ULD0FID0wO4QMHFgtdfEpL1Fp5IsEctoVtunOo5LxomJOY/uw94SVeZgrfESV7Jw==
+  dependencies:
+    tiny-puppeteer "1.x"
 
 q@^1.1.2:
   version "1.5.1"
@@ -1806,26 +1806,27 @@ readable-stream@^2.0.2, readable-stream@^2.2.2, readable-stream@^2.3.5:
     util-deprecate "~1.0.1"
 
 refo-core-build@1.x:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/refo-core-build/-/refo-core-build-1.0.0.tgz#28af27a6b2f851c6654ca3125baf16235a11d004"
-  integrity sha512-MSM7HcJ40WUC6ege+Vcrrh96ZXCo9EwFvSHg4aRwK0wHRFHTW/CZf+PI3hQhzPlZeEFFM5mFY5+uG1GP2UWYog==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/refo-core-build/-/refo-core-build-1.0.1.tgz#081cce23fc284da575b9316144610388e0a7e6d6"
+  integrity sha512-ViD3rkJ1YQRRKenAJCPwaqo+3NkzlWj/M6seCwxU29d3mQiKUjdSd1imFUxhG2Rev1pNRX63xKEjSDJqVyLVBQ==
   dependencies:
     fs-extra "7.x"
-    klaw-sync "6.x"
+    klaw "3.x"
+    refo-directory-to-other-directory "1.x"
 
 refo-core-watch@1.x:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/refo-core-watch/-/refo-core-watch-1.0.1.tgz#59c3c1d566bc0c2e72cf7b1778a02e246285fcea"
-  integrity sha512-MMnbzOfPZy+K/FoE4NeY+M4nXYRwg+frpzay9cLC9FlCJ6GWzBp/QGzXgTV4FBj9/vAlfWkDJQ1YpylenWRPVQ==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/refo-core-watch/-/refo-core-watch-1.0.2.tgz#ea6c3c1d92e233d13f58f7d7bbeedaa3671a55f1"
+  integrity sha512-o/zlW/AMT40V7+KDAxEycHggKDFtWPHdpXiAxI4dXmQTowzqQuusm9+k4Bx4NZxDxf4F9LicfZIqFbsq/aT8gw==
   dependencies:
     fs-extra "7.x"
     gaze "1.x"
     refo-directory-to-other-directory "1.x"
 
 refo-core@1.x:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/refo-core/-/refo-core-1.0.1.tgz#72e96b11ced546a91bb1ad9c4f2506db8931ca3e"
-  integrity sha512-cYZXaE4q9kIDuDSxl3zEqcGaXjd8uFiWmny0iFF/48S0QWsywTo7CnQJRBwLhd3f7attsPmeRkrxDwh65sRltw==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/refo-core/-/refo-core-1.0.2.tgz#b67e2724130b230a33d351bbcb62f39da6ceca9f"
+  integrity sha512-TLvwyiflXK/VUT+Cea8NNDxWPsxWXs2mRQxHS6LR6g46MrsYtg6UFAvh23ulnR2rtmUseOx7tgNSdLJOHdIeFg==
   dependencies:
     refo-core-build "1.x"
     refo-core-watch "1.x"
@@ -1852,9 +1853,9 @@ refo-handle-json@1.x:
     moment "2.x"
 
 refo-main@1.x:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/refo-main/-/refo-main-1.0.2.tgz#bf512a8a6f4a29f16cea32028eb1dfde5f278913"
-  integrity sha512-I2QWkd3mSFIGrAwAAdaC9MuDiyMK7/CzvH3rnHuEtei5JUa1Dq7GtQNZU4GlqSpsqkuYRW17TwBUN0Xzbt6DnQ==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/refo-main/-/refo-main-1.1.0.tgz#5844e3a92a1d5268656b2422a5298142e3b542d7"
+  integrity sha512-Zl8B3+1QrR9MItmJVePVDQl3+nJU8rEQThkLRVlROJeUAaZ3FReYYsRbJtf/i3rmibwBv452bbSpdIJ9a7z6oA==
   dependencies:
     bundle-js "1.x"
     fs-extra "7.x"
@@ -1866,16 +1867,16 @@ refo-main@1.x:
     uglify-js "3.x"
 
 refo-pdf-source-change-handler@1.x:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/refo-pdf-source-change-handler/-/refo-pdf-source-change-handler-1.0.0.tgz#538813544dd6c6a6ce7b1228f91fd945c448f4d9"
-  integrity sha512-J0wWOBbGoXXUVaiATc0QMKatAb8SS3YPmYg1JFVd/y4E2paJSXw0eQSL0Q71z/hjlPp3SCTZpuz7RfIQ3GtvVg==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/refo-pdf-source-change-handler/-/refo-pdf-source-change-handler-1.1.0.tgz#4066a38bd45ffb238b327c8be5d75c470616789d"
+  integrity sha512-SgNQcs5vx6gDEpPZfN3t0Gy0l7Gl8HBI9erKewJFHnm+4Ymx3H0k4L+G1iKOhYpisFlb3mgAzUJdtbkue28UMA==
   dependencies:
-    puppeteer-html2pdf "0.x"
+    puppeteer-html2pdf "1.x"
 
 refo@1.x:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/refo/-/refo-1.0.2.tgz#9b4908fd9646660dc44c0d78b2078c82ce77a7e6"
-  integrity sha512-6bR4qR6g5+iLoFA1kg7SNHqRkZTv0tPyou9JJc2fFqfXw1M+pIr3uQtc+1D0RaXyLT65wWrH6eamzhPiNHigXw==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/refo/-/refo-1.1.0.tgz#e0ca7e60c436cd0e72c5fba4cd1f0db5b529c6c6"
+  integrity sha512-aTkmwcpT1fGz4CUby/0YPIcNipHTMM5M43bnY9z8juYV2T/fxPbtUFnKAJEQ/pF/LE/72aYtBxRb76SYILQQTA==
   dependencies:
     refo-main "1.x"
 
@@ -1910,11 +1911,11 @@ require-main-filename@^1.0.1:
   integrity sha1-l/cXtp1IeE9fUmpsWqj/3aBVpNE=
 
 resolve@^1.4.0:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.8.1.tgz#82f1ec19a423ac1fbd080b0bab06ba36e84a7a26"
-  integrity sha512-AicPrAC7Qu1JxPCZ9ZgCZlY35QgFnNqc+0LtbRNxnVw4TXvjQ72wnuL9JQcEBgXkI9JM8MsT9kaQoHcpCRJOYA==
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.9.0.tgz#a14c6fdfa8f92a7df1d996cb7105fa744658ea06"
+  integrity sha512-TZNye00tI67lwYvzxCxHGjwTNlUV70io54/Ed4j6PscB8xVfuBJpRenI/o6dVk0cY0PYTY27AgCoGGxRnYuItQ==
   dependencies:
-    path-parse "^1.0.5"
+    path-parse "^1.0.6"
 
 rimraf@^2.2.8, rimraf@^2.6.1:
   version "2.6.2"
@@ -2039,9 +2040,9 @@ spdx-expression-parse@^3.0.0:
     spdx-license-ids "^3.0.0"
 
 spdx-license-ids@^3.0.0:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.2.tgz#a59efc09784c2a5bada13cfeaf5c75dd214044d2"
-  integrity sha512-qky9CVt0lVIECkEsYbNILVnPvycuEBkXoMFLRWsREkomQLevYhtRKC+R91a5TOAQ3bCMjikRwhyaRqj1VYatYg==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.3.tgz#81c0ce8f21474756148bbb5f3bfc0f36bf15d76e"
+  integrity sha512-uBIcIl3Ih6Phe3XHK1NqboJLdGfwr1UN3k6wSD1dZpmPsIkb8AGNbZYJ1fOBk834+Gxy8rpfDxrS6XLEMZMY2g==
 
 sprintf-js@~1.0.2:
   version "1.0.3"
@@ -2215,6 +2216,13 @@ timed-out@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
   integrity sha1-8y6srFoXW+ol1/q1Zas+2HQe9W8=
+
+tiny-puppeteer@1.x:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/tiny-puppeteer/-/tiny-puppeteer-1.6.0.tgz#a91fdd95c0772e0599e175102d83934ba1c7b313"
+  integrity sha512-jU1owa5UZQhgEfYv19uA+nzwWzM8LKVNRKxe2aa2gxC5wRfi8QbGlBpCZvkaVF/kPd9+m20FzU8riHbE1F6nLg==
+  dependencies:
+    puppeteer-core "^1.9.0"
 
 toxic@^1.0.0:
   version "1.0.1"
