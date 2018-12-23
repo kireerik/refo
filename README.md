@@ -19,6 +19,8 @@
 </p>
 
 ## Features
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkireerik%2Frefo.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkireerik%2Frefo?ref=badge_shield)
+
 - 
 	- **H**ot **M**odule **R**eplacement with [hot-module-replacement](https://github.com/sidorares/hot-module-replacement)
 	- JS, CSS and image inlining with [inline-source](https://github.com/popeindustries/inline-source)
@@ -238,3 +240,7 @@ refoCore(/*handlers, options*/)
 **Re**sume + port**fo**lio = Refo
 
 Short and easy to type. Ideal as a command as well.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkireerik%2Frefo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkireerik%2Frefo?ref=badge_large)
