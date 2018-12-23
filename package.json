@@ -20,7 +20,7 @@
 
 		, "fs-extra": "7.x"
 
-		, "klaw-sync": "6.x"
+		, "klaw": "3.x"
 
 		, "gaze": "1.x"
 

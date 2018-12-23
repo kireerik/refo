@@ -1,24 +1,27 @@
 const path = require('path')
+
 , fs = require('fs-extra')
-, klawSync = require('klaw-sync')
+, klaw = require('klaw')
+
+, getToStaticDirectory = require('refo-directory-to-other-directory')
 
 module.exports = (handlers, siteDirectory, staticDirectory) => {
+	String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
+
 	fs.emptyDirSync(staticDirectory)
 
-	fs.copySync(siteDirectory, staticDirectory, {
-		filter: filePath => {
-			const extension = path.extname(filePath)
+	klaw(siteDirectory).on('data', file => {
+		if (handlers)
+			var handler = handlers[path.extname(file.path)]
 
-			return !handlers || Object.keys(handlers).reduce((result, currentExtension) => result && extension != currentExtension, true)
-		}
+		const staticFilePath = file.path.toStaticDirectory()
+
+		if (handler)
+			handler(file.path)
+		else
+			if (file.stats.isDirectory())
+				fs.ensureDir(staticFilePath)
+			else
+				fs.copy(file.path, staticFilePath)
 	})
-
-	if (handlers)
-		Object.entries(handlers).forEach(handler =>
-			klawSync(siteDirectory, {
-				filter: file => file.stats.isDirectory() || path.extname(file.path) == handler[0]
-			})
-				.filter(file => !file.stats.isDirectory())
-				.forEach(file => handler[1](file.path))
-		)
 }

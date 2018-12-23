@@ -3,7 +3,8 @@
 	, "version": "1.0.0"
 	, "dependencies": {
 		"fs-extra": "7.x"
+		, "klaw": "3.x"
 
-		, "klaw-sync": "6.x"
+		, "refo-directory-to-other-directory": "1.x"
 	}
 }
