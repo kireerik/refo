@@ -1461,17 +1461,10 @@ pseudomap@^1.0.2:
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
   integrity sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
 
-puppeteer-html2pdf@0.x:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/puppeteer-html2pdf/-/puppeteer-html2pdf-0.1.1.tgz#dc972f3dd3e013ab72e80d24685b4277baff2a54"
-  integrity sha512-jy/9p/Ui+qmYf3zkaTeAJgCXyRRFZrTUzDvRmvFTAy+vGBkOySS9p8HKdEqIRhrj/mA9pTeE1m+XYYd39YzjsQ==
-  dependencies:
-    puppeteer "1.x"
-
-puppeteer@1.x:
+puppeteer-core@^1.9.0:
   version "1.11.0"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-1.11.0.tgz#63cdbe12b07275cd6e0b94bce41f3fcb20305770"
-  integrity sha512-iG4iMOHixc2EpzqRV+pv7o3GgmU2dNYEMkvKwSaQO/vMZURakwSOn/EYJ6OIRFYOque1qorzIBvrytPIQB3YzQ==
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-1.11.0.tgz#34ad606115f2b1299aeec3cf68cd0dc4e2f26aa9"
+  integrity sha512-JTsJKCQdrk1RqEGZN3l2TyW7Rhy7GWRRzd3PftYyA3B35l0t0lLU+gdF7czemnpSVVMiAgHpM1Uk/iO6jLreMA==
   dependencies:
     debug "^4.1.0"
     extract-zip "^1.6.6"
@@ -1481,6 +1474,13 @@ puppeteer@1.x:
     proxy-from-env "^1.0.0"
     rimraf "^2.6.1"
     ws "^6.1.0"
+
+puppeteer-html2pdf@1.x:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/puppeteer-html2pdf/-/puppeteer-html2pdf-1.0.0.tgz#1c3f0cbfc9a5ddf6ffa320403bb3db621eaa1523"
+  integrity sha512-ZGCsBqezTWwS6Bp3E+0JX5ULD0FID0wO4QMHFgtdfEpL1Fp5IsEctoVtunOo5LxomJOY/uw94SVeZgrfESV7Jw==
+  dependencies:
+    tiny-puppeteer "1.x"
 
 q@^1.1.2:
   version "1.5.1"
@@ -1830,6 +1830,13 @@ through@^2.3.6:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
+
+tiny-puppeteer@1.x:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/tiny-puppeteer/-/tiny-puppeteer-1.6.0.tgz#a91fdd95c0772e0599e175102d83934ba1c7b313"
+  integrity sha512-jU1owa5UZQhgEfYv19uA+nzwWzM8LKVNRKxe2aa2gxC5wRfi8QbGlBpCZvkaVF/kPd9+m20FzU8riHbE1F6nLg==
+  dependencies:
+    puppeteer-core "^1.9.0"
 
 tmp@^0.0.33:
   version "0.0.33"

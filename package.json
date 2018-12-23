@@ -37,6 +37,6 @@
 		, "uglify-js": "3.x"
 
 
-		, "puppeteer-html2pdf": "0.x"
+		, "puppeteer-html2pdf": "1.x"
 	}
 }
