@@ -43,11 +43,11 @@
 ## Packages
 | name `version` | &nbsp; source code location: [index/](https://github.com/kireerik/refo/tree/master/index/) &nbsp; |
 | --- | --- |
-| [refo](https://www.npmjs.com/package/refo) `1.0.2` &nbsp; | &nbsp; &nbsp; [index/index](https://github.com/kireerik/refo/tree/master/index/index/index) &nbsp; &nbsp; |
-| <ul><li>[core](https://www.npmjs.com/package/refo-core) `1.0.1` &nbsp; </li></ul> | &nbsp; &nbsp; [index/core/index](https://github.com/kireerik/refo/tree/master/index/index/core/index) &nbsp; &nbsp; |
-| <ul><li><ul><li>[build](https://www.npmjs.com/package/refo-core-build) `1.0.0` (=`0.0.0`) &nbsp; </li></ul></li></ul> | &nbsp; &nbsp; [index/core/build](https://github.com/kireerik/refo/tree/master/index/index/core/build) &nbsp; &nbsp; |
-| <ul><li><ul><li>[watch](https://www.npmjs.com/package/refo-core-watch) `1.0.1` &nbsp; </li></ul></li></ul> | &nbsp; &nbsp; [index/core/watch](https://github.com/kireerik/refo/tree/master/index/index/core/watch) &nbsp; &nbsp; |
-| <ul><li>[main](https://www.npmjs.com/package/refo-main) `1.0.2` &nbsp; </li></ul> | &nbsp; &nbsp; [index/main](https://github.com/kireerik/refo/tree/master/index/index/main) &nbsp; &nbsp; |
+| [refo](https://www.npmjs.com/package/refo) `1.0.3` &nbsp; | &nbsp; &nbsp; [index/index](https://github.com/kireerik/refo/tree/master/index/index/index) &nbsp; &nbsp; |
+| <ul><li>[core](https://www.npmjs.com/package/refo-core) `1.0.2` &nbsp; </li></ul> | &nbsp; &nbsp; [index/core/index](https://github.com/kireerik/refo/tree/master/index/index/core/index) &nbsp; &nbsp; |
+| <ul><li><ul><li>[build](https://www.npmjs.com/package/refo-core-build) `1.0.1` &nbsp; </li></ul></li></ul> | &nbsp; &nbsp; [index/core/build](https://github.com/kireerik/refo/tree/master/index/index/core/build) &nbsp; &nbsp; |
+| <ul><li><ul><li>[watch](https://www.npmjs.com/package/refo-core-watch) `1.0.2` &nbsp; </li></ul></li></ul> | &nbsp; &nbsp; [index/core/watch](https://github.com/kireerik/refo/tree/master/index/index/core/watch) &nbsp; &nbsp; |
+| <ul><li>[main](https://www.npmjs.com/package/refo-main) `1.0.3` &nbsp; </li></ul> | &nbsp; &nbsp; [index/main](https://github.com/kireerik/refo/tree/master/index/index/main) &nbsp; &nbsp; |
 | <ul><li>[directory-to-other-directory](https://www.npmjs.com/package/refo-directory-to-other-directory) `1.0.0` (=`0.0.0`) &nbsp; </li></ul> | &nbsp; &nbsp; [directory-to-other-directory](https://github.com/kireerik/refo/tree/master/index/directory-to-other-directory) &nbsp; &nbsp; |
 | <ul><li>[handle-html](https://www.npmjs.com/package/refo-handle-html) `1.0.0` &nbsp; </li></ul> | &nbsp; &nbsp; [handle-html](https://github.com/kireerik/refo/tree/master/index/handle-html) &nbsp; &nbsp; |
 | <ul><li>[pdf-source-change-handler](https://www.npmjs.com/package/refo-pdf-source-change-handler) `1.0.0` (=`0.0.2`) &nbsp; </li></ul> | &nbsp; &nbsp; [pdf-source-change-handler](https://github.com/kireerik/refo/tree/master/index/pdf-source-change-handler) &nbsp; &nbsp; |
