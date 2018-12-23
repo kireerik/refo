@@ -36,13 +36,6 @@ async-limiter@~1.0.0:
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
   integrity sha512-jp/uFnooOiO+L211eZOoSyzpOITMXx1rBITauYykG3BRYPu8h0UcxsPNB04RR5vo4Tyz3+ay17tR6JVf9qzYWg==
 
-async@^2.5.0:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
-  integrity sha512-fNEiL2+AZt6AlAw/29Cr0UDe4sRAHCpEHh54WMz+Bb7QfNcFw4h3loofyJpLeQs4Yx7yuqu/2dLgM5hKOs6HlQ==
-  dependencies:
-    lodash "^4.17.10"
-
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -70,6 +63,11 @@ buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
   integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
+
+builtin-modules@^1.0.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
+  integrity sha1-Jw8HbFpywC9bZaR9+Uxf46J4iS8=
 
 bundle-js@1.x:
   version "1.0.2"
@@ -426,21 +424,10 @@ globule@^1.0.0:
     lodash "~4.17.10"
     minimatch "~3.0.2"
 
-graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
+graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
-
-handlebars@4.x:
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.12.tgz#2c15c8a96d46da5e266700518ba8cb8d919d5bc5"
-  integrity sha512-RhmTekP+FZL+XNhwS1Wf+bTTZpdLougwt5pcgA1tuz6Jcx0fpH/7z0qd71RKnZHBCxIRBHfBOnio4gViPemNzA==
-  dependencies:
-    async "^2.5.0"
-    optimist "^0.6.1"
-    source-map "^0.6.1"
-  optionalDependencies:
-    uglify-js "^3.1.4"
 
 has-symbols@^1.0.0:
   version "1.0.0"
@@ -458,6 +445,14 @@ he@1.2.x:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+hot-module-replacement@3.x:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/hot-module-replacement/-/hot-module-replacement-3.0.2.tgz#62187e773fd93bb51cdaefd6addb83192055defa"
+  integrity sha512-WNA/AzEC7BA7kY9OwKN/ak3CGEGd83hXbBFBjShSv/MFrCjoVUuEWCZuBO4aDyBc4fGCTTHDStDie6zLh3AdVA==
+  dependencies:
+    is-builtin-module "^1.0.0"
+    node-watch "^0.5.8"
 
 html-minifier@3.x:
   version "3.5.21"
@@ -521,6 +516,13 @@ inline-source@6.x:
     svgo "~1.0.5"
     uglify-js "~3.4.6"
 
+is-builtin-module@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-builtin-module/-/is-builtin-module-1.0.0.tgz#540572d34f7ac3119f8f76c30cbc1b1e037affbe"
+  integrity sha1-VAVy0096wxGfj3bDDLwbHgN6/74=
+  dependencies:
+    builtin-modules "^1.0.0"
+
 is-callable@^1.1.3, is-callable@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.1.4.tgz#1e1adf219e1eeb684d691f9d6a05ff0d30a24d75"
@@ -575,21 +577,14 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-klaw-sync@6.x:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/klaw-sync/-/klaw-sync-6.0.0.tgz#1fd2cfd56ebb6250181114f0a581167099c2b28c"
-  integrity sha512-nIeuVSzdCCs6TDPTqI8w1Yre34sSq7AkZ4B3sfOBbI2CgVSB4Du4aLQijFU2+lhAFCwt9+42Hel6lQNIv6AntQ==
+klaw@3.x:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/klaw/-/klaw-3.0.0.tgz#b11bec9cf2492f06756d6e809ab73a2910259146"
+  integrity sha512-0Fo5oir+O9jnXu5EefYbVK+mHMBeEVEy2cmctR1O1NECcCkPRreJKrS6Qt/j3KC2C148Dfo9i3pCmCMsdqGr0g==
   dependencies:
-    graceful-fs "^4.1.11"
+    graceful-fs "^4.1.9"
 
-linkify-it@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-2.1.0.tgz#c4caf38a6cd7ac2212ef3c7d2bde30a91561f9db"
-  integrity sha512-4REs8/062kV2DSHxNfq5183zrqXMl7WP0WzABH9IeJI+NLm429FgE1PDecltYfnOoFDFlZGh2T8PfZn0r+GTRg==
-  dependencies:
-    uc.micro "^1.0.1"
-
-lodash@^4.17.10, lodash@~4.17.10:
+lodash@~4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
@@ -607,17 +602,6 @@ lru-cache@^4.1.3:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-markdown-it@8.x:
-  version "8.4.2"
-  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"
-  integrity sha512-GcRz3AWTqSUphY3vsUqQSFMbgR38a4Lh3GWlHRh/7MRwz8mcu9n2IO7HOh+bXHrR9kOPDl5RNCaEsrneb+xhHQ==
-  dependencies:
-    argparse "^1.0.7"
-    entities "~1.1.1"
-    linkify-it "^2.0.0"
-    mdurl "^1.0.1"
-    uc.micro "^1.0.5"
-
 mdn-data@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-1.2.0.tgz#eadd28b0f2d307cf27e71524609bfb749ebfc0b6"
@@ -627,11 +611,6 @@ mdn-data@~1.1.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-1.1.4.tgz#50b5d4ffc4575276573c4eedb8780812a8419f01"
   integrity sha512-FSYbp3lyKjyj3E7fMl6rYvUdX0FBXaluGqlFoYESWQlyUTq8R+wp0rkFxoYFqZlHCvsUXGjyJmLQSnXToYhOSA==
-
-mdurl@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
-  integrity sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=
 
 methods@^1.1.1:
   version "1.1.2"
@@ -684,11 +663,6 @@ mkdirp@0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   dependencies:
     minimist "0.0.8"
 
-moment@2.x:
-  version "2.22.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
-  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
-
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -705,6 +679,11 @@ no-case@^2.2.0:
   integrity sha512-rmTZ9kz+f3rCvK2TD1Ue/oZlns7OGoIWP4fc3llxxRXlOkHKoWPPWJOfFYpITabSow43QJbRIoHQXtt10VldyQ==
   dependencies:
     lower-case "^1.1.1"
+
+node-watch@^0.5.8:
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/node-watch/-/node-watch-0.5.9.tgz#da108bf9b5b28652ed1845523a30485c029a0b1c"
+  integrity sha512-W0SgGKaB9qSCfFfNj2uQZ/5BlVumaNHjVCAPdEoXrkEJ3ynSf/806LEz1rbDFbJ4+PL9G8IxRkJJTvZndd5D9g==
 
 nopt@~4.0.1:
   version "4.0.1"
@@ -824,17 +803,10 @@ pseudomap@^1.0.2:
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
   integrity sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
 
-puppeteer-html2pdf@0.x:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/puppeteer-html2pdf/-/puppeteer-html2pdf-0.1.0.tgz#7e013c7b36695a250d14b08420df0d89426ca5b7"
-  integrity sha512-WqvUKhtmXAnX5Szr2kwh75JjOp9fYd5y/tJ2HrZHWuRTc+Rht1SgO2BWd0R4tkJiwwhPoSemlsiUxlOlt7FO6g==
-  dependencies:
-    puppeteer "1.x"
-
-puppeteer@1.x:
+puppeteer-core@^1.9.0:
   version "1.11.0"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-1.11.0.tgz#63cdbe12b07275cd6e0b94bce41f3fcb20305770"
-  integrity sha512-iG4iMOHixc2EpzqRV+pv7o3GgmU2dNYEMkvKwSaQO/vMZURakwSOn/EYJ6OIRFYOque1qorzIBvrytPIQB3YzQ==
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-1.11.0.tgz#34ad606115f2b1299aeec3cf68cd0dc4e2f26aa9"
+  integrity sha512-JTsJKCQdrk1RqEGZN3l2TyW7Rhy7GWRRzd3PftYyA3B35l0t0lLU+gdF7czemnpSVVMiAgHpM1Uk/iO6jLreMA==
   dependencies:
     debug "^4.1.0"
     extract-zip "^1.6.6"
@@ -844,6 +816,13 @@ puppeteer@1.x:
     proxy-from-env "^1.0.0"
     rimraf "^2.6.1"
     ws "^6.1.0"
+
+puppeteer-html2pdf@1.x:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/puppeteer-html2pdf/-/puppeteer-html2pdf-1.0.0.tgz#1c3f0cbfc9a5ddf6ffa320403bb3db621eaa1523"
+  integrity sha512-ZGCsBqezTWwS6Bp3E+0JX5ULD0FID0wO4QMHFgtdfEpL1Fp5IsEctoVtunOo5LxomJOY/uw94SVeZgrfESV7Jw==
+  dependencies:
+    tiny-puppeteer "1.x"
 
 q@^1.1.2:
   version "1.5.1"
@@ -868,76 +847,65 @@ readable-stream@^2.0.2, readable-stream@^2.2.2, readable-stream@^2.3.5:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
-refo-core-build@0.x:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/refo-core-build/-/refo-core-build-0.0.0.tgz#0200d1aaeb623356a9def5db598018d8194ae7ee"
-  integrity sha512-gif1Zr9bXF432hgp620XSsSg2ARzugcDKCH6o7SUlBKS0vqQOei8nToTLN4O0On+baoWVy+V+1JmTePMZATQyg==
+refo-core-build@1.x:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/refo-core-build/-/refo-core-build-1.0.1.tgz#081cce23fc284da575b9316144610388e0a7e6d6"
+  integrity sha512-ViD3rkJ1YQRRKenAJCPwaqo+3NkzlWj/M6seCwxU29d3mQiKUjdSd1imFUxhG2Rev1pNRX63xKEjSDJqVyLVBQ==
   dependencies:
     fs-extra "7.x"
-    klaw-sync "6.x"
+    klaw "3.x"
+    refo-directory-to-other-directory "1.x"
 
-refo-core-watch@0.x:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/refo-core-watch/-/refo-core-watch-0.0.3.tgz#007b6a0bd6b3b0bfced232273e9b1c3b116b9462"
-  integrity sha512-wdsdy55k50bxFKQFPJ0GFq6zzLt4t4Kr0LvGszrXwtFbPOZDRdMggM2sqVcuT4SLnj3gYfHLYQv3N2BTNurE0w==
+refo-core-watch@1.x:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/refo-core-watch/-/refo-core-watch-1.0.2.tgz#ea6c3c1d92e233d13f58f7d7bbeedaa3671a55f1"
+  integrity sha512-o/zlW/AMT40V7+KDAxEycHggKDFtWPHdpXiAxI4dXmQTowzqQuusm9+k4Bx4NZxDxf4F9LicfZIqFbsq/aT8gw==
   dependencies:
     fs-extra "7.x"
     gaze "1.x"
-    refo-directory-to-other-directory "0.x"
+    refo-directory-to-other-directory "1.x"
 
-refo-core@0.x:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/refo-core/-/refo-core-0.0.2.tgz#7463014ce3b1e14177855860b4a570afe7c3ca01"
-  integrity sha512-hjbO1Sed7FG+fwMArWkK3JLQYK2FgMqs3KKzgHcvSH4S7tqn6P9nUNPWGthI8Igrh7k+12qN+qn9/gYi62bE5w==
+refo-core@1.x:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/refo-core/-/refo-core-1.0.2.tgz#b67e2724130b230a33d351bbcb62f39da6ceca9f"
+  integrity sha512-TLvwyiflXK/VUT+Cea8NNDxWPsxWXs2mRQxHS6LR6g46MrsYtg6UFAvh23ulnR2rtmUseOx7tgNSdLJOHdIeFg==
   dependencies:
-    refo-core-build "0.x"
-    refo-core-watch "0.x"
+    refo-core-build "1.x"
+    refo-core-watch "1.x"
 
-refo-directory-to-other-directory@0.x:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/refo-directory-to-other-directory/-/refo-directory-to-other-directory-0.0.0.tgz#9f3df3efbe9944909aab6a5832b8a90023a31627"
-  integrity sha512-YzB+AaXLuPUjf+eGl7prxMrsbUHSacphS9hkTzK63TPzawK1SzA7RLhNvxmvN15i+2s/+aqBmayZJ8Kh+siS8w==
+refo-directory-to-other-directory@1.x:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/refo-directory-to-other-directory/-/refo-directory-to-other-directory-1.0.0.tgz#96a8c8238bb1dc6582ecfd75cb7722875456845d"
+  integrity sha512-dMSYWgpaFJN1uywpXWsNWwyqrvEzRfeZZJMd4gH1xppY3TpZa0tyAI+gtOpa4tXQugiIEAErzq6+vmI0KKWFvA==
 
-refo-handle-handlebars@0.x:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/refo-handle-handlebars/-/refo-handle-handlebars-0.0.4.tgz#2c291ae5561e4c22813813a73ceb65cd5aff6e0c"
-  integrity sha512-cHUfi0gyNHYrigQiw3e+8omyKod9KPGR2c4yvg0Z8yHCPPyWvMqDi1Gyt2ch2w019S/lpvb9U71YaYOBhkA3GA==
+refo-handle-html@1.x:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/refo-handle-html/-/refo-handle-html-1.0.0.tgz#752f2bd3175864532333c45f9c478fe59d373003"
+  integrity sha512-djOJH5DIbGj1DRLfZujETEo1IJEEoC2gyeEASSb0AQMXcCp24Y20AdvF1XXXIUH0IOVWp7eWKv/tq8n+cpa35Q==
   dependencies:
-    fs-extra "7.x"
-    handlebars "4.x"
-    klaw-sync "6.x"
-    refo-directory-to-other-directory "0.x"
-    refo-handle-json "0.x"
+    html-minifier "3.x"
+    inline-source "6.x"
 
-refo-handle-json@0.x:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/refo-handle-json/-/refo-handle-json-0.0.0.tgz#56923c834cd810ff798aca919191a9d397b55cda"
-  integrity sha512-CpTK7yfn+SNmD9b3W2d7uzhEbbdMPNRP7PEs8t6saLOpMAMXVZ3gUlt2TXi00Tzkh8qbGb+GEqjepaL2xgNdqg==
-  dependencies:
-    markdown-it "8.x"
-    moment "2.x"
-
-refo-main@0.x:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/refo-main/-/refo-main-0.0.5.tgz#2c4d77e3520eab26e40eff82804e41aa523d5d14"
-  integrity sha512-kfBeVwtavA5NmPgaa5NYaV1dsF3++GR3yhE1DAC357GD40QHw3mYz5NF++KKQkdTHHZfTRbbkdsfzw7+rqPUCw==
+refo-main@1.x:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/refo-main/-/refo-main-1.1.0.tgz#5844e3a92a1d5268656b2422a5298142e3b542d7"
+  integrity sha512-Zl8B3+1QrR9MItmJVePVDQl3+nJU8rEQThkLRVlROJeUAaZ3FReYYsRbJtf/i3rmibwBv452bbSpdIJ9a7z6oA==
   dependencies:
     bundle-js "1.x"
     fs-extra "7.x"
-    html-minifier "3.x"
-    inline-source "6.x"
-    refo-core "0.x"
-    refo-directory-to-other-directory "0.x"
-    refo-handle-handlebars "0.x"
-    refo-pdf-source-change-handler "0.x"
+    hot-module-replacement "3.x"
+    refo-core "1.x"
+    refo-directory-to-other-directory "1.x"
+    refo-handle-html "1.x"
+    refo-pdf-source-change-handler "1.x"
     uglify-js "3.x"
 
-refo-pdf-source-change-handler@0.x:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/refo-pdf-source-change-handler/-/refo-pdf-source-change-handler-0.0.0.tgz#86db6f442dfbabc6e51670d79dd057470a6a889e"
-  integrity sha512-lnAuShXIjd+oWcHpWeUQXKfSnhsVVnJr7QQJHkmftmtBDIQRVqkYPH19psuv0M8/CYGdwZmj1rnZJmEeVn1WGQ==
+refo-pdf-source-change-handler@1.x:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/refo-pdf-source-change-handler/-/refo-pdf-source-change-handler-1.1.0.tgz#4066a38bd45ffb238b327c8be5d75c470616789d"
+  integrity sha512-SgNQcs5vx6gDEpPZfN3t0Gy0l7Gl8HBI9erKewJFHnm+4Ymx3H0k4L+G1iKOhYpisFlb3mgAzUJdtbkue28UMA==
   dependencies:
-    puppeteer-html2pdf "0.x"
+    puppeteer-html2pdf "1.x"
 
 relateurl@0.2.x:
   version "0.2.7"
@@ -983,7 +951,7 @@ source-map@^0.5.3:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
 
-source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
+source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
@@ -1041,17 +1009,19 @@ svgo@~1.0.5:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
+tiny-puppeteer@1.x:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/tiny-puppeteer/-/tiny-puppeteer-1.6.0.tgz#a91fdd95c0772e0599e175102d83934ba1c7b313"
+  integrity sha512-jU1owa5UZQhgEfYv19uA+nzwWzM8LKVNRKxe2aa2gxC5wRfi8QbGlBpCZvkaVF/kPd9+m20FzU8riHbE1F6nLg==
+  dependencies:
+    puppeteer-core "^1.9.0"
+
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-uc.micro@^1.0.1, uc.micro@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.5.tgz#0c65f15f815aa08b560a61ce8b4db7ffc3f45376"
-  integrity sha512-JoLI4g5zv5qNyT09f4YAvEZIIV1oOjqnewYg5D38dkQljIzpPT296dbIGvKro3digYI1bkb7W6EP1y4uDlmzLg==
-
-uglify-js@3.4.x, uglify-js@3.x, uglify-js@^3.1.4, uglify-js@~3.4.6:
+uglify-js@3.4.x, uglify-js@3.x, uglify-js@~3.4.6:
   version "3.4.9"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.4.9.tgz#af02f180c1207d76432e473ed24a28f4a782bae3"
   integrity sha512-8CJsbKOtEbnJsTyv6LE6m6ZKniqMiFWmm9sRbopbkGs3gMPPfd3Fh8iIA4Ykv5MgaTbqHr4BaoGLJLZNhsrW1Q==
