@@ -39,8 +39,14 @@ module.exports.watch = (handlers, assetDirectory, siteDirectory, staticDirectory
 
 				if (handle)
 					handle(filePath)
-				else
-					fs.copy(filePath, filePath.toStaticDirectory())
+				else {
+					const staticFilePath = filePath.toStaticDirectory()
+
+					if (fs.lstatSync(filePath).isDirectory())
+						fs.ensureDir(staticFilePath)
+					else
+						fs.copy(filePath, staticFilePath)
+				}
 
 				handleSourceChange(filePath)
 			break;
