@@ -3,8 +3,6 @@ const main = require('../asset/main')
 , slogan = 'A static site build tool.'
 , description = 'A static site and resume build tool with hot JavaScript module replacement. Ideal for resumes, portfolios and landing pages.'
 
-, linkPrefixum = !process.argv[2] ? 'refo/' : ''
-
 module.exports = `<!DOCTYPE HTML>
 <html lang="en">
 	<head>
@@ -18,7 +16,7 @@ module.exports = `<!DOCTYPE HTML>
 
 		<meta name="description" content="` + description + `">
 
-		<link rel="shortcut icon" href="` + linkPrefixum + `favicon.ico">
+		<link rel="shortcut icon" href="favicon.ico">
 
 		<meta name="msapplication-TileColor" content="#fff">
 
