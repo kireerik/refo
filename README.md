@@ -32,9 +32,9 @@
 #### Highlights
 - Edit your resume data in a `JSON` file.
 - View and publish your resume as a `PDF`, a `HTML` `document` and or as a page on a website.
-- Design and customize resume layout with `HTML` and `CSS`.
+	- Design and customize resume layout with `HTML` and `CSS`.
 - Generate 1 or more `PDF`s supporting different formats like `Letter` and `A4`.
-- Refresh the `PDF` like ~`.3` seconds after saving changes and the `PDF` is updated too.
+	- Refresh the `PDF` like ~`.3` seconds after saving changes and the `PDF` is updated too.
 
 ## Example
 - <a title="Refo - A static site build tool." href="https://kireerik.github.io/refo/">kireerik.github.io/refo</a> &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/example) &nbsp; [hosted source](https://github.com/kireerik/refo/tree/master/docs)
