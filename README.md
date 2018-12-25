@@ -22,10 +22,11 @@
 - 
 	- **H**ot **M**odule **R**eplacement with [hot-module-replacement](https://github.com/sidorares/hot-module-replacement)
 	- JS, CSS and image inlining with [inline-source](https://github.com/popeindustries/inline-source)
-	- HTML and inline CSS and JS minification with [HTMLMinifier](https://github.com/kangax/html-minifier)
-	- JS bundling with [bundle-js](https://github.com/hugabor/bundle-js) and minification with [UglifyJS](https://github.com/mishoo/UglifyJS2)
+	- HTML and inline CSS and JS minification with [HTMLMinifier](https://kangax.github.io/html-minifier/)
+	- JS bundling with [bundle-js](https://github.com/hugabor/bundle-js) and minification with [UglifyJS](https://skalman.github.io/UglifyJS-online/)
 - 
-	- `Markdown` support for texts in `JSON` files with [markdown-it](https://github.com/markdown-it/markdown-it)
+	- `Markdown` support for strings in `JSON` files with [markdown-it](https://markdown-it.github.io/)
+		- Duration calculation with [Moment.js](https://momentjs.com/)
 	- `PDF` generation with [puppeteer-html2pdf](https://github.com/kireerik/puppeteer-html2pdf)
 
 #### Highlights
@@ -229,8 +230,9 @@ refoCore(/*handlers, options*/)
 - <a title="JSON Resume" href="https://jsonresume.org/">JSON Resume</a>
 
 #### Other technologes
+- [gaze](https://github.com/shama/gaze) - The `watch` module [uses it](https://github.com/kireerik/refo/blob/eb321838f4ed5141d72bc7be914e0e1463dc1205/index/index/core/watch/index.js#L34-L35) to watch the `assetDirectory` and the `siteDirectory` folder for file changes.
+- [klaw](https://github.com/jprichardson/node-klaw) - The `build` module [uses it](https://github.com/kireerik/refo/blob/5f5757cc1110e55abc851116e8b55cbc6ccfbe78/index/index/core/build/index.js#L13) to loop through files within the `siteDirectory` folder.
 - [fs-extra](https://github.com/jprichardson/node-fs-extra)
-- [klaw](https://github.com/jprichardson/node-klaw) - The `build` module [uses it](https://github.com/kireerik/refo/blob/5f5757cc1110e55abc851116e8b55cbc6ccfbe78/index/index/core/build/index.js#L13) to loop through files in the `siteDirectory` folder.
 
 <ul><li><a href="https://github.com/boltpkg/bolt">bolt</a> - Used during development to link and publish packages.</li></ul>
 
