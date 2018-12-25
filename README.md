@@ -228,8 +228,11 @@ refoCore(/*handlers, options*/)
 ## Inspiration
 - <a title="JSON Resume" href="https://jsonresume.org/">JSON Resume</a>
 
-#### Technologes
+#### Other technologes
+- [fs-extra](https://github.com/jprichardson/node-fs-extra)
+- [klaw](https://github.com/jprichardson/node-klaw) - The `build` module [uses it](https://github.com/kireerik/refo/blob/5f5757cc1110e55abc851116e8b55cbc6ccfbe78/index/index/core/build/index.js#L13) to loop through files in the `siteDirectory` folder.
 
+<ul><li><a href="https://github.com/boltpkg/bolt">bolt</a> - Used during development to link and publish packages.</li></ul>
 
 #### Author
 - <a title="Oengi.com" href="https://oengi.com/">Erik Engi</a>
