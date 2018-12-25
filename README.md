@@ -19,15 +19,15 @@
 </p>
 
 ## Features
-- 
-	- **H**ot **M**odule **R**eplacement with [hot-module-replacement](https://github.com/sidorares/hot-module-replacement)
+- **H**ot **M**odule **R**eplacement with [hot-module-replacement](https://github.com/sidorares/hot-module-replacement)
 	- JS, CSS and image inlining with [inline-source](https://github.com/popeindustries/inline-source)
-	- HTML and inline CSS and JS minification with [HTMLMinifier](https://kangax.github.io/html-minifier/)
-	- JS bundling with [bundle-js](https://github.com/hugabor/bundle-js) and minification with [UglifyJS](https://skalman.github.io/UglifyJS-online/)
-- 
-	- `Markdown` support for strings in `JSON` files with [markdown-it](https://markdown-it.github.io/)
-		- Duration calculation with [Moment.js](https://momentjs.com/)
-	- `PDF` generation with [puppeteer-html2pdf](https://github.com/kireerik/puppeteer-html2pdf)
+- HTML and inline CSS and JS minification with [HTMLMinifier](https://kangax.github.io/html-minifier/)
+- JS bundling with [bundle-js](https://github.com/hugabor/bundle-js) and minification with [UglifyJS](https://skalman.github.io/UglifyJS-online/)
+<ul>
+	<li><code>Markdown</code> support for strings in <code>JSON</code> files with <a href="https://markdown-it.github.io/">markdown-it</a></li>
+		<ul><li>Duration calculation with <a href="https://momentjs.com/">Moment.js</a></li></ul>
+	<li><code>PDF</code> generation with <a href="https://github.com/kireerik/puppeteer-html2pdf">puppeteer-html2pdf</a></li>
+</ul>
 
 #### Highlights
 - Edit your resume data in a `JSON` file.
