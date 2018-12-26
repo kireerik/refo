@@ -39,6 +39,8 @@
 ## Examples
 - ### [Refo Example](https://github.com/kireerik/refo/tree/master/example)
 
+&nbsp;
+
 > [Propose file change](https://github.com/kireerik/refo/edit/master/README.md) to add your new example.
 
 ## Packages
