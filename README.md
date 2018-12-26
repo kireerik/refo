@@ -37,10 +37,7 @@
 	- Refresh the `PDF` like ~`.3` seconds after saving changes and the `PDF` is updated too.
 
 ## Examples
-<p>
-	<ul><li><h3><a href="https://github.com/kireerik/refo/tree/master/example">Refo Example</a></h3></li></ul>
-	<br>&nbsp;
-</p>
+- ### [Refo Example](https://github.com/kireerik/refo/tree/master/example)
 
 > [Propose file change](https://github.com/kireerik/refo/edit/master/README.md) to add your new example.
 
