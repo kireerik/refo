@@ -1,4 +1,10 @@
-<h1 align="center"><a title="Refo - A static site build tool." href="https://kireerik.github.io/refo/">Refo Example</a> (<a href="https://github.com/kireerik/refo/tree/master/docs">source</a>)</h1>
+<h1 align="center"><a title="Refo - A static site build tool." href="https://kireerik.github.io/refo/">Refo Example</a></h1>
+
+<p align="center">
+	Link: <a title="Refo - A static site build tool." href="https://kireerik.github.io/refo/">kireerik.github.io/refo</a>
+	<br>Source: <a href="https://github.com/kireerik/refo/tree/master/docs">../docs</a>
+	<br>&nbsp;
+</p>
 
 <p align="center">
 	<a title="Node.js" href="https://nodejs.org/en/"><img alt="Node.js" src="https://camo.githubusercontent.com/9c24355bb3afbff914503b663ade7beb341079fa/68747470733a2f2f6e6f64656a732e6f72672f7374617469632f696d616765732f6c6f676f2d6c696768742e737667" width="" height="90"></a>
