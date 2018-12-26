@@ -36,8 +36,8 @@
 - Generate 1 or more `PDF`s supporting different formats like `Letter` and `A4`.
 	- Refresh the `PDF` like ~`.3` seconds after saving changes and the `PDF` is updated too.
 
-## Example
-- <a title="Refo - A static site build tool." href="https://kireerik.github.io/refo/">kireerik.github.io/refo</a> &nbsp; &nbsp; [source code](https://github.com/kireerik/refo/tree/master/example) &nbsp; [hosted source](https://github.com/kireerik/refo/tree/master/docs)
+## Examples
+- ### [Refo Example](https://github.com/kireerik/refo/tree/master/example)
 
 > [Propose file change](https://github.com/kireerik/refo/edit/master/README.md) to add your new example.
 
