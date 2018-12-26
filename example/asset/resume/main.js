@@ -9,6 +9,8 @@ module.exports = json => html`<!DOCTYPE HTML>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8">
 
+		<link rel="shortcut icon" href="${json.basics.version && '../'}../favicon.ico">
+
 		<link inline href="${json.basics.version && '../'}../../asset/main.css">
 		<link inline href="${json.basics.version && '../'}../../asset/resume/style.css">
 		${json.basics.version && `
