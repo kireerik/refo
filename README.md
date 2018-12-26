@@ -39,9 +39,9 @@
 ## Examples
 - ### [Refo Example](https://github.com/kireerik/refo/tree/master/example)
 
-&nbsp;
-
-> [Propose file change](https://github.com/kireerik/refo/edit/master/README.md) to add your new example.
+<p align="center">
+	<a href="https://github.com/kireerik/refo/edit/master/README.md">Propose file change</a> to add your new example.
+</p>
 
 ## Packages
 | name `version` | &nbsp; source code location: [index/](https://github.com/kireerik/refo/tree/master/index/) &nbsp; |
@@ -226,7 +226,9 @@ refoCore(/*handlers, options*/)
 ## Who is using Refo
 - <a title="Oengi.com" href="https://oengi.com/">Oengi.com</a> – Erik Engi's website and resume.
 
-> [Propose file change](https://github.com/kireerik/refo/edit/master/README.md) to add your project here.
+<p align="center">
+	<a href="https://github.com/kireerik/refo/edit/master/README.md">Propose file change</a> to add your project here.
+</p>
 
 ## Inspiration
 - <a title="JSON Resume" href="https://jsonresume.org/">JSON Resume</a>
