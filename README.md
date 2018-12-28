@@ -229,6 +229,15 @@ const refoCore = require('refo-core')
 refoCore(/*handlers, options*/)
 ```
 
+## Contribution
+It can be useful to create an in depth documentation about each Refo package.
+
+> [Open a new issue](https://github.com/kireerik/refo/issues/new) if you think so and let's discuss this. We can definitely implement this if it turns out to be useful.
+
+It can be useful to implement logging about the build progress and file changes.
+
+> [Open a new issue](https://github.com/kireerik/refo/issues/new) if you think so and let's discuss this. We can definitely implement this if it turns out to be useful.
+
 ## Who is using Refo
 - <a title="Oengi.com" href="https://oengi.com/">Oengi.com</a> – Erik Engi's website and resume.
 
