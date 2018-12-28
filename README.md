@@ -124,7 +124,9 @@ refo(/*options*/)
 PDF files are saved to the root of the `staticDirectory` by default. You can modify this behaviour with a custom `getFileNamePrefixum` function.
 
 ### JSON handler
-The JSON handler can be used as you can see in the example ([asset/resume/getHandledJson.js](https://github.com/kireerik/refo/blob/ec14756dc0046ff7c007e0af1200f39678e3e632/example/asset/resume/getHandledJson.js#L9)) as well.
+The JSON handler is a standalone package. It is mainly useful to handle resume related data, but you can use it for anything else too.
+
+You can use it as you can see in the example ([asset/resume/getHandledJson.js](https://github.com/kireerik/refo/blob/ec14756dc0046ff7c007e0af1200f39678e3e632/example/asset/resume/getHandledJson.js#L9)) as well:
 
 ```JavaScript
 const handleJSON = require('refo-handle-json')
@@ -136,11 +138,15 @@ json = handleJSON(json)
 
 It is recommended to create a copy of the required JSON using the `JSON.parse(JSON.stringify(json))` functions for example when you are using Refo in `watch` mode ([related comment](https://github.com/sidorares/hot-module-replacement/issues/10#issuecomment-447473770)), because the JSON hander is changing object properties.
 
-The JSON handler is parsing string object values as `Markdown` using markdown-it.
+The JSON handler is parsing string object values as `Markdown` using markdown-it. Example: [example/asset/resume/data.json#L7](https://github.com/kireerik/refo/blob/90c4dd6b4010c14a6323833dc0af5c22d6676e12/example/asset/resume/data.json#L7)
 
-Properties which are ending with `-private` are removed. Objects which have a property named `private` are removed too.
+Properties which are ending with `-private` are removed. Example: [example/asset/resume/data.json#L4](https://github.com/kireerik/refo/blob/90c4dd6b4010c14a6323833dc0af5c22d6676e12/example/asset/resume/data.json#L4)
+<br>Objects which have a property named `private` are removed too.
 
-Properties which are ending with `-full` are only included when a second true value parameter is passed to the handler function. Objects which have a property named `full` are only included when a second true value parameter is passed to the handler function.
+Properties which are ending with `-full` are only included when a second true value parameter is passed to the handler function.  Example: [example/asset/resume/data.json#L8](https://github.com/kireerik/refo/blob/90c4dd6b4010c14a6323833dc0af5c22d6676e12/example/asset/resume/data.json#L8), [example/asset/resume/getHandledJson.js#L9](https://github.com/kireerik/refo/blob/master/example/asset/resume/getHandledJson.js#L9)
+<br>Objects which have a property named `full` are only included when a second true value parameter is passed to the handler function.
+
+#### Period
 
 When an object contains a `startDate` properrty without an `endDate` property then a `hidePresent` property can be used to hide a present label and show the current year instead.
 <br>A `hideEndDate` property can be used to hide the current year shown instead of a present label.
