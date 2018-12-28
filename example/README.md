@@ -88,6 +88,10 @@ It can  be useful to separate the resume template and publish it as a new Refo p
 
 ## About
 
+This example uses Refo's JSON handler. So you can control how and wether certain properties are displayed from the [asset/resume/data.json](https://github.com/kireerik/refo/blob/master/example/asset/resume/data.json) file as described in Refo's readme at the [JSON handler](https://github.com/kireerik/refo#json-handler) Usage section.
+
+### Server
+
 This project uses [superstatic](https://github.com/firebase/superstatic) to serve the generated static files. You can use any similar library to serve the files or no library at all in case you would like to browse the files directly. This can be useful for offline documentations for example.
 
 You can remove superstatic and use [firebase-tools](https://github.com/firebase/firebase-tools) instead (which uses superstatic) if you prefer. In this case you can modify the `scripts` in the `package.json` file and replace `superstatic` with `firebase serve` commands.
