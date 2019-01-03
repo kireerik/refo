@@ -31,7 +31,7 @@
 
 #### Highlights
 - Edit your resume data in a `JSON` file.
-- View and publish your resume as a `PDF`, a `HTML` `document` and or as a page on a website.
+- View and publish your resume as a `PDF`, an `HTML` `document` and or as a page on a website.
 	- Design and customize resume layout with `HTML` and `CSS`.
 - Generate 1 or more `PDF`s supporting different formats like `Letter` and `A4`.
 	- Refresh the `PDF` like ~`.3` seconds after saving changes and the `PDF` is updated too.
@@ -61,7 +61,7 @@
 ### Main
 You can use `refo` as global and or as a local command as you can see in the `scripts` in the [example package.json](https://github.com/kireerik/refo/blob/master/example/package.json) file.
 
-You can start Refo in `watch` mode by passing a `watch` parameter to the command. By default it creates a static build.
+You can start Refo in `watch` mode by passing a `watch` parameter to the command. By default, it creates a static build.
 
 You can create a `refo.options` `js` or `json` file to change the default properties. Examples:
 
@@ -85,7 +85,7 @@ module.exports = {
 }
 ```
 
-Creating a Node module can be useful, because you can define functions as well and use additional code if needed.
+Creating a Node module can be useful because you can define functions as well and use additional code if needed.
 
 You can also use Refo programmatically if you don't have a `refo.options` file in the folder where you require the `refo` package:
 ```JavaScript
@@ -119,9 +119,9 @@ refo(/*options*/)
 | `getFileNamePrefixum`	| [`async page => ...`](https://github.com/kireerik/refo/blob/9c8dfb3f7e973372d08569f33e89217f8487d024/index/pdf-source-change-handler/index.js#L10) | A function which generates the prefixum for the PDF file name. The default function returns the HTML document title before the `fileNameSeparator` without spaces. |
 | `mainFileName`	| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sourceDirectory`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Main name for the PDF file name. |
 | `defaultFormat`	| `'Letter'`			| Default PDF page size format. This won't be included in the PDF file name by default. |
-| `formats`		| `[defaultFormat, 'A4']`	| An array of generated PDF page size formats. A HTML document is saved in 2 formats by default. |
+| `formats`		| `[defaultFormat, 'A4']`	| An array of generated PDF page size formats. An HTML document is saved in 2 formats by default. |
 
-PDF files are saved to the root of the `staticDirectory` by default. You can modify this behaviour with a custom `getFileNamePrefixum` function.
+PDF files are saved to the root of the `staticDirectory` by default. You can modify this behavior with a custom `getFileNamePrefixum` function.
 
 ### JSON handler
 The JSON handler is a standalone package. It is mainly useful to handle resume related data, but you can use it for anything else too.
@@ -151,16 +151,16 @@ Properties which are ending with `-full` are only included when a second true va
 When an object contains a `startDate` properrty without an `endDate` property then a `hidePresent` property can be used to hide a present label and show the current year instead.
 <br>A `hideEndDate` property can be used to hide the current year shown instead of a present label.
 
-A `hideDuration` property can be used to hide the calculated duration. Otherwise a `duration` property is defined with the calculated duration (examples: 7 months, 1 year, 1.5 years, 2 years).
+A `hideDuration` property can be used to hide the calculated duration. Otherwise, a `duration` property is defined with the calculated duration (examples: 7 months, 1 year, 1.5 years, 2 years).
 
 ### Core
 You can use `refo-core` as global and or as a local command.
 
-You can start Refo core in `watch` mode by passing a `watch` parameter to the command. By default it creates a static build.
+You can start Refo core in `watch` mode by passing a `watch` parameter to the command. By default, it creates a static build.
 
-You can create a `refo.core` `js` or `json` file to change the default properties. In general a `js` file is recommended, because you can define functions as well, but in some cases you might not need that.
+You can create a `refo.core` `js` or `json` file to change the default properties. In general, a `js` file is recommended, because you can define functions as well, but in some cases, you might not need that.
 
-The `handlers` property is not defined by default. In this case all files are copied from the `siteDirectory` to the `staticDirectory` folder without any additional processing.
+The `handlers` property is not defined by default. In this case, all files are copied from the `siteDirectory` to the `staticDirectory` folder without any additional processing.
 
 The [folder structure options](https://github.com/kireerik/refo#folder-structure-options) are the same as for the main Refo package.
 
@@ -176,7 +176,7 @@ module.exports = {
 
 This example does nothing with each individual `.html` file. So these files are not saved to the `staticDirectory` folder.
 
-> As a propbably more meaningful but still simple example you could make some changes to the files and save them to a dedicated folder for example.
+> As a probably more meaningful but still simple example you could make some changes to the files and save them to a dedicated folder for example.
 
 The `handlers` property can be an object or a function. When it is a function the `options` property is passed as the first parameter to this function which can return the handler object.
 
@@ -205,7 +205,7 @@ module.exports = {
 
 This example pre-appends `<!DOCTYPE HTML>` to each HTML document located in the `siteDirectory` folder and saves them to the `staticDirectory` folder keeping the folder structure they had in the `siteDirectory` folder.
 
-You can also use an [`addStaticFilePath`](https://github.com/kireerik/refo/blob/1f580272a79b5cb9b18528e98b749689370c65f0/index/index/core/watch/index.js#L12) function property in `watch` mode to register a new file path for the canged file. This can be useful when you are changing the extension of the result for example. For example you are saving `.js` as `.html` files just as the main refo package does. This function accepts 2 parameters. The original and the new static file path.
+You can also use an [`addStaticFilePath`](https://github.com/kireerik/refo/blob/1f580272a79b5cb9b18528e98b749689370c65f0/index/index/core/watch/index.js#L12) function property in `watch` mode to register a new file path for the changed file. This can be useful when you are changing the extension of the result for example. For example, you are saving `.js` as `.html` files just as the main refo package does. This function accepts 2 parameters. The original and the new static file path.
 
 You can also use a [`watchedFileSource`](https://github.com/kireerik/refo/blob/1f580272a79b5cb9b18528e98b749689370c65f0/index/index/core/watch/index.js#L18-L19) object property in `watch` mode to register dependencies of a certain file. When a dependency changes the dependent file is regenerated. The main refo package uses this object in the HTML handler ([index/handle-html/index.js#L6-L18](https://github.com/kireerik/refo/blob/1f580272a79b5cb9b18528e98b749689370c65f0/index/handle-html/index.js#L6-L18)) to add inlined sources as dependencies.
 
@@ -230,7 +230,7 @@ refoCore(/*handlers, options*/)
 ```
 
 ## Contribution
-It can be useful to create an in depth documentation about each Refo package.
+It can be useful to create in-depth documentation about each Refo package.
 
 > [Open a new issue](https://github.com/kireerik/refo/issues/new) if you think so and let's discuss this. We can definitely implement this if it turns out to be useful.
 
