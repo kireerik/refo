@@ -191,3 +191,27 @@ module.exports = `
 `
 ```
 In some cases, one of these can be easier to read than the other so you may use the style according to the context or you can choose one over the other and stay consistent. This example uses both.
+
+#### Syntax highlighting
+
+Some code editors like [Atom](https://atom.io/) and GitHub, for example, highlights `html` tagged template literals as HTML as you can see this above as well.
+
+##### Sublime Text
+ - Install [Package Control](https://packagecontrol.io/installation) and [JS Custom](https://packagecontrol.io/packages/JSCustom).
+ - Go to `Preferencies / Package Settings / JS Custom / Settings`.
+ - Edit the `JS Custom.sublime-settings — User` file:
+	```JSON
+	{
+		"configurations": {
+			"Default": {
+				"custom_template_tags": {
+					"html": "scope:text.html.basic"
+					, "": "scope:text.html.basic"
+				}
+			}
+		}
+	}
+	```
+	This example setting highlights template literals tagged as `html` and without a tag as HTML.
+
+Now you can use the `JS Custom - Default` syntax highlight option for JavaScript files.
