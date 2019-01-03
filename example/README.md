@@ -79,7 +79,7 @@ You can completely remove the `linkPrefixum` in case you are publishing a `user 
 
 You can remove the `refo.options.json` file to set the `staticDirectory` to the default if you wish.
 
-In this case you can change the deployed folder from `../docs` to `static` in the [firebase.json](https://github.com/kireerik/refo/blob/8fd9472fa9ef7ee0e00adb26be4dd99e7e775041/example/firebase.json#L3) file.
+In this case, you can change the deployed folder from `../docs` to `static` in the [firebase.json](https://github.com/kireerik/refo/blob/8fd9472fa9ef7ee0e00adb26be4dd99e7e775041/example/firebase.json#L3) file.
 
 ## Contribution
 It can  be useful to separate the resume template and publish it as a new Refo package.
@@ -88,22 +88,22 @@ It can  be useful to separate the resume template and publish it as a new Refo p
 
 ## About
 
-This example uses Refo's JSON handler. So you can control how and wether certain properties are displayed from the [asset/resume/data.json](https://github.com/kireerik/refo/blob/master/example/asset/resume/data.json) file as described in Refo's readme at the [JSON handler](https://github.com/kireerik/refo#json-handler) Usage section.
+This example uses Refo's JSON handler. So you can control how and whether certain properties are displayed from the [asset/resume/data.json](https://github.com/kireerik/refo/blob/master/example/asset/resume/data.json) file as described in Refo's readme at the [JSON handler](https://github.com/kireerik/refo#json-handler) Usage section.
 
 ### Server
 
 This project uses [superstatic](https://github.com/firebase/superstatic) to serve the generated static files. You can use any similar library to serve the files or no library at all in case you would like to browse the files directly. This can be useful for offline documentations for example.
 
-You can remove superstatic and use [firebase-tools](https://github.com/firebase/firebase-tools) instead (which uses superstatic) if you prefer. In this case you can modify the `scripts` in the `package.json` file and replace `superstatic` with `firebase serve` commands.
+You can remove superstatic and use [firebase-tools](https://github.com/firebase/firebase-tools) instead (which uses superstatic) if you prefer. In this case, you can modify the `scripts` in the `package.json` file and replace `superstatic` with `firebase serve` commands.
 
-This project uses [concurrently](https://github.com/kimmobrunfeldt/concurrently) to run Refo in watch mode and serve the files with superstatic. You can use any similar library like [npm-run-all](https://github.com/mysticatea/npm-run-all) to run Refo and a server in paralell or no library at all if you don't need a file server.
+This project uses [concurrently](https://github.com/kimmobrunfeldt/concurrently) to run Refo in watch mode and serve the files with superstatic. You can use any similar library like [npm-run-all](https://github.com/mysticatea/npm-run-all) to run Refo and a server in parallel or no library at all if you don't need a file server.
 
-The `firebase.json` file could be named as `superstatic.json` if you prefer. This example does not depends on Firebase it self. Hovewer they provide one of the consistently fastest static hosting solution.
+The `firebase.json` file could be named as `superstatic.json` if you prefer. This example does not depend on Firebase itself. However, they provide one of if not the consistently fastest static hosting solution.
 
 ### Templating
 JavaScript [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) are used for templating HTML documents.
 
-This example aso uses [common-tags](https://github.com/declandewet/common-tags) in certain templates which allows to use a shorter syntax in many cases.
+This example also uses [common-tags](https://github.com/declandewet/common-tags) in certain templates which allows using a shorter syntax in many cases.
 
 Here are some scenarios commonly used in this example:
 
@@ -174,7 +174,7 @@ module.exports = html`<section>
 
 &nbsp;
 
-Wehn you are not using a tagged template literal with common-tags or with a similar library, then you can concatenate template parts with the `+` operator if you prefer:
+When you are not using a tagged template literal with common-tags or with a similar library, then you can concatenate template parts with the `+` operator if you prefer:
 ```JavaScript
 module.exports = `
 	<div>
@@ -190,4 +190,4 @@ module.exports = `
 	</div>
 `
 ```
-In some cases one of these can be easier to read than the other so you may use the style accordingto the context or you can choose one over the other and stay consistent. This example uses both.
+In some cases, one of these can be easier to read than the other so you may use the style according to the context or you can choose one over the other and stay consistent. This example uses both.
