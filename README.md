@@ -148,7 +148,7 @@ Properties which are ending with `-full` are only included when a second true va
 
 #### Period
 
-When an object contains a `startDate` properrty without an `endDate` property then a `hidePresent` property can be used to hide a present label and show the current year instead.
+When an object contains a `startDate` property without an `endDate` property then a `hidePresent` property can be used to hide a present label and show the current year instead.
 <br>A `hideEndDate` property can be used to hide the current year shown instead of a present label.
 
 A `hideDuration` property can be used to hide the calculated duration. Otherwise, a `duration` property is defined with the calculated duration (examples: 7 months, 1 year, 1.5 years, 2 years).
@@ -248,7 +248,7 @@ It can be useful to implement logging about the build progress and file changes.
 ## Inspiration
 - <a title="JSON Resume" href="https://jsonresume.org/">JSON Resume</a>
 
-#### Other technologes
+#### Other technologies
 - [gaze](https://github.com/shama/gaze) - The `watch` module [uses it](https://github.com/kireerik/refo/blob/eb321838f4ed5141d72bc7be914e0e1463dc1205/index/index/core/watch/index.js#L34-L35) to watch the `assetDirectory` and the `siteDirectory` folder for file changes.
 - [klaw](https://github.com/jprichardson/node-klaw) - The `build` module [uses it](https://github.com/kireerik/refo/blob/5f5757cc1110e55abc851116e8b55cbc6ccfbe78/index/index/core/build/index.js#L13) to loop through files within the `siteDirectory` folder.
 - [fs-extra](https://github.com/jprichardson/node-fs-extra)
