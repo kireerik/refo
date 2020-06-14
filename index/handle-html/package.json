@@ -3,6 +3,6 @@
 	, "version": "1.0.0"
 	, "dependencies": {
 		"inline-source": "6.x"
-		, "html-minifier": "3.x"
+		, "html-minifier": "4.x"
 	}
 }
