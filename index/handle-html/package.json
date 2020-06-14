@@ -2,7 +2,7 @@
 	"name": "refo-handle-html"
 	, "version": "1.0.0"
 	, "dependencies": {
-		"inline-source": "6.x"
+		"inline-source": "7.x"
 		, "html-minifier": "4.x"
 	}
 }

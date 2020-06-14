@@ -30,7 +30,7 @@
 		, "moment": "2.x"
 
 
-		, "inline-source": "6.x"
+		, "inline-source": "7.x"
 		, "html-minifier": "4.x"
 
 		, "bundle-js": "1.x"
