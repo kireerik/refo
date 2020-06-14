@@ -121,10 +121,10 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
-bolt@0.22.x:
-  version "0.22.5"
-  resolved "https://registry.yarnpkg.com/bolt/-/bolt-0.22.5.tgz#78211c36d12abd24db0dfbcc45d98a78270a92d1"
-  integrity sha512-RK2VhQsYzFLzullU+G7TjW/0ICBs2l+vR4aiHg+hMF8spjgzhukTNlK08MOE9/Gdd1BeBa5AJ5F5FXSOWncN4g==
+bolt@0.24.x:
+  version "0.24.5"
+  resolved "https://registry.yarnpkg.com/bolt/-/bolt-0.24.5.tgz#6dc21e5628a928a3d547a0bd959fb15540b5149e"
+  integrity sha512-tVeTuboDbCQVWQxbsDA8ZXp20j82XN/QxRbzvqMfjgXSV8NoEWYBGhBaOndewnIehvAaHYBSML1ICZRbwMQe6Q==
   dependencies:
     array-includes "^3.0.3"
     babel-runtime "^6.25.0"
@@ -135,12 +135,13 @@ bolt@0.22.x:
     cmd-shim "^2.0.2"
     cross-spawn "^5.1.0"
     detect-indent "^5.0.0"
+    detect-newline "2.1.0"
     find-up "^2.1.0"
     globby "^6.1.0"
     inquirer "3.3.0"
     is-glob "^4.0.0"
     make-dir "^1.0.0"
-    meow "^4.0.0"
+    meow "^5.0.0"
     minimatch "^3.0.4"
     multimatch "^2.1.0"
     p-limit "^1.1.0"
@@ -484,6 +485,11 @@ detect-indent@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-5.0.0.tgz#3871cc0a6a002e8c3e5b3cf7f336264675f06b9d"
   integrity sha1-OHHMCmoALow+Wzz38zYmRnXwa50=
+
+detect-newline@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-2.1.0.tgz#f41f1c10be4b00e87b5f13da680759f2c5bfd3e2"
+  integrity sha1-9B8cEL5LAOh7XxPaaAdZ8sW/0+I=
 
 dom-serializer@0:
   version "0.1.0"
@@ -1104,20 +1110,20 @@ mdurl@^1.0.1:
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
   integrity sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=
 
-meow@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/meow/-/meow-4.0.1.tgz#d48598f6f4b1472f35bf6317a95945ace347f975"
-  integrity sha512-xcSBHD5Z86zaOc+781KrupuHAzeGXSLtiAOmBsiLDiPSaYSB6hdew2ng9EBAnZ62jagG9MHAOdxpDi/lWBFJ/A==
+meow@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/meow/-/meow-5.0.0.tgz#dfc73d63a9afc714a5e371760eb5c88b91078aa4"
+  integrity sha512-CbTqYU17ABaLefO8vCU153ZZlprKYWDljcndKKDCFcYQITzWCXZAVk4QMFZPgvzrnUQ3uItnIE/LoUOwrT15Ig==
   dependencies:
     camelcase-keys "^4.0.0"
     decamelize-keys "^1.0.0"
     loud-rejection "^1.0.0"
-    minimist "^1.1.3"
     minimist-options "^3.0.1"
     normalize-package-data "^2.3.4"
     read-pkg-up "^3.0.0"
     redent "^2.0.0"
     trim-newlines "^2.0.0"
+    yargs-parser "^10.0.0"
 
 methods@^1.1.1:
   version "1.1.2"
@@ -1170,11 +1176,6 @@ minimist@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
   integrity sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
-
-minimist@^1.1.3:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
-  integrity sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
 
 minimist@~0.0.1:
   version "0.0.10"
@@ -1976,6 +1977,13 @@ yallist@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
   integrity sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
+
+yargs-parser@^10.0.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-10.1.0.tgz#7202265b89f7e9e9f2e5765e0fe735a905edbaa8"
+  integrity sha512-VCIyR1wJoEBZUqk5PA+oOBF6ypbwh5aNB3I50guxAL/quggdfs4TtNHQrSazFA3fYZ+tEqfs0zIGlv0c/rgjbQ==
+  dependencies:
+    camelcase "^4.1.0"
 
 yarn@^1.9.4:
   version "1.12.3"

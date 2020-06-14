@@ -16,7 +16,7 @@
 		]
 	}
 	, "devDependencies": {
-		"bolt": "0.22.x"
+		"bolt": "0.24.x"
 
 		, "fs-extra": "7.x"
 
