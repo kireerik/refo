@@ -2,7 +2,7 @@
 	"name": "refo-handle-json"
 	, "version": "1.0.0"
 	, "dependencies": {
-		"markdown-it": "8.x"
+		"markdown-it": "11.x"
 		, "moment": "2.x"
 	}
 }
