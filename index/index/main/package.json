@@ -4,7 +4,7 @@
 	, "dependencies": {
 		"refo-core": "1.x"
 
-		, "fs-extra": "7.x"
+		, "fs-extra": "9.x"
 
 		, "refo-directory-to-other-directory": "1.x"
 

@@ -2,7 +2,7 @@
 	"name": "refo-core-build"
 	, "version": "1.0.1"
 	, "dependencies": {
-		"fs-extra": "7.x"
+		"fs-extra": "9.x"
 		, "klaw": "3.x"
 
 		, "refo-directory-to-other-directory": "1.x"
