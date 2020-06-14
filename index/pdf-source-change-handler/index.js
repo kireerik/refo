@@ -22,7 +22,7 @@ module.exports = (staticDirectory, watchChanges
 			let folder = filePath.split(path.sep)
 			folder = folder[folder.length - 1 - 1]
 
-			, getPdfFileName = format => {
+			const getPdfFileName = format => {
 				var currentText = mainFileName
 
 				if (folder == 'full' || format != defaultFormat)
@@ -30,12 +30,9 @@ module.exports = (staticDirectory, watchChanges
 
 				return fileNameSeparator + (folder == 'full' ? 'full' : '') + (format == defaultFormat ? '' : format) + currentText + '.pdf'
 			}
-			, getPdfPath = (format = '') => {
-				var pdfFileName	= getPdfFileName(format)
-
-				return async page =>
-					staticDirectory + '/' + (await getFileNamePrefixum(page)) + pdfFileName
-			}
+			, getPdfPath = (format = '') =>
+				async page =>
+					staticDirectory + '/' + (await getFileNamePrefixum(page)) + getPdfFileName(format)
 
 			formats.forEach(format =>
 				generatePDF(filePath, getPdfPath(format), format)

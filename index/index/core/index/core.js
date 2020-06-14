@@ -1,20 +1,34 @@
 const watchChanges = process.argv[2]
 
 , build = require('refo-core-build')
+
 if (watchChanges)
 	var {addStaticFilePath, watchedFileSource, watch} = require('refo-core-watch')
 
-var assetDirectory, siteDirectory, staticDirectory
+var directories
 
-module.exports.get = (options = {}) => {
-	({assetDirectory = 'asset', siteDirectory = 'site', staticDirectory = 'static'} = options)
+module.exports = {
+	get: ({
+		assetDirectory = 'asset'
+		, siteDirectory = 'site'
+		, staticDirectory = 'static'
+		, ...options
+	} = {}) => {
+		directories = {assetDirectory, siteDirectory, staticDirectory}
 
-	return {assetDirectory, siteDirectory, staticDirectory, addStaticFilePath, watchedFileSource, ...options}
-}
+		return {
+			...directories
+			, addStaticFilePath, watchedFileSource
+			, ...options
+		}
+	}
 
-module.exports.use = handlers => {
-	build(handlers, siteDirectory, staticDirectory)
+	, use: handlers => {
+		const {assetDirectory, siteDirectory, staticDirectory} = directories
 
-	if (watchChanges)
-		watch(handlers, assetDirectory, siteDirectory, staticDirectory)
+		build(handlers, siteDirectory, staticDirectory)
+
+		if (watchChanges)
+			watch(handlers, assetDirectory, siteDirectory, staticDirectory)
+	}
 }

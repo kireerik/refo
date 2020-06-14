@@ -17,23 +17,22 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 	const handleHTML = getHtmlHandler(watchedFileSource)
 	, handlePdfSourceChange = getPdfSourceChangeHandler(staticDirectory, !!watchedFileSource, pdfSourceChangeHandler)
 
-	String.prototype.save = function(html) {
-		const filePath = this.toString()
-
-		fs.writeFile(filePath, html
-			, () => handlePdfSourceChange(filePath)
+	, saveHTML = async (staticFilePath, filePath, html) =>
+		fs.writeFile(
+			staticFilePath
+			, await handleHTML(filePath, html)
+			, () => handlePdfSourceChange(staticFilePath)
 		)
-	}
 
 	return {
 		'.html':
-			async filePath => {
-				var html = fs.readFileSync(filePath, 'UTF-8')
+			filePath =>
+				saveHTML(
+					filePath.toStaticDirectory()
+					, filePath
+					, fs.readFileSync(filePath, 'UTF-8')
+				)
 
-				html = await handleHTML(filePath, html)
-
-				filePath.toStaticDirectory().save(html)
-			}
 		, '.js': (() => {
 			const path = require('path')
 
@@ -50,13 +49,8 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 
 					fs.writeFile(staticFilePath, js)
 				} else {
-					const handleModule = async () => {
-						var html = require(filePath)
-
-						html = await handleHTML(filePath, html)
-
-						staticFilePath.save(html)
-					}
+					const handleModule = async () =>
+						saveHTML(staticFilePath, filePath, require(filePath))
 
 					staticFilePath = staticFilePath.substring(0, staticFilePath.lastIndexOf('.')) + '.html'
 
