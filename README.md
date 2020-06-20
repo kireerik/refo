@@ -140,7 +140,7 @@ It is recommended to create a copy of the required JSON using the `JSON.parse(JS
 
 The JSON handler is parsing string object values as `Markdown` using markdown-it. Example: [example/asset/resume/data.json#L7](https://github.com/kireerik/refo/blob/90c4dd6b4010c14a6323833dc0af5c22d6676e12/example/asset/resume/data.json#L7)
 
-Properties which are ending with `-private` are removed. Example: [example/asset/resume/data.json#L4](https://github.com/kireerik/refo/blob/90c4dd6b4010c14a6323833dc0af5c22d6676e12/example/asset/resume/data.json#L4)
+Properties which are ending with `-private` are ~~removed~~. Example: [example/asset/resume/data.json#L4](https://github.com/kireerik/refo/blob/90c4dd6b4010c14a6323833dc0af5c22d6676e12/example/asset/resume/data.json#L4)
 <br>Objects which have a property named `private` are removed too.
 
 Properties which are ending with `-full` are only included when a second true value parameter is passed to the handler function.  Example: [example/asset/resume/data.json#L8](https://github.com/kireerik/refo/blob/90c4dd6b4010c14a6323833dc0af5c22d6676e12/example/asset/resume/data.json#L8), [example/asset/resume/getHandledJson.js#L9](https://github.com/kireerik/refo/blob/master/example/asset/resume/getHandledJson.js#L9)
