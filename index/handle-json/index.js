@@ -35,7 +35,7 @@ module.exports = (json, full) => {
 					if (object[index].endDate) {
 						var endDate = moment(object[index].endDate, format)
 
-						if (object[index].endDate.split('-').length == 2)
+						if (object[index].endDate.toString().split('-').length == 2)
 							endDate = moment(object[index].endDate + endDate.daysInMonth(), format)
 					} else if (object[index].hidePresent)
 						if (object[index].hideEndDate) {
@@ -74,11 +74,11 @@ module.exports = (json, full) => {
 					}
 
 					if (object[index].startDate)
-						object[index].startDate = object[index].startDate.split('-')[0]
+						object[index].startDate = object[index].startDate.toString().split('-')[0]
 
 					if (object[index].endDate)
 						object[index].endDate = (
-							parseInt(object[index].endDate.split('-')[0])
+							parseInt(object[index].endDate.toString().split('-')[0])
 							+ (
 								object[index].hidePresent ?
 									''
@@ -90,10 +90,10 @@ module.exports = (json, full) => {
 						).toString()
 
 					if (object[index].date)
-						object[index].date = object[index].date.split('-')[0]
+						object[index].date = object[index].date.toString().split('-')[0]
 
 					if (object[index].releaseDate)
-						object[index].releaseDate = object[index].releaseDate.split('-')[0]
+						object[index].releaseDate = object[index].releaseDate.toString().split('-')[0]
 
 					traverse(object[index])
 				}
