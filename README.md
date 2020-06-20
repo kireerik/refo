@@ -54,7 +54,7 @@
 | <ul><li>[directory-to-other-directory](https://www.npmjs.com/package/refo-directory-to-other-directory) `1.0.0` (=`0.0.0`) &nbsp; </li></ul> | &nbsp; &nbsp; [directory-to-other-directory](https://github.com/kireerik/refo/tree/master/index/directory-to-other-directory) &nbsp; &nbsp; |
 | <ul><li>[handle-html](https://www.npmjs.com/package/refo-handle-html) `1.0.1` &nbsp; </li></ul> | &nbsp; &nbsp; [handle-html](https://github.com/kireerik/refo/tree/master/index/handle-html) &nbsp; &nbsp; |
 | <ul><li>[pdf-source-change-handler](https://www.npmjs.com/package/refo-pdf-source-change-handler) `1.1.1` &nbsp; </li></ul> | &nbsp; &nbsp; [pdf-source-change-handler](https://github.com/kireerik/refo/tree/master/index/pdf-source-change-handler) &nbsp; &nbsp; |
-| <ul><li>[handle-json](https://www.npmjs.com/package/refo-handle-json) `1.0.1` &nbsp; </li></ul> | &nbsp; &nbsp; [handle-json](https://github.com/kireerik/refo/tree/master/index/handle-json) &nbsp; &nbsp; |
+| <ul><li>[handle-json](https://www.npmjs.com/package/refo-handle-json) `1.0.2` &nbsp; </li></ul> | &nbsp; &nbsp; [handle-json](https://github.com/kireerik/refo/tree/master/index/handle-json) &nbsp; &nbsp; |
 
 ## Usage
 
