@@ -98,8 +98,9 @@ module.exports = (json, full) => {
 					traverse(object[index])
 				}
 			else
-				object[index] =
-					markdownIt.renderInline(object[index].split("'").join('’'))
+				if (typeof object[index] == 'string')
+					object[index] =
+						markdownIt.renderInline(object[index].split("'").join('’'))
 		}
 	})(json)
 
