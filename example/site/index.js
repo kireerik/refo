@@ -1,4 +1,4 @@
-const main = require('../asset/main')
+const main = require('./asset/main')
 
 , slogan = 'A static site build tool.'
 , description = 'A static site and resume build tool with hot JavaScript module replacement. Ideal for resumes, portfolios and landing pages.'
@@ -25,8 +25,8 @@ module.exports = `<!DOCTYPE HTML>
 		<meta property="og:description" content="` + description + `">
 		<meta property="og:type" content="website">
 
-		<link inline href="../asset/main.css">
-		<link inline href="../asset/index.css">
+		<link inline href="./site/asset/main.css">
+		<link inline href="./site/asset/index.css">
 		<script>
 			(function (onReady) {
 				if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading')

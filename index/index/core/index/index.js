@@ -3,7 +3,7 @@ const fs = require('fs')
 , path = require('path')
 
 , coreFileName = './refo.core'
-, coreFile = path.resolve(fs.realpathSync(process.cwd()), coreFileName)
+, coreFile = path.resolve(fs.realpathSync(process.cwd()), coreFileName)//separate//remove const (reason: only used once)
 try {var core = require(coreFile)} catch (error) {}
 
 const main = require('./main')

@@ -1,4 +1,5 @@
 const fs = require('fs-extra')
+, path = require('path')
 
 , getToStaticDirectory = require('refo-directory-to-other-directory')
 
@@ -7,18 +8,31 @@ const fs = require('fs-extra')
 , bundle = require('bundle-js')
 , minifyJS = require('uglify-js').minify
 
-require('hot-module-replacement')()
+require('hot-module-replacement')()//check if can be separated (it will be common)
 
 const getPdfSourceChangeHandler = require('refo-pdf-source-change-handler')
 
-module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFilePath, watchedFileSource, pdfSourceChangeHandler}) => {
-	String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
+module.exports = ({
+	assetDirectory, staticDirectory
+	, watchChanges, watchedFileSource
+	, pdfSourceChangeHandler
+}) => {
+	const toStaticDirectory = pathX =>
+		getToStaticDirectory(
+			process.cwd() + path.sep
+			+ pathX.replace(
+				path.resolve(process.cwd()) + path.sep
+				, ''
+			).split(path.sep)[0]
+		,
+			staticDirectory
+		).call(pathX)
 
 	const handleHTML = getHtmlHandler(watchedFileSource)
 	, handlePdfSourceChange = getPdfSourceChangeHandler(staticDirectory, !!watchedFileSource, pdfSourceChangeHandler)
 
 	, saveHTML = async (staticFilePath, filePath, html) =>
-		fs.writeFile(
+		fs.outputFile(
 			staticFilePath
 			, await handleHTML(filePath, html)
 			, () => handlePdfSourceChange(staticFilePath)
@@ -28,20 +42,23 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 		'.html':
 			filePath =>
 				saveHTML(
-					filePath.toStaticDirectory()
+					toStaticDirectory(filePath)
 					, filePath
 					, fs.readFileSync(filePath, 'UTF-8')
 				)
 
-		, '.js': (() => {
+		, '.js': (() => {//separate .js and .index (and .)
 			const path = require('path')
 
-			var requiredModule = {}
-
 			return (filePath, sourceChange) => {
-				var staticFilePath = filePath.toStaticDirectory()
+				const staticFilePath =
+					toStaticDirectory(filePath)
 
-				if (filePath.replace(path.resolve(siteDirectory) + path.sep, '').split(path.sep)[0] == assetDirectory) {
+				if (
+					filePath.includes(
+						path.resolve(assetDirectory)
+					)
+				) {
 					let js = bundle({entry: filePath, disablebeautify: true})
 
 					for (let i = 1; i <= 2; i++)
@@ -49,22 +66,88 @@ module.exports = ({assetDirectory, siteDirectory, staticDirectory, addStaticFile
 
 					fs.writeFile(staticFilePath, js)
 				} else {
-					const handleModule = async () =>
-						saveHTML(staticFilePath, filePath, require(filePath))
+					let directory, fP = filePath
+console.log('fp: ', fP)
+//fp = filePath.replace(path.sep + 'index.js', '')
+//console.log('fp: ', fP)
 
-					staticFilePath = staticFilePath.substring(0, staticFilePath.lastIndexOf('.')) + '.html'
+					//if (!sourceChange) {
+						const index =
+							fP + path.sep + 'index.js'
 
-					if (addStaticFilePath)
-						addStaticFilePath(filePath, staticFilePath)
+						if (fs.existsSync(index)) {
+							directory = true
+//							fP = index
+						}
+					//}
 
-					if (!requiredModule[filePath] || sourceChange)
-						handleModule()
+					let html//
+					const requireModule = () =>
+						html = require(fP)
+					, saveModule = () =>
+						saveHTML(
+								staticFilePath
+								+ (directory ?
+									path.sep + 'index'
+								: '')
+								+ '.html'
+							,
+								fP
+							,
+								require(fP)//html
+						)
 
-					if (addStaticFilePath && !requiredModule[filePath]) {
-						requiredModule[filePath] = true
+					saveModule()
 
-						module.hot.accept(filePath, handleModule)
+					if (!sourceChange) {//
+						//requireModule()
+
+						if (watchChanges)
+							module.hot.accept(fP, () => {
+console.log('hot')
+								//requireModule()
+								saveModule()
+							})
 					}
+
+					//saveModule()
+
+					/*let html, saveModule, directory
+
+					if (!sourceChange) {
+						const requireModule = () =>
+							html = require(filePath)
+
+						requireModule()
+
+						if (watchChanges)
+							module.hot.accept(filePath, () => {
+								requireModule()// consider simplifying
+								saveModule()
+							})
+
+						const index =
+							filePath + path.sep + 'index.js'
+
+						if (fs.existsSync(index)) {
+							directory = true
+							filePath = index
+						}
+					}
+
+					(saveModule = () =>
+						saveHTML(
+								staticFilePath
+								+ (directory ?
+									path.sep + 'index'
+								: '')
+								+ '.html'
+							,
+								filePath
+							,
+								html
+						)
+					)()*/
 				}
 			}
 		})()

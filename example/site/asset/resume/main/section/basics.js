@@ -46,7 +46,7 @@ module.exports = basics => {
 				<div class="icons">
 					${profiles.map(({title, url, network}, index) => html`
 						<a ${index + 1 == profiles.length && `class="last" `}${title && `title="` + title + `" `}href="${url}" target="_blank" rel="noopener">
-							<img inline src="${version && '../'}../../asset/icon/${network}.svg">
+							<img inline src="asset/icon/${network}.svg">
 						</a>
 					`)}
 				</div>

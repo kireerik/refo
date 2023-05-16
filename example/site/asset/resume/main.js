@@ -11,8 +11,8 @@ module.exports = json => html`<!DOCTYPE HTML>
 
 		<link rel="shortcut icon" href="${json.basics.version && '../'}../favicon.ico">
 
-		<link inline href="${json.basics.version && '../'}../../asset/main.css">
-		<link inline href="${json.basics.version && '../'}../../asset/resume/style.css">
+		<link inline href="site/asset/main.css">
+		<link inline href="site/asset/resume/style.css">
 		${json.basics.version && `
 			<style>
 				@media print and (max-width: 12.782cm) {

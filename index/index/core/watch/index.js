@@ -6,16 +6,18 @@ const path = require('path')
 
 , getToStaticDirectory = require('refo-directory-to-other-directory')
 
-var staticFilePaths = {}
-, fileSources = {}
+//var staticFilePaths = {}
+var fileSources = {}
+
+require('hot-module-replacement')()
 
 module.exports = {
-	addStaticFilePath: (filePath, staticFilePath) => {
-		if (!staticFilePaths[filePath])
-			staticFilePaths[filePath] = staticFilePath
-	}
+	//addStaticFilePath: (filePath, staticFilePath) => {
+	//	if (!staticFilePaths[filePath])
+	//		staticFilePaths[filePath] = staticFilePath
+	//}
 
-	, watchedFileSource: {
+	/*, */watchedFileSource: {
 		init: filePath => fileSources[filePath] = []
 		, add: (filePath, sourceFilePath) => {
 			if (!fileSources[filePath].includes(sourceFilePath))
@@ -23,17 +25,45 @@ module.exports = {
 		}
 	}
 
-	, watch: (handlers, assetDirectory, siteDirectory, staticDirectory) => {
-		String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
+	, watch: (
+		handlers, indexModules
+		, assetDirectory, staticDirectory
+	) => {
+		String.prototype.toStaticDirectory = getToStaticDirectory(assetDirectory, staticDirectory)
 
 		const getHandler = filePath => handlers[path.extname(filePath)]
 		, handleSourceChange = filePath =>
 			Object.entries(fileSources).forEach(source => {
+console.log('source: ', source)
 				if (source[1].includes(filePath))
-					getHandler(source[0])(source[0], true)
+					handlers['.js']/*getHandler(source[0])*/(source[0], true)
 			})
 
 		watch(assetDirectory, (event, filePath) => handleSourceChange(filePath))
+		//watch(/*rootDirectory*/, (event, filePath) => handleSourceChange(filePath))
+
+		module.hot.accept(process.cwd(), () => {
+			const previousIndexModules = indexModules
+
+			indexModules = require(index)
+
+			//handle new indexModules//, and removed ones
+			indexModules.forEach(indexModule => {
+				if (!previousIndexModules.includes(indexModule))
+					handlers['.js'](
+						indexModule//path.resolve(process.cwd(), indexModule)
+					)
+			})
+			previousIndexModules.forEach(indexModule => {
+				if (!indexModules.includes(indexModule)) {
+					fs.unlink(filePath.toStaticDirectory())
+
+					if (fileSources[filePath])
+						delete fileSources[filePath]
+				}
+			})
+		})
+if (false)//copy files for assetDirectory or handle js on new
 		watch(siteDirectory, (event, filePath) => {
 			switch (event) {
 				case 'added': case 'changed': case 'renamed':
@@ -50,18 +80,18 @@ module.exports = {
 							fs.copy(filePath, staticFilePath)
 					}
 
-					handleSourceChange(filePath)
+					//handleSourceChange(filePath)// ?? (should I use this and if so where?) (no not needed here)
 				break;
 				case 'deleted':
 					fs.unlink(
-						staticFilePaths[filePath] ?
-							staticFilePaths[filePath]
-						:
+						//staticFilePaths[filePath] ?
+						//	staticFilePaths[filePath]
+						//:
 							filePath.toStaticDirectory()
 					)
 
-					if (staticFilePaths[filePath])
-						delete staticFilePaths[filePath]
+					//if (staticFilePaths[filePath])
+					//	delete staticFilePaths[filePath]
 
 					if (fileSources[filePath])
 						delete fileSources[filePath]

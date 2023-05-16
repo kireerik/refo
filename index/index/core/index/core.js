@@ -1,38 +1,50 @@
 const watchChanges = process.argv[2]
 
+, {realpathSync} = require('fs')
+, {resolve} = require('path')
+
 , build = require('refo-core-build')
 
 if (watchChanges)
-	var {addStaticFilePath, watchedFileSource, watch} = require('refo-core-watch')
+	var {
+		watchedFileSource, watch
+	} =
+		require('refo-core-watch')
 
 var directory = {}
 
 module.exports = {
 	get: ({
 		assetDirectory = 'asset'
-		, siteDirectory = 'site'
 		, staticDirectory = 'static'
 		, ...options
 	} = {}) => {
-		const directories = {assetDirectory, siteDirectory, staticDirectory}
+		const directories = {assetDirectory, staticDirectory}
 
 		, directoryName = Object.values(directories)
 
-		;['asset', 'site', 'static'].forEach((type, index) =>
+		;['asset', 'static'].forEach((type, index) =>
 			directory[type] = directoryName[index]
-		)
+		)//simplify
 
 		return {
 			...directories
-			, addStaticFilePath, watchedFileSource
+			, watchChanges, watchedFileSource
 			, ...options
 		}
 	}
 
 	, use: handlers => {
-		build(handlers, directory.site, directory.static)
+		const requireIndexModule = () =>
+			require(process.cwd())
+
+		, parameters = [
+			handlers, requireIndexModule(), directory.asset, directory.static
+		]
+
+		build(...parameters)
 
 		if (watchChanges)
-			watch(handlers, directory.asset, directory.site, directory.static)
+			watch(...parameters, requireIndexModule)
 	}
 }

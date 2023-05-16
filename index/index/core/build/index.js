@@ -1,18 +1,18 @@
-const path = require('path')
+const path = require('path')//simplify impports
 
 , fs = require('fs-extra')
 , klaw = require('klaw')
 
 , getToStaticDirectory = require('refo-directory-to-other-directory')
 
-module.exports = (handlers, siteDirectory, staticDirectory) => {
-	String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
+module.exports = (handlers, indexModules, assetDirectory, staticDirectory) => {
+	String.prototype.toStaticDirectory = getToStaticDirectory(assetDirectory, staticDirectory)
 
 	fs.emptyDirSync(staticDirectory)
-
-	klaw(siteDirectory).on('data', file => {
+//move favicon.ico
+	klaw(assetDirectory).on('data', file => {
 		if (handlers)
-			var handler = handlers[path.extname(file.path)]
+			var handler = handlers[path.extname(file.path)]//simplify
 
 		const staticFilePath = file.path.toStaticDirectory()
 
@@ -24,4 +24,11 @@ module.exports = (handlers, siteDirectory, staticDirectory) => {
 			else
 				fs.copy(file.path, staticFilePath)
 	})
+
+	if (handlers && handlers['.js'])
+		indexModules.forEach(indexModule =>
+			handlers['.js'](
+				path.resolve(process.cwd(), indexModule)
+			)
+		)
 }
