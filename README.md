@@ -21,12 +21,12 @@
 ## Features
 - **H**ot **M**odule **R**eplacement with [hot-module-replacement](https://github.com/sidorares/hot-module-replacement)
 	- JS, CSS and image inlining with [inline-source](https://github.com/popeindustries/inline-source)
-- HTML and inline CSS and JS minification with [HTMLMinifier](https://kangax.github.io/html-minifier/)
-- JS bundling with [bundle-js](https://github.com/hugabor/bundle-js) and minification with [UglifyJS](https://skalman.github.io/UglifyJS-online/)
+- HTML and inline CSS and JS minification using [HTMLMinifier terser](https://github.com/terser/html-minifier-terser)
+- JS minification using [UglifyJS](https://skalman.github.io/UglifyJS-online/)
 <ul>
 	<li><code>Markdown</code> support for strings in <code>JSON</code> files with <a href="https://markdown-it.github.io/">markdown-it</a></li>
 		<ul><li>Duration calculation with <a href="https://momentjs.com/">Moment.js</a></li></ul>
-	<li><code>PDF</code> generation with <a href="https://github.com/kireerik/puppeteer-html2pdf">puppeteer-html2pdf</a></li>
+	<li><code>PDF</code> generation using <a href="https://github.com/suhaotian/tiny-puppeteer">Tiny puppeteer</a></li>
 </ul>
 
 #### Highlights
@@ -34,94 +34,22 @@
 - View and publish your resume as a `PDF`, an `HTML` `document` and or as a page on a website.
 	- Design and customize resume layout with `HTML` and `CSS`.
 - Generate 1 or more `PDF`s supporting different formats like `Letter` and `A4`.
-	- Refresh the `PDF` like ~`.3` seconds after saving changes and the `PDF` is updated too.
+	- Refresh the `PDF` after saving changes to see the up to date `PDF`.
 
 ## Examples
-- ### [Refo Example](https://github.com/kireerik/refo/tree/master/example)
+- ### [Refo Example](https://github.com/kireerik/refo/tree/main/example)
 
 <p align="center">
-	<a href="https://github.com/kireerik/refo/edit/master/README.md">Propose file change</a> to add your new example.
+	<a href="https://github.com/kireerik/refo/edit/main/README.md">Propose file change</a> to add your new example.
 </p>
 
 ## Packages
-| name `version` | &nbsp; source code location: [index/](https://github.com/kireerik/refo/tree/master/index/) &nbsp; |
+| name `version` | &nbsp; source code location: [index/](https://github.com/kireerik/refo/tree/main/index/) &nbsp; |
 | --- | --- |
-| [refo](https://www.npmjs.com/package/refo) `1.1.1` &nbsp; | &nbsp; &nbsp; [index/index](https://github.com/kireerik/refo/tree/master/index/index/index) &nbsp; &nbsp; |
-| <ul><li>[core](https://www.npmjs.com/package/refo-core) `1.0.3` &nbsp; </li></ul> | &nbsp; &nbsp; [index/core/index](https://github.com/kireerik/refo/tree/master/index/index/core/index) &nbsp; &nbsp; |
-| <ul><li><ul><li>[build](https://www.npmjs.com/package/refo-core-build) `1.0.2` &nbsp; </li></ul></li></ul> | &nbsp; &nbsp; [index/core/build](https://github.com/kireerik/refo/tree/master/index/index/core/build) &nbsp; &nbsp; |
-| <ul><li><ul><li>[watch](https://www.npmjs.com/package/refo-core-watch) `1.0.3` &nbsp; </li></ul></li></ul> | &nbsp; &nbsp; [index/core/watch](https://github.com/kireerik/refo/tree/master/index/index/core/watch) &nbsp; &nbsp; |
-| <ul><li>[main](https://www.npmjs.com/package/refo-main) `1.1.1` &nbsp; </li></ul> | &nbsp; &nbsp; [index/main](https://github.com/kireerik/refo/tree/master/index/index/main) &nbsp; &nbsp; |
-| <ul><li>[directory-to-other-directory](https://www.npmjs.com/package/refo-directory-to-other-directory) `1.0.0` (=`0.0.0`) &nbsp; </li></ul> | &nbsp; &nbsp; [directory-to-other-directory](https://github.com/kireerik/refo/tree/master/index/directory-to-other-directory) &nbsp; &nbsp; |
-| <ul><li>[handle-html](https://www.npmjs.com/package/refo-handle-html) `1.0.1` &nbsp; </li></ul> | &nbsp; &nbsp; [handle-html](https://github.com/kireerik/refo/tree/master/index/handle-html) &nbsp; &nbsp; |
-| <ul><li>[pdf-source-change-handler](https://www.npmjs.com/package/refo-pdf-source-change-handler) `1.1.1` &nbsp; </li></ul> | &nbsp; &nbsp; [pdf-source-change-handler](https://github.com/kireerik/refo/tree/master/index/pdf-source-change-handler) &nbsp; &nbsp; |
-| <ul><li>[handle-json](https://www.npmjs.com/package/refo-handle-json) `1.0.2` &nbsp; </li></ul> | &nbsp; &nbsp; [handle-json](https://github.com/kireerik/refo/tree/master/index/handle-json) &nbsp; &nbsp; |
+| refo ||
+| <ul><li>[handle-json](https://www.npmjs.com/package/refo-handle-json) `1.0.2` &nbsp; </li></ul> | &nbsp; &nbsp; [handle-json](https://github.com/kireerik/refo/tree/main/index/handle-json) &nbsp; &nbsp; |
 
 ## Usage
-
-### Main
-You can use `refo` as global and or as a local command as you can see in the `scripts` in the [example package.json](https://github.com/kireerik/refo/blob/master/example/package.json) file.
-
-You can start Refo in `watch` mode by passing a `watch` parameter to the command. By default, it creates a static build.
-
-You can create a `refo.options` `js` or `json` file to change the default properties. Examples:
-
-`.js`:
-```JavaScript
-module.exports = {
-	staticDirectory: '../docs'
-	, pdfSourceChangeHandler: {
-		sourceDirectory: 'CV'
-	}
-}
-```
-
-`.json`:
-```JavaScript
-{
-	"staticDirectory": "../docs"
-	, "pdfSourceChangeHandler": {
-		"sourceDirectory": "CV"
-	}
-}
-```
-
-Creating a Node module can be useful because you can define functions as well and use additional code if needed.
-
-You can also use Refo programmatically if you don't have a `refo.options` file in the folder where you require the `refo` package:
-```JavaScript
-const refo = require('refo')
-
-refo(/*options*/)
-```
-
-You can define the 2. argument if you would like to use Refo programmatically in `watch` mode:
-```JavaScript
-process.argv[2] = 'watch'
-
-const refo = require('refo')
-
-refo(/*options*/)
-```
-
-#### Folder structure options
-| property name				| default value | use case |
-| ---					| :---:		| --- |
-| `assetDirectory`			| `'asset'`	| Dependent HTML documents are regenerated when an inlined source changes. This property is only used in watch mode by inline-source. |
-| `siteDirectory`			| `'site'`	| Node modules (not located in the `siteDirectory`/`assetDirectory` folder) and HTML files are processed with inline-source and HTMLMinifier and the result is saved to the `staticDirectory` folder as HTML. Other files are copied to the `staticDirectory` folder. |
-| <ul><li>`assetDirectory`</li></ul>	| `'asset'`	| JavaScript files in this folder are bundled with bundle-js and minified with UglifyJS and saved to the `staticDirectory`/`assetDirectory` folder. |
-| `staticDirectory`			| `'static'`	| Node modules (not located in the `siteDirectory`/`assetDirectory` folder) and HTML files from the `siteDirectory` folder are generated to this folder as HTML documents. Other files are copied to this folder from the `siteDirectory` folder. |
-
-#### `pdfSourceChangeHandler` options
-| property name		| default value			| use case |
-| ---			| :---:				| --- |
-| `sourceDirectory`	| `'resume'`			| PDF files are generated from the HTML documents located in this folder within the `staticDirectory` folder. |
-| `fileNameSeparator`	| `'-'`				| Separator for the PDF file name. |
-| `getFileNamePrefixum`	| [`async page => ...`](https://github.com/kireerik/refo/blob/9c8dfb3f7e973372d08569f33e89217f8487d024/index/pdf-source-change-handler/index.js#L10) | A function which generates the prefixum for the PDF file name. The default function returns the HTML document title before the `fileNameSeparator` without spaces. |
-| `mainFileName`	| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sourceDirectory`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Main name for the PDF file name. |
-| `defaultFormat`	| `'Letter'`			| Default PDF page size format. This won't be included in the PDF file name by default. |
-| `formats`		| `[defaultFormat, 'A4']`	| An array of generated PDF page size formats. An HTML document is saved in 2 formats by default. |
-
-PDF files are saved to the root of the `staticDirectory` by default. You can modify this behavior with a custom `getFileNamePrefixum` function.
 
 ### JSON handler
 The JSON handler is a standalone package. It is mainly useful to handle resume related data, but you can use it for anything else too.
@@ -143,7 +71,7 @@ The JSON handler is parsing string object values as `Markdown` using markdown-it
 Properties which are ending with `-private` are ~~removed~~. Example: [example/asset/resume/data.json#L4](https://github.com/kireerik/refo/blob/90c4dd6b4010c14a6323833dc0af5c22d6676e12/example/asset/resume/data.json#L4)
 <br>Objects which have a property named `private` are removed too.
 
-Properties which are ending with `-full` are only included when a second true value parameter is passed to the handler function.  Example: [example/asset/resume/data.json#L8](https://github.com/kireerik/refo/blob/90c4dd6b4010c14a6323833dc0af5c22d6676e12/example/asset/resume/data.json#L8), [example/asset/resume/getHandledJson.js#L9](https://github.com/kireerik/refo/blob/master/example/asset/resume/getHandledJson.js#L9)
+Properties which are ending with `-full` are only included when a second true value parameter is passed to the handler function.  Example: [example/asset/resume/data.json#L8](https://github.com/kireerik/refo/blob/90c4dd6b4010c14a6323833dc0af5c22d6676e12/example/asset/resume/data.json#L8), [example/asset/resume/getHandledJson.js#L9](https://github.com/kireerik/refo/blob/main/example/asset/resume/getHandledJson.js#L9)
 <br>Objects which have a property named `full` are only included when a second true value parameter is passed to the handler function.
 
 #### Period
@@ -153,88 +81,8 @@ When an object contains a `startDate` property without an `endDate` property the
 
 A `hideDuration` property can be used to hide the calculated duration. Otherwise, a `duration` property is defined with the calculated duration (examples: 7 months, 1 year, 1.5 years, 2 years).
 
-### Core
-You can use `refo-core` as global and or as a local command.
-
-You can start Refo core in `watch` mode by passing a `watch` parameter to the command. By default, it creates a static build.
-
-You can create a `refo.core` `js` or `json` file to change the default properties. In general, a `js` file is recommended, because you can define functions as well, but in some cases, you might not need that.
-
-The `handlers` property is not defined by default. In this case, all files are copied from the `siteDirectory` to the `staticDirectory` folder without any additional processing.
-
-The [folder structure options](https://github.com/kireerik/refo#folder-structure-options) are the same as for the main Refo package.
-
-Example `refo.core.js`:
-```JavaScript
-module.exports = {
-	handlers: {
-		'.html': () => {}
-	}
-	//, options: {}
-}
-```
-
-This example does nothing with each individual `.html` file. So these files are not saved to the `staticDirectory` folder.
-
-> As a probably more meaningful but still simple example you could make some changes to the files and save them to a dedicated folder for example.
-
-The `handlers` property can be an object or a function. When it is a function the `options` property is passed as the first parameter to this function which can return the handler object.
-
-Example `refo.core.js`:
-```JavaScript
-const fs = require('fs')
-
-, getToStaticDirectory = require('refo-directory-to-other-directory')
-
-module.exports = {
-	handlers: ({siteDirectory, staticDirectory}) => {
-		String.prototype.toStaticDirectory = getToStaticDirectory(siteDirectory, staticDirectory)
-
-		return {
-			'.html': filePath => {
-				var html = fs.readFileSync(filePath, 'UTF-8')
-
-				html = '<!DOCTYPE HTML>' + html
-
-				fs.writeFile(filePath.toStaticDirectory(), html)
-			}
-		}
-	}
-}
-```
-
-This example pre-appends `<!DOCTYPE HTML>` to each HTML document located in the `siteDirectory` folder and saves them to the `staticDirectory` folder keeping the folder structure they had in the `siteDirectory` folder.
-
-You can also use an [`addStaticFilePath`](https://github.com/kireerik/refo/blob/1f580272a79b5cb9b18528e98b749689370c65f0/index/index/core/watch/index.js#L12) function property in `watch` mode to register a new file path for the changed file. This can be useful when you are changing the extension of the result for example. For example, you are saving `.js` as `.html` files just as the main refo package does. This function accepts 2 parameters. The original and the new static file path.
-
-You can also use a [`watchedFileSource`](https://github.com/kireerik/refo/blob/1f580272a79b5cb9b18528e98b749689370c65f0/index/index/core/watch/index.js#L18-L19) object property in `watch` mode to register dependencies of a certain file. When a dependency changes the dependent file is regenerated. The main refo package uses this object in the HTML handler ([index/handle-html/index.js#L6-L18](https://github.com/kireerik/refo/blob/1f580272a79b5cb9b18528e98b749689370c65f0/index/handle-html/index.js#L6-L18)) to add inlined sources as dependencies.
-
-> As a bit more complex example you can see Refo's main handlers: [index/index/main/handlers.js](https://github.com/kireerik/refo/blob/master/index/index/main/handlers.js)
-> 
-> <br>Feel free to make a copy to remove and add new features to it. You can publish your new handlers on NPM if you like the result so others can require and use your custom Refo handler too.
-
-You can also use Refo core programmatically if you don't have a `refo.core` file in the folder where you require the `refo-core` package:
-```JavaScript
-const refoCore = require('refo-core')
-
-refoCore(/*handlers, options*/)
-```
-
-You can define the 2. argument if you would like to use Refo core programmatically in `watch` mode:
-```JavaScript
-process.argv[2] = 'watch'
-
-const refoCore = require('refo-core')
-
-refoCore(/*handlers, options*/)
-```
-
 ## Contribution
 It can be useful to create in-depth documentation about each Refo package.
-
-> [Open a new issue](https://github.com/kireerik/refo/issues/new) if you think so and let's discuss this. We can definitely implement this if it turns out to be useful.
-
-It can be useful to implement logging about the build progress and file changes.
 
 > [Open a new issue](https://github.com/kireerik/refo/issues/new) if you think so and let's discuss this. We can definitely implement this if it turns out to be useful.
 
@@ -242,21 +90,17 @@ It can be useful to implement logging about the build progress and file changes.
 - <a title="Oengi.com" href="https://oengi.com/">Oengi.com</a> – Erik Engi's website and resume.
 
 <p align="center">
-	<a href="https://github.com/kireerik/refo/edit/master/README.md">Propose file change</a> to add your project here.
+	<a href="https://github.com/kireerik/refo/edit/main/README.md">Propose file change</a> to add your project here.
 </p>
 
 ## Inspiration
 - <a title="JSON Resume" href="https://jsonresume.org/">JSON Resume</a>
 
 #### Other technologies
-- [gaze](https://github.com/shama/gaze) - The `watch` module [uses it](https://github.com/kireerik/refo/blob/eb321838f4ed5141d72bc7be914e0e1463dc1205/index/index/core/watch/index.js#L34-L35) to watch the `assetDirectory` and the `siteDirectory` folder for file changes.
-- [klaw](https://github.com/jprichardson/node-klaw) - The `build` module [uses it](https://github.com/kireerik/refo/blob/5f5757cc1110e55abc851116e8b55cbc6ccfbe78/index/index/core/build/index.js#L13) to loop through files within the `siteDirectory` folder.
-- [fs-extra](https://github.com/jprichardson/node-fs-extra)
+- [Astro](https://astro.build/)
 
 #### Author
 - <a title="Oengi.com" href="https://oengi.com/">Erik Engi</a>
 
 #### About the name
 **Re**sume + port**fo**lio = Refo
-
-Short and easy to type. Ideal as a command as well.
