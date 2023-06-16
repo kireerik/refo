@@ -1,21 +1,36 @@
 {
 	"scripts": {
-		"dev": "concurrently \"refo watch\" \"superstatic --port 80\" --kill-others-on-fail"
-		, "start": "refo && superstatic --port 80"
+		"dev": "astro dev --port 80"
 
-		, "static": "refo"
-		, "watch": "refo watch"
-		, "serve": "superstatic --port 80"
+		, "static": "astro build"
+		, "serve": "firebase serve --port 80"
 
-		, "deploy": "refo && firebase deploy"
+		, "start": "pnpm static && pnpm serve"
+
+		, "deploy": "pnpm static && firebase deploy"
 	}
 	, "devDependencies": {
-		"concurrently": "5.x"
+		"image-size": "1.x"
 
-		, "superstatic": "6.x"
+		, "@emotion/css": "11.x"
+
+		, "stack-tracer": "1.x"
+
+		, "@emotion/server": "11.x"
+
+		, "html-minifier-terser": "7.x"
+		, "uglify-js": "3.x"
+
+		, "tiny-puppeteer": "1.x"
 
 		, "common-tags": "1.x"
 		, "refo-handle-json": "1.x"
-		, "refo": "1.x"
+
+		, "quicklink": "2.x"
+
+		, "lazysizes": "5.x"
+
+		, "astro": "2.x"
 	}
+	, "type": "module"
 }

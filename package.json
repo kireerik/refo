@@ -2,41 +2,13 @@
 	"name": "refo"
 	, "bolt": {
 		"workspaces": [
-			"index/index/index"
-
-			, "index/index/core/*"
-
-			, "index/directory-to-other-directory"
-			, "index/handle-html"
-			, "index/pdf-source-change-handler"
-
-			, "index/index/main"
-
-			, "index/handle-json"
+			"index/handle-json"
 		]
 	}
 	, "devDependencies": {
 		"bolt": "0.24.x"
 
-		, "fs-extra": "9.x"
-
-		, "klaw": "3.x"
-
-		, "gaze": "1.x"
-
-		, "hot-module-replacement": "3.x"
-
 		, "markdown-it": "11.x"
 		, "moment": "2.x"
-
-
-		, "inline-source": "7.x"
-		, "html-minifier": "4.x"
-
-		, "bundle-js": "1.x"
-		, "uglify-js": "3.x"
-
-
-		, "puppeteer-html2pdf": "1.x"
 	}
 }
