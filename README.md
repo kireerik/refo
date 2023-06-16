@@ -253,8 +253,6 @@ It can be useful to implement logging about the build progress and file changes.
 - [klaw](https://github.com/jprichardson/node-klaw) - The `build` module [uses it](https://github.com/kireerik/refo/blob/5f5757cc1110e55abc851116e8b55cbc6ccfbe78/index/index/core/build/index.js#L13) to loop through files within the `siteDirectory` folder.
 - [fs-extra](https://github.com/jprichardson/node-fs-extra)
 
-<ul><li><a href="https://github.com/boltpkg/bolt">bolt</a> - Used during development to link and publish packages.</li></ul>
-
 #### Author
 - <a title="Oengi.com" href="https://oengi.com/">Erik Engi</a>
 
