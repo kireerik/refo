@@ -1,5 +1,7 @@
 import getHeader from './header'
 
+const linkPrefixum = import.meta.env.PROD ? '/refo' : ''
+
 export default async (
 	style
 
@@ -38,7 +40,7 @@ export default async (
 					})
 				</script>
 				` + script + `
-				<script async src="/main.js"></script>
+				<script async src="${linkPrefixum}/main.js"></script>
 			</head>
 			<body>
 				` + header + `
