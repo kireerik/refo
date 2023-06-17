@@ -28,27 +28,28 @@
 
 > Install dependencies:
 > ```shell
-> yarn install
+> pnpm install
 > ```
 
-> Are you on some kind of Unix based system? Mac? Linux? If so you might want to change the `port` in the `scripts` within the [package.json](https://github.com/kireerik/refo/blob/master/example/package.json#L2-L11) file, which is set to `80` which works on Windows. [Superstatic](https://github.com/firebase/superstatic)'s default is `3474` so you can remove that line if you prefer.
+> Are you on some kind of Unix based system? Mac? Linux? If so you might want to change the `port` in the `scripts` within the [package.json](https://github.com/kireerik/refo/blob/master/example/package.json#L2-L11) file, which is set to `80` which works on Windows. [Astro](https://astro.build/)'s default is `3000` so you can remove that line if you prefer.
 
 Start the server in development mode:
 > ```shell
-> yarn dev
+> pnpm dev
 > ```
-> This command starts Refo in `watch` mode and serves the files from the static `../docs` folder using [Superstatic](https://github.com/firebase/superstatic).
 
 Visit http://localhost/ to access the website.
 
 ### Static site generation
 Generate a static site:
 ```shell
-yarn static
+pnpm static
 ```
 Open the `index.html` within the `static` folder to access the website.
 
 ## Deployment
+
+### [Astro](https://docs.astro.build/en/guides/deploy/)
 
 ### [GitHub Pages](https://pages.github.com/)
 You can deploy the static `../docs` folder as it is.
@@ -74,12 +75,8 @@ You can completely remove the `linkPrefixum` in case you are publishing a `user 
 
 > Deploy your site to Firebase Hosting:
 > ```shell
-> yarn deploy
+> pnpm deploy
 > ```
-
-You can remove the `refo.options.json` file to set the `staticDirectory` to the default if you wish.
-
-In this case, you can change the deployed folder from `../docs` to `static` in the [firebase.json](https://github.com/kireerik/refo/blob/8fd9472fa9ef7ee0e00adb26be4dd99e7e775041/example/firebase.json#L3) file.
 
 ## Contribution
 It can  be useful to separate the resume template and publish it as a new Refo package.
@@ -88,7 +85,7 @@ It can  be useful to separate the resume template and publish it as a new Refo p
 
 ## About
 
-This example uses Refo's JSON handler. So you can control how and whether certain properties are displayed from the [asset/resume/data.json](https://github.com/kireerik/refo/blob/master/example/asset/resume/data.json) file as described in Refo's readme at the [JSON handler](https://github.com/kireerik/refo#json-handler) Usage section.
+This example uses Refo's JSON handler. So you can control how and whether certain properties are displayed from the [index/index/site/index/resume/data.js](https://github.com/kireerik/refo/blob/main/example/index/index/site/index/resume/data.js) file as described in Refo's readme at the [JSON handler](https://github.com/kireerik/refo#json-handler) Usage section.
 
 ### Server
 
