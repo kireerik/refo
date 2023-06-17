@@ -19,7 +19,7 @@ export default ({name, version}) => {
 		<div class="flexContainer">
 			<div class="flexGrow">
 				${version ? html`
-					<a title="View ${name}’s ${resume}" href="../${!linkPrefixum && resume}" rel="noopener" class="fontWeightNormal">View compact version</a>
+					<a title="View ${name}’s ${resume}" href="../${resume}" rel="noopener" class="fontWeightNormal">View compact version</a>
 				` : `
 					<a title="View ${name}’s full ${resume}" href="${linkPrefixum}${resume}/full" rel="noopener" class="fontWeightNormal">View full version</a>
 				`}
