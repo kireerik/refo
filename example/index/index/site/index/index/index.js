@@ -1,5 +1,5 @@
-const slogan = 'A static site build tool.'
-, description = 'A static site and resume build tool with hot JavaScript module replacement. Ideal for resumes, portfolios and landing pages.'
+const slogan = 'A static site example.'
+, description = 'A static site and resume example with styled modules.'
 
 import use from '@style'
 
