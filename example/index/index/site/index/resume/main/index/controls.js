@@ -1,4 +1,5 @@
-const linkPrefixum = import.meta.env.PROD ? '/refo/resume/' : ''
+const mainLinkPrefixum = import.meta.env.PROD ? '/refo/' : ''
+, linkPrefixum = import.meta.env.PROD ? mainLinkPrefixum + 'resume/' : ''
 
 import {html} from 'common-tags'
 
@@ -21,7 +22,7 @@ export default ({name, version}) => {
 				${version ? html`
 					<a title="View ${name}’s ${resume}" href="../${resume}" rel="noopener" class="fontWeightNormal">View compact version</a>
 				` : `
-					<a title="View ${name}’s full ${resume}" href="${resume}/full" rel="noopener" class="fontWeightNormal">View full version</a>
+					<a title="View ${name}’s full ${resume}" href="${mainLinkPrefixum}${resume}/full" rel="noopener" class="fontWeightNormal">View full version</a>
 				`}
 			</div>
 			<div>
