@@ -21,7 +21,7 @@ export default ({name, version}) => {
 				${version ? html`
 					<a title="View ${name}’s ${resume}" href="../${resume}" rel="noopener" class="fontWeightNormal">View compact version</a>
 				` : `
-					<a title="View ${name}’s full ${resume}" href="${linkPrefixum}${resume}/full" rel="noopener" class="fontWeightNormal">View full version</a>
+					<a title="View ${name}’s full ${resume}" href="${resume}/full" rel="noopener" class="fontWeightNormal">View full version</a>
 				`}
 			</div>
 			<div>
