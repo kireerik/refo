@@ -6,7 +6,7 @@ if (import.meta.env.DEV)
 
 import getShortName from '@getShortName'
 
-export default (css, [identifiers, names], method) =>
+export default (css, [identifiers, names]) =>
 	(...parameters) => {
 		const identifier =
 			css(...parameters).replace(key, '')
@@ -19,8 +19,9 @@ export default (css, [identifiers, names], method) =>
 			const name =
 				(import.meta.env.DEV ? getModuleName() : '')
 
-				+ getShortName(method(identifier))
+				+ getShortName(identifiers.length)
 
+			identifiers.push(identifier)
 			names.push(name)
 
 			return name

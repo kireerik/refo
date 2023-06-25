@@ -9,6 +9,8 @@ const indexName = 'index'
 
 import {get, close} from '../pdfGenerator'
 
+import solid from 'babel-preset-solid'
+
 import outDir from './staticDirectory'
 
 import {defineConfig} from 'astro/config'
@@ -22,8 +24,24 @@ export default defineConfig({
 		{
 			name: ''
 			, hooks: {
-				'astro:config:setup': ({injectRoute}) => {
+				'astro:config:setup': ({
+					addRenderer, injectRoute
+				}) => {
 					global.getPDF = get
+
+					addRenderer({
+						name: 'SolidJS'
+
+						, serverEntrypoint:
+							'@astrojs/solid-js/server.js'
+
+						, jsxImportSource: 'solid-js'
+						, jsxTransformOptions: () => ({
+							presets: [
+								solid(...[, ], {generate: 'ssr'})
+							]
+						})
+					})
 
 					if (import.meta.env.DEV)
 						injectRoute({

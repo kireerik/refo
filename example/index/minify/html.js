@@ -6,6 +6,7 @@ export default value =>
 		,
 			{
 				collapseWhitespace: true
+				, ignoreCustomComments: false
 				, removeComments: true
 				, removeAttributeQuotes: true
 				, sortAttributes: true

@@ -1,3 +1,3 @@
-import main from './main'
+import index from './index/index'
 
-export default await main()
+export default await index()

@@ -83,7 +83,7 @@ export default `
 	window.addEventListener('load', function () {
 		[].forEach.call(document.getElementsByTagName('a')
 			, function (link) {
-				if (link.target != '_blank')
+				if (link.target != '_blank' && !link.download)
 					link.addEventListener(
 						'click', function (event) {
 							event.preventDefault()

@@ -2,6 +2,8 @@ import firebase from './firebase'
 
 import {readFileSync} from 'fs'
 
+import {renderToString} from 'solid-js/web'
+
 import main from '@index/site/index/main'
 
 import asset from '@index/site/index/index/asset'
@@ -16,7 +18,7 @@ import index from '@index/site/index/index'
 import resume from '@index/site/index/resume'
 import resumeFull from '@index/site/index/resume/full'
 
-import paths from '@index/site/index/pdf/paths'
+import paths from '@index/site/index/pdf/path/s'
 import pdf from '@index/site/index/pdf'
 
 const js = '.js'
@@ -120,7 +122,9 @@ export const get = async ({
 					result = minifyScript(result)
 				else
 					if (!(image || json))
-						result = await minify(result)
+						result = await minify(
+							await renderToString(() => result)
+						)
 
 				return [
 					result
