@@ -59,9 +59,9 @@ You might want to change the `prefixum` in the following files according to the 
 `main/`
 - [header/index.jsx#L6](https://github.com/kireerik/refo/blob/17b836cb6afa85373c3dc8591c2326a4c34b928a/example/index/index/site/main/header/index.jsx#L6)
 - [index.jsx#L7](https://github.com/kireerik/refo/blob/17b836cb6afa85373c3dc8591c2326a4c34b928a/example/index/index/site/main/index.jsx#L7)
-`index/resume/index/index`
-- [.jsx#L13](https://github.com/kireerik/refo/blob/17b836cb6afa85373c3dc8591c2326a4c34b928a/example/index/index/site/index/resume/index/index.jsx#L13)
-- [/controls.jsx#L5](https://github.com/kireerik/refo/blob/17b836cb6afa85373c3dc8591c2326a4c34b928a/example/index/index/site/index/resume/index/index/controls.jsx#L5)
+- `index/resume/index/index`
+   - [.jsx#L13](https://github.com/kireerik/refo/blob/17b836cb6afa85373c3dc8591c2326a4c34b928a/example/index/index/site/index/resume/index/index.jsx#L13)
+   - [/controls.jsx#L5](https://github.com/kireerik/refo/blob/17b836cb6afa85373c3dc8591c2326a4c34b928a/example/index/index/site/index/resume/index/index/controls.jsx#L5)
 
 You can completely remove the `prefixum` in case you are publishing a `user or an organization site`.
 
