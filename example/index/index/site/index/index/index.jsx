@@ -1,7 +1,7 @@
 import title from '@index/site/main/title'
 
 const slogan = 'A static site example.'
-, description = 'A static site and resume example with styled modules.'
+, description = 'A static site and resume example with styled components.'
 
 import use from '@style'
 
