@@ -38,7 +38,7 @@ var page = {
 		indexDirectory + 'favicon.ico'
 	)
 	, ...Object.entries({
-		'main': main
+		main
 
 		, [assetDirectory + 'lazysizes']: lazysizes
 	}).reduce(
