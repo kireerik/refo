@@ -54,15 +54,20 @@ Open the `index.html` within the `static` folder to access the website.
 ### [GitHub Pages](https://pages.github.com/)
 You can deploy the static `../docs` folder as it is.
 
-You might want to change the `linkPrefixum` in the following files according to the name of your `project site` repository:
-- [asset/main.js#L5](https://github.com/kireerik/refo/blob/8fd9472fa9ef7ee0e00adb26be4dd99e7e775041/example/asset/main.js#L5)
-- [asset/resume/main/section/basics.js#L3](https://github.com/kireerik/refo/blob/8fd9472fa9ef7ee0e00adb26be4dd99e7e775041/example/asset/resume/main/section/basics.js#L3)
+You might want to change the `prefixum` in the following files according to the name of your `project site` repository:
+`index/index/site/`
+`main/`
+- [header/index.jsx#L6](https://github.com/kireerik/refo/blob/17b836cb6afa85373c3dc8591c2326a4c34b928a/example/index/index/site/main/header/index.jsx#L6)
+- [index.jsx#L7](https://github.com/kireerik/refo/blob/17b836cb6afa85373c3dc8591c2326a4c34b928a/example/index/index/site/main/index.jsx#L7)
+`index/resume/index/index`
+- [.jsx#L13](https://github.com/kireerik/refo/blob/17b836cb6afa85373c3dc8591c2326a4c34b928a/example/index/index/site/index/resume/index/index.jsx#L13)
+- [/controls.jsx#L5](https://github.com/kireerik/refo/blob/17b836cb6afa85373c3dc8591c2326a4c34b928a/example/index/index/site/index/resume/index/index/controls.jsx#L5)
 
-You can completely remove the `linkPrefixum` in case you are publishing a `user or an organization site`.
+You can completely remove the `prefixum` in case you are publishing a `user or an organization site`.
 
 ### [Firebase Hosting](https://firebase.google.com/products/hosting/)
 - Initial steps
-	- Remove the `linkPrefixum` from the files listed above under GitHub Pages Deployment.
+	- Remove the `prefixum` from the files listed above under GitHub Pages Deployment.
 	- Install and set up <a title="Firebase CLI" href="https://firebase.google.com/docs/cli/"><img alt="Firebase" src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-standard.svg" width="" height="18"> CLI</a>.
 	- Add a `.firebaserc` file with your Firebase project ID:
 		```JSON
