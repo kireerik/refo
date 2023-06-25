@@ -19,10 +19,20 @@
 </p>
 
 ## Features
-- **H**ot **M**odule **R**eplacement with [hot-module-replacement](https://github.com/sidorares/hot-module-replacement)
-	- JS, CSS and image inlining with [inline-source](https://github.com/popeindustries/inline-source)
+- **H**ot **M**odule **R**eplacement using [Astro](https://docs.astro.build/en/reference/cli-reference/#astro-dev)
+- JavaScript eXtensible markup language using [SolidJS](https://www.solidjs.com/) [Astro integration](https://docs.astro.build/en/guides/integrations-guide/solid-js/) and [babel-preset-solid](https://github.com/solidjs/solid/tree/main/packages/babel-preset-solid)
+- [importing Astro Asset as String](https://vitejs.dev/guide/assets.html#importing-asset-as-string)
+	- JS and [SVG](https://github.com/kireerik/refo/blob/main/example/index/svg.jsx) inlining
+	- JS bundling
+- [Style](https://github.com/kireerik/refo/tree/main/example/index/style)d components using [Emotion](https://emotion.sh/docs/introduction)
+	- [Short class names](https://github.com/kireerik/refo/blob/main/example/index/getShortName.js)
+	- [Class name label](https://github.com/kireerik/refo/blob/main/example/index/getModuleName.js) in `development` mode using [stack-tracer](https://github.com/bninni/stack-tracer)
+- [Image](https://github.com/kireerik/refo/blob/main/example/index/image.jsx) dimensions setting using [image-size](https://github.com/image-size/image-size)
 - HTML and inline CSS and JS minification using [HTMLMinifier terser](https://github.com/terser/html-minifier-terser)
 - JS minification using [UglifyJS](https://skalman.github.io/UglifyJS-online/)
+- Client side [navigation](blob/main/example/index/navigator.js)
+- Link prefetching using [Quicklink](https://getquick.link/)
+- Lazy loading using [lazysizes](https://github.com/aFarkas/lazysizes)
 <ul>
 	<li><code>Markdown</code> support for strings in <code>JSON</code> files with <a href="https://markdown-it.github.io/">markdown-it</a></li>
 		<ul><li>Duration calculation with <a href="https://momentjs.com/">Moment.js</a></li></ul>
