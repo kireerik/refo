@@ -10,11 +10,11 @@
 	<a title="Node.js" href="https://nodejs.org/en/"><img alt="Node.js" src="https://camo.githubusercontent.com/9c24355bb3afbff914503b663ade7beb341079fa/68747470733a2f2f6e6f64656a732e6f72672f7374617469632f696d616765732f6c6f676f2d6c696768742e737667" width="" height="100"></a>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="Fast, disk space efficient package manager | pnpm" href="https://pnpm.io/"><img alt="pnpm" src="https://d33wubrfki0l68.cloudfront.net/aad219b6c931cebb53121dcda794f6180d9e4397/17f34/assets/images/pnpm-standard-79c9dbb2e99b8525ae55174580061e1b.svg" width="" height="100"></a>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="Astro" href="https://astro.build/"><img alt="Astro" src="https://astro.build/assets/press/astro-logo-dark.svg" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="HTML5" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"><img alt="HTML5" src="https://cdn.worldvectorlogo.com/logos/html-5.svg" width="" height="100"></a>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="HTML5" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"><img alt="HTML5" src="https://www.w3.org/html/logo/downloads/HTML5_Logo.svg" width="" height="100"></a>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="SolidJS · Reactive Javascript Library" href="https://www.solidjs.com/"><img alt="SolidJS" src="https://www.solidjs.com/img/logo/with-wordmark/logo.svg" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="CSS" href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img alt="CSS" src="https://cdn.worldvectorlogo.com/logos/css-5.svg" width="" height="100"></a>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="CSS" href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img alt="CSS" src="https://svgshare.com/i/ugQ.svg" width="" height="100"></a>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="Emotion" href="https://emotion.sh/docs/introduction"><img alt="Emotion" src="https://raw.githubusercontent.com/emotion-js/emotion/f3b268f7c52103979402da919c9c0dd3f9e0e189/site/public/logo-96x96.png" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="JavaScript" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img alt="JavaScript" src="https://cdn.worldvectorlogo.com/logos/javascript-4.svg" width="" height="100"></a>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="JavaScript" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img alt="JavaScript" src="https://svgshare.com/i/ug3.svg" width="" height="100"></a>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="Puppeteer" href="https://developers.google.com/web/tools/puppeteer/"><img alt="Puppeteer" src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" width="" height="100"></a>
 </p>
 
