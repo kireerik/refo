@@ -14,7 +14,7 @@ import script from './script'
 
 import Main from '@index/site/main'
 
-export default await <Main index {...{
+export default <Main index {...{
 	title
 	, head: <>
 		<meta name="theme-color" content="#fdfcec"/>

@@ -1,6 +1,6 @@
 import size from 'image-size'
 
-export default (name = '', alt, src, lazyload) => {
+export default ({class: name, lazyload, alt, src}) => {
 	const {
 		width, height
 	} =
@@ -9,7 +9,7 @@ export default (name = '', alt, src, lazyload) => {
 	return <img {...{
 		...((name || lazyload) && {
 			class:
-				name
+				name ?? ''
 				+ (lazyload ?
 					(name ? ' ' : '') + 'lazyload'
 				: '')

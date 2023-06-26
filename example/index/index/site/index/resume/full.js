@@ -1,3 +1,3 @@
 import index from './index/index'
 
-export default await index('full')
+export default index('full')

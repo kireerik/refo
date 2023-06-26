@@ -8,7 +8,7 @@ const prefixum = import.meta.env.PROD ? '/refo' : ''
 
 import brand from './title'
 
-export default async ({
+export default ({
 	style: dependant
 
 	, title, head

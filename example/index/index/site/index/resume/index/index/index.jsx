@@ -7,13 +7,13 @@ import education from './section/education'
 import awards from './section/awards'
 import publications from './section/publications'
 
-export default async ({styling, json, version}) => <>
+export default ({styling, json, version}) => <>
 	<div class="controls">
 		{controls({...json.basics, version})}
 	</div>
 
 	<main>{[
-		await basics(styling, json.basics)
+		basics(styling, json.basics)
 		, skills(json.skills)
 		, work(json.work)
 		, work(json.project, true)

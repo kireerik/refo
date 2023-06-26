@@ -1,5 +1,4 @@
 import * as icon from './index/index'
-import svg from '@svg'
 
 import Component from '@component'
 
@@ -32,22 +31,22 @@ export default (
 		${styles}
 	`
 
-	return Promise.all(
-		content.map(
-			async ([title, href, network], index) => {
-				const children = await svg(icon[network])
+	return content.map(
+		([title, href, network], index) => {
+			const Icon = icon[network]
 
-				return <Link
-					{...{
-						...(index == selected && {
-							as: a(style)
-						})
+			return <Link
+				{...{
+					...(index == selected && {
+						as: a(style)
+					})
 
-						, title, href, children
-					}}
-					target="_blank" rel="noopener"
-				/>
-			}
-		)
+					, title, href
+				}}
+				target="_blank" rel="noopener"
+			>
+				<Icon/>
+			</Link>
+		}
 	)
 }

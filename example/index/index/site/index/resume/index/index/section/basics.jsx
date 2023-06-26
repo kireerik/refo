@@ -2,7 +2,7 @@ import icon from '@index/site/icon'
 
 import template from '@template'
 
-export default async (
+export default (
 	styling
 	, {
 		name, label, website
@@ -21,7 +21,7 @@ export default async (
 			</div>
 		}
 		{profiles &&
-			await icon(
+			icon(
 					styling
 				,
 					`

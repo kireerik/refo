@@ -14,11 +14,11 @@ const prefixum = import.meta.env.PROD ? '/refo' : ''
 
 import Main from '@index/site/main'
 
-export default async version => {
+export default version => {
 	const json = handleJSON(
 		JSON.parse(JSON.stringify(data)), version
 	)
-	, children = await index({styling, json, version})
+	, children = index({styling, json, version})
 
 	return <Main resume {...{
 		style: header => style(header, styling)
