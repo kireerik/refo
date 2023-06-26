@@ -208,15 +208,25 @@ Some code editors like [Atom](https://atom.io/) and GitHub, for example, highlig
 	```JSON
 	{
 		"configurations": {
-			"Default": {
-				"custom_template_tags": {
-					"html": "scope:text.html.basic"
-					, "": "scope:text.html.basic"
+			"jsx": true
+			, "custom_templates": {
+				"styled_components": true
+				, "lookaheads": {
+					"\\<": "scope:text.html.basic"
+
+					, "\\.|height|padding|margin": "scope:source.js.css"
+
+					, "var|if|window|\\(|,": "scope:source.js"
+				}
+				, "tags": {
+					"injectGlobal": "scope:source.js.css"
+					, "css": "scope:source.js.css"
+
+					, "html": "scope:text.html.basic"
 				}
 			}
 		}
 	}
 	```
-	This example setting highlights template literals tagged as `html` and without a tag as HTML.
 
 Now you can use the `JS Custom - Default` syntax highlight option for JavaScript files.
