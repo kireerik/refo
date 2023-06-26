@@ -23,6 +23,7 @@
 
 ## Features
 - **H**ot **M**odule **R**eplacement using [Astro](https://docs.astro.build/en/reference/cli-reference/#astro-dev)
+	- [Astro](https://docs.astro.build/en/reference/cli-reference/#astro-dev) [Dynamic](https://docs.astro.build/en/core-concepts/routing/#static-ssg-mode) [Static file (server) endpoint](https://docs.astro.build/en/core-concepts/endpoints/#static-file-endpoints) based [page](https://github.com/kireerik/refo/blob/main/example/index/index/page.js) routing
 - JavaScript eXtensible markup language using [SolidJS](https://www.solidjs.com/) [Astro integration](https://docs.astro.build/en/guides/integrations-guide/solid-js/) and [babel-preset-solid](https://github.com/solidjs/solid/tree/main/packages/babel-preset-solid)
 - [importing Astro Asset as String](https://vitejs.dev/guide/assets.html#importing-asset-as-string)
 	- JS and [SVG](https://github.com/kireerik/refo/blob/main/example/index/svg.jsx) inlining
