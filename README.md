@@ -110,9 +110,6 @@ It can be useful to create in-depth documentation about each Refo package.
 ## Inspiration
 - <a title="JSON Resume" href="https://jsonresume.org/">JSON Resume</a>
 
-#### Other technologies
-- [Astro](https://astro.build/)
-
 #### Author
 - <a title="Oengi.com" href="https://oengi.com/">Erik Engi</a>
 
