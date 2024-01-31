@@ -31,7 +31,7 @@
 	, "optionalDependencies": {
 		"dynohot": "1.x"
 
-		, "firebase-tools": "13.x"
+		, "superstatic": "9.x"
 	}
 	, "type": "module"
 	, "imports": {
@@ -41,7 +41,7 @@
 		"dev": "node --env-file .env --import dynohot/register . withModuleReloading"
 
 		, "static": "node ."
-		, "serve": "firebase serve --port 80"
+		, "serve": "superstatic --port 80"
 
 		, "start": "pnpm static && pnpm serve"
 

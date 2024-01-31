@@ -19,9 +19,9 @@ const configuration = import('./index/index')
 if (withModuleReloading) {
 	import.meta.hot.accept()
 
-	const {serve} = (await import('firebase-tools')).default
+	const {server} = await import('superstatic')
 
 	await configuration
 
-	serve({port: 80})
+	server({port: 80}).listen()
 }
