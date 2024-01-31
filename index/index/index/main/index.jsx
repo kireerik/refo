@@ -4,6 +4,10 @@ import getHeader from './header'
 
 import template from '#template'
 
+import withModuleReloading from '#withModuleReloading'
+
+const prefixum = withModuleReloading ? '' : '/refo'
+
 import brand from './title'
 
 export default ({
@@ -48,7 +52,7 @@ export default ({
 					})
 				`)}</script>
 				{script}
-				<script async src="/main.js"/>
+				<script async src={prefixum + '/main.js'}/>
 			{template(`</head>`)}
 			<body>
 				<Header/>

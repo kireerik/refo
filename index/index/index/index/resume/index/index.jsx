@@ -10,6 +10,10 @@ import handleJSON from '#handleJSON'
 
 import index from './index/index'
 
+import withModuleReloading from '#withModuleReloading'
+
+const prefixum = withModuleReloading ? '' : '../'
+
 import Main from '#index/index/main'
 
 import pdf from '../../.pdf'
@@ -29,7 +33,9 @@ export default version => {
 			+ (version ? version + ' ' : '') + 'resume'
 
 		, head:
-			<link rel="shortcut icon" href="/favicon.ico"/>
+			<link rel="shortcut icon"
+				href={prefixum + '/favicon.ico'}
+			/>
 
 		, extract, styling, children
 	}}/>

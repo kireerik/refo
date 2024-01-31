@@ -2,6 +2,10 @@ import view from './view'
 
 import getDocumentName from './documentName'
 
+import withModuleReloading from '#withModuleReloading'
+
+const prefixum = withModuleReloading ? '' : '../'
+
 import resume from '../../name'
 import full from '../../full.html/name'
 
@@ -22,6 +26,7 @@ export default ({name, version}) => {
 			<a class="fontWeightNormal"
 				title={view(!version)}
 				href={<>
+					{prefixum}
 					{version && '/'}{resume}
 					{!version ? '/' + full : ''}
 				</>.join('')}
@@ -70,7 +75,9 @@ export default ({name, version}) => {
 										+ type + ' PDF'
 
 									, href:
-										'/' + getName(format, version)
+										prefixum
+										+ '/'
+										+ getName(format, version)
 
 									, ...properties
 								}}
