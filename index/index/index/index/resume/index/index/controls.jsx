@@ -24,7 +24,7 @@ export default ({name, version}) => {
 			<a class="fontWeightNormal"
 				title={view(!version)}
 				href={<>
-					{prefixum}{!version && '/'}
+					{prefixum}{version ? '' : '/'}
 					{version && '/'}{resume}
 					{!version ? '/' + full : ''}
 				</>.join('')}
