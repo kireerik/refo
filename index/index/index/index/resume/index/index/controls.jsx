@@ -2,9 +2,7 @@ import view from './view'
 
 import getDocumentName from './documentName'
 
-import withModuleReloading from '#withModuleReloading'
-
-const prefixum = withModuleReloading ? '' : '../'
+import prefixum from '#index/index/prefixum'
 
 import resume from '../../name'
 import full from '../../full.html/name'
@@ -26,8 +24,7 @@ export default ({name, version}) => {
 			<a class="fontWeightNormal"
 				title={view(!version)}
 				href={<>
-					{prefixum}
-					{version && '/'}{resume}
+					{version && prefixum + '/'}{resume}
 					{!version ? '/' + full : ''}
 				</>.join('')}
 				rel="noopener"

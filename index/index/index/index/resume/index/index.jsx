@@ -10,9 +10,7 @@ import handleJSON from '#handleJSON'
 
 import index from './index/index'
 
-import withModuleReloading from '#withModuleReloading'
-
-const prefixum = withModuleReloading ? '' : '../'
+import prefixum from '#index/index/prefixum'
 
 import Main from '#index/index/main'
 

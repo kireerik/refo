@@ -4,9 +4,7 @@ import getHeader from './header'
 
 import template from '#template'
 
-import withModuleReloading from '#withModuleReloading'
-
-const prefixum = withModuleReloading ? '' : '/refo'
+import prefixum from '#index/index/prefixum'
 
 import brand from './title'
 

@@ -3,9 +3,7 @@ import brand from './brand'
 import page from './page'
 import selected from './selected'
 
-import withModuleReloading from '#withModuleReloading'
-
-const prefixum = withModuleReloading ? '' : 'refo/'
+import prefixum from '#index/index/prefixum'
 
 import title from '../title'
 
@@ -34,7 +32,7 @@ export default ({styled, index, resume}) => {
 				{...{
 					...(selected && {as})
 
-					, href: '/' + prefixum + href, ...properties
+					, href: prefixum + '/' + href, ...properties
 				}}
 				rel="noopener"
 			/>
