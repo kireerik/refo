@@ -1,8 +1,0 @@
-{
-	"name": "refo-handle-json"
-	, "version": "1.0.2"
-	, "dependencies": {
-		"markdown-it": "11.x"
-		, "moment": "2.x"
-	}
-}
