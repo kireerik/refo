@@ -1,0 +1,50 @@
+{
+	"devDependencies": {
+		"image-size": "1.x"
+
+		, "@emotion/css": "11.x"
+		, "@emotion/styled": "11.x"
+
+		, "stack-tracer": "1.x"
+
+		, "@emotion/server": "11.x"
+
+		, "html-minifier-terser": "7.x"
+		, "uglify-js": "3.x"
+
+		, "tiny-puppeteer": "1.x"
+
+		, "specifier-resolution-node": "1.x"
+
+		, "babel-preset-solid": "1.x"
+		, "@babel/core": "7.x"
+
+		, "solid-js": "1.x"
+
+		, "quicklink": "2.x"
+
+		, "lazysizes": "5.x"
+
+		, "markdown-it": "14.x"
+		, "dayjs": "1.x"
+	}
+	, "optionalDependencies": {
+		"dynohot": "1.x"
+
+		, "superstatic": "9.x"
+	}
+	, "type": "module"
+	, "imports": {
+		"#*": ["./index/*"]
+	}
+	, "scripts": {
+		"dev": "node --env-file .env --import dynohot/register . withModuleReloading"
+
+		, "static": "node ."
+		, "serve": "superstatic --port 80"
+
+		, "start": "pnpm static && pnpm serve"
+
+		, "deploy": "pnpm static && firebase deploy"
+	}
+}
