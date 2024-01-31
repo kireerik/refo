@@ -35,19 +35,6 @@ export default ({
 				{head}
 
 				<style>{template(extract())}</style>
-				<script>{template(`
-					window.dataLayer = window.dataLayer || []
-
-					;(function () {
-						var push = function () {
-							window.dataLayer.push(arguments)
-						}
-
-						push('js', new Date)
-						push('config', 'G-EC49HGT49S')
-					})()
-				`)}</script>
-				<script async src="https://www.googletagmanager.com/gtag/js?id=G-EC49HGT49S"/>
 				<script data-load>{template(`
 					(function (onReady) {
 						if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading')

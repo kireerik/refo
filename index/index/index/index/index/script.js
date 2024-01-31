@@ -20,27 +20,11 @@ export default `
 		return setTimeout(method, 1000)
 	}
 
-	window.addEventListener('load', function method() {
-		delay(function () {
-			window.quicklink.prefetch('technologies')
-		})
-		
-		window.removeEventListener('load', method)
-	})
-
 	if (!window.lazySizesConfig) {
 		window.lazySizesConfig = {ricTimeout: 100}
 
 		delay(function () {
 			window.lazySizesConfig.preloadAfterLoad = true
 		})
-
-		document.addEventListener(
-			'lazyincluded', function () {
-				displayImages(
-					document.getElementById('technologies')
-				)
-			}
-		)
 	}
 `
