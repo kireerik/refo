@@ -20,6 +20,14 @@
 	<a title="Refo package downloads" href="https://www.npmjs.com/package/refo"><img alt="Refo package downloads" src="https://img.shields.io/npm/dt/refo.svg"></a>
 </p>
 
+| `import`                                                               |   | generated file |
+| --- | --- | --- |
+| index/                                                                 |   | `static`/ |
+| &nbsp;&nbsp; • favicon`.ico` image file (imported as a Node.js module) |   | &nbsp;&nbsp; • favicon`.ico` |
+| &nbsp;&nbsp; • main`.js.js` (Node.js module)                           | → | &nbsp;&nbsp; • main`.js` |
+| &nbsp;&nbsp; • index`.html.jsx` (Node.js module)                       |   | &nbsp;&nbsp; • index`.html` |
+| firebase`.json.js` (Node.js module)                                    |   | firebase.json |
+
 ## Features
 - (**H**ot) **M**odule **R**eloading using [dynohot](https://github.com/braidnetworks/dynohot)
 - JavaScript eXtensible markup language using [SolidJS](https://www.solidjs.com/) and [babel-preset-solid](https://github.com/solidjs/solid/tree/main/packages/babel-preset-solid)
