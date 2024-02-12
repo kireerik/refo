@@ -243,7 +243,7 @@ Some code editors like [Atom](https://atom.io/) and GitHub, for example, highlig
 
 					, "\\.|height|padding|margin": "scope:source.js.css"
 
-					, "var|if|window|\\(|,": "scope:source.js"
+					, "import|minify|await|export|var|if|window|\\(|,": "scope:source.js"
 				}
 				, "tags": {
 					"injectGlobal": "scope:source.js.css"
