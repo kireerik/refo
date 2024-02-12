@@ -3,7 +3,6 @@
 <p align="center">
 	<a title="Node.js" href="https://nodejs.org/en/"><img alt="Node.js" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="" height="100"></a>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="Fast, disk space efficient package manager | pnpm" href="https://pnpm.io/"><img alt="pnpm" src="https://d33wubrfki0l68.cloudfront.net/aad219b6c931cebb53121dcda794f6180d9e4397/17f34/assets/images/pnpm-standard-79c9dbb2e99b8525ae55174580061e1b.svg" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="Astro" href="https://astro.build/"><img alt="Astro" src="https://astro.build/assets/press/astro-logo-dark.svg" width="" height="100"></a>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="HTML5" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"><img alt="HTML5" src="https://www.w3.org/html/logo/downloads/HTML5_Logo.svg" width="" height="100"></a>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="SolidJS · Reactive Javascript Library" href="https://www.solidjs.com/"><img alt="SolidJS" src="https://www.solidjs.com/img/logo/with-wordmark/logo.svg" width="" height="100"></a>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="CSS" href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img alt="CSS" src="https://svgshare.com/i/ugQ.svg" width="" height="100"></a>
@@ -22,18 +21,19 @@
 </p>
 
 ## Features
-- **H**ot **M**odule **R**eplacement using [Astro](https://docs.astro.build/en/reference/cli-reference/#astro-dev)
-	- [Astro](https://docs.astro.build/en/reference/cli-reference/#astro-dev) [Dynamic](https://docs.astro.build/en/core-concepts/routing/#static-ssg-mode) [Static file (server) endpoint](https://docs.astro.build/en/core-concepts/endpoints/#static-file-endpoints) based [page](https://github.com/kireerik/refo/blob/main/example/index/index/page.js) routing
-- JavaScript eXtensible markup language using [SolidJS](https://www.solidjs.com/) [Astro integration](https://docs.astro.build/en/guides/integrations-guide/solid-js/) and [babel-preset-solid](https://github.com/solidjs/solid/tree/main/packages/babel-preset-solid)
-- [importing Astro Asset as String](https://vitejs.dev/guide/assets.html#importing-asset-as-string)
-	- JS and [SVG](https://github.com/kireerik/refo/blob/main/example/index/svg.jsx) inlining
-	- JS bundling
+- (**H**ot) **M**odule **R**eloading using [dynohot](https://github.com/braidnetworks/dynohot)
+- JavaScript eXtensible markup language using [SolidJS](https://www.solidjs.com/) and [babel-preset-solid](https://github.com/solidjs/solid/tree/main/packages/babel-preset-solid)
+- [Node.js module customitation](https://nodejs.org/api/module.html#customization-hooks)
+	- importing SVGs as components
+	- `raw` imports
+	- (Java)Script bundling
+	- Extensionless imports using [specifier-resolution-node](https://github.com/Poyoman39/specifier-resolution-node)
 - [Style](https://github.com/kireerik/refo/tree/main/example/index/style)d components using [Emotion](https://emotion.sh/docs/introduction)
 	- [Short class names](https://github.com/kireerik/refo/blob/main/example/index/getShortName.js)
 	- [Class name label](https://github.com/kireerik/refo/blob/main/example/index/getModuleName.js) in `development` mode using [stack-tracer](https://github.com/bninni/stack-tracer)
 - [Image](https://github.com/kireerik/refo/blob/main/example/index/image.jsx) dimensions setting using [image-size](https://github.com/image-size/image-size)
 - HTML and inline CSS and JS minification using [HTMLMinifier terser](https://github.com/terser/html-minifier-terser)
-- JS minification using [UglifyJS](https://skalman.github.io/UglifyJS-online/)
+- (Java)Script minification using [UglifyJS](https://skalman.github.io/UglifyJS-online/)
 - Client side [navigation](blob/main/example/index/navigator.js)
 - Link prefetching using [Quicklink](https://getquick.link/)
 - Lazy loading using [lazysizes](https://github.com/aFarkas/lazysizes)
