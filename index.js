@@ -19,9 +19,11 @@ const configuration = import('./index/index')
 if (withModuleReloading) {
 	import.meta.hot.accept()
 
-	const {server} = await import('superstatic')
+	let {server} = await import('superstatic')
 
 	await configuration
 
-	server({port: 80}).listen()
+	server = server({port: 80}).listen()
+
+	import.meta.hot.dispose(() => server.close())
 }
