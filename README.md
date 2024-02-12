@@ -61,7 +61,7 @@
 > pnpm install
 > ```
 
-> Are you on some kind of Unix based system? Mac? Linux? If so you might want to change the `port` in the `scripts` within the [package.json](https://github.com/kireerik/refo/blob/master/example/package.json#L2-L11) file, which is set to `80` which works on Windows. [Astro](https://astro.build/)'s default is `3000` so you can remove that line if you prefer.
+> Are you on some kind of Unix based system? Mac? Linux? If so you might want to change the `port` in the `index` module, which is set to `80` which works on Windows. [Superstatic](https://github.com/firebase/superstatic/)'s default is `3474` so you can remove it if you prefer.
 
 Start the server in development mode:
 > ```shell
@@ -79,10 +79,8 @@ Open the `index.html` within the `static` folder to access the website.
 
 ## Deployment
 
-### [Astro](https://docs.astro.build/en/guides/deploy/)
-
 ### [GitHub Pages](https://pages.github.com/)
-You can deploy the static `../docs` folder as it is.
+You can deploy the static `docs` folder as it is.
 
 You might want to change the `prefixum` in the following files according to the name of your `project site` repository:
 `index/index/site/`
