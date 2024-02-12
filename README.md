@@ -31,7 +31,7 @@
 ## Features
 - (**H**ot) **M**odule **R**eloading using [dynohot](https://github.com/braidnetworks/dynohot)
 - JavaScript eXtensible markup language using [SolidJS](https://www.solidjs.com/) and [babel-preset-solid](https://github.com/solidjs/solid/tree/main/packages/babel-preset-solid)
-- [Node.js module customitation](https://nodejs.org/api/module.html#customization-hooks)
+- [Node.js module customization](https://nodejs.org/api/module.html#customization-hooks)
 	- importing SVGs as components
 	- `raw` imports
 	- (Java)Script bundling
