@@ -54,7 +54,7 @@
 - Initial steps
 	- Install <a title="Node.js" href="https://nodejs.org/en/"><img alt="Node.js" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="" height="18"></a>, <a title="Fast, disk space efficient package manager | pnpm" href="https://pnpm.io/"><img alt="pnpm" src="https://d33wubrfki0l68.cloudfront.net/aad219b6c931cebb53121dcda794f6180d9e4397/17f34/assets/images/pnpm-standard-79c9dbb2e99b8525ae55174580061e1b.svg" width="" height="18"></a> and <a title="Google Chrome" href="https://www.google.com/chrome/"><img alt="Google Chrome" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Google_Chrome_logo_and_wordmark_%282015%29.png" width="" height="18"></a>.
 	- [Download](https://github.com/kireerik/refo/archive/master.zip) or [clone](x-github-client://openRepo/https://github.com/kireerik/refo) this repository.
-	- Open a command prompt in this `example` folder.
+	- Open a command prompt in this folder.
 
 > Install dependencies:
 > ```shell
@@ -130,7 +130,7 @@ You can remove superstatic and use [firebase-tools](https://github.com/firebase/
 
 This project uses [concurrently](https://github.com/kimmobrunfeldt/concurrently) to run Refo in watch mode and serve the files with superstatic. You can use any similar library like [npm-run-all](https://github.com/mysticatea/npm-run-all) to run Refo and a server in parallel or no library at all if you don't need a file server.
 
-The `firebase.json` file could be named as `superstatic.json` if you prefer. This example does not depend on Firebase itself. However, they provide one of if not the consistently fastest static hosting solution.
+The `firebase.json` file could be named as `superstatic.json` if you prefer. This template does not depend on Firebase itself. However, they provide one of if not the consistently fastest static hosting solution.
 
 ### Templating
 JavaScript [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) are used for templating HTML documents.
