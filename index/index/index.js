@@ -1,3 +1,8 @@
-import './firebase.json'
+import importAll from '#index/module/importAll'
 
-import './index/index'
+importAll([
+	'favicon'
+	, 'main.js'
+	, 'index/index'
+	, 'resume'
+])

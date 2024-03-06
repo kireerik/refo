@@ -12,7 +12,8 @@
 		, "html-minifier-terser": "7.x"
 		, "uglify-js": "3.x"
 
-		, "tiny-puppeteer": "1.x"
+		, "chrome-finder": "1.x"
+		, "puppeteer-core": "22.x"
 
 		, "specifier-resolution-node": "1.x"
 
@@ -26,7 +27,7 @@
 		, "lazysizes": "5.x"
 
 		, "markdown-it": "14.x"
-		, "dayjs": "1.x"
+		, "moment": "2.x"
 	}
 	, "optionalDependencies": {
 		"dynohot": "1.x"
@@ -35,13 +36,15 @@
 	}
 	, "type": "module"
 	, "imports": {
-		"#*": ["./index/*"]
+		"#*": "./index/*"
+		, "#@*": "./index/module/*"
 	}
 	, "scripts": {
-		"dev": "node --env-file .env --import dynohot/register . withModuleReloading"
+		"static": "node --import ./loaders.js ."
 
-		, "static": "node ."
-		, "serve": "superstatic --port 80"
+		, "dev": "pnpm static withModuleReloading"
+
+		, "serve": "superstatic serve --port 80"
 
 		, "start": "pnpm static && pnpm serve"
 
