@@ -12,13 +12,23 @@ export default ({styling, json, version}) => <>
 		{controls({...json.basics, version})}
 	</div>
 
-	<main>{[
-		basics(styling, json.basics)
-		, skills(json.skills)
-		, work(json.work)
-		, work(json.project, true)
-		, education(json.education)
-		, awards(json.awards)
-		, publications(json.publications)
-	]}</main>
+	<main>
+		{[
+			basics(styling, json.basics)
+			, skills(json.skills)
+			, work(json.work)
+			, work(json.project, true)
+			, education(json.education)
+			, awards(json.awards)
+			, publications(json.publications)
+		]}
+		<p class="branding">
+			Designed by <a
+				title="Oengi.com" href="https://oengi.com/"
+				target="_blank" rel="noopener"
+			>
+				Erik Engi
+			</a>
+		</p>
+	</main>
 </>

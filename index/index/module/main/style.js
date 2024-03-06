@@ -1,6 +1,6 @@
 export default ({injectGlobal}) =>
 	injectGlobal`
-		body {
+		body, .branding {
 			margin: 0;
 			font-family: Arial, Helvetica, sans-serif;
 			font-size: 18px;

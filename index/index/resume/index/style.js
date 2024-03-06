@@ -116,4 +116,12 @@ export default (Header, {injectGlobal}) =>
 		section:last-of-type .item:last-of-type {
 			margin: 0;
 		}
+
+		.branding {
+			margin: 2.24em 0;
+
+			a {
+				color: #1640de;
+			}
+		}
 	`
