@@ -2,7 +2,7 @@
 
 <p align="center">
 	A website template for the modern web.
-	<br>Powerful developer experience with lightweight output.
+	<br>Powerful developer experience meets lightweight output.
 </p>
 
 <p align="center">
