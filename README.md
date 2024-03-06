@@ -46,10 +46,10 @@
 	- `raw` imports
 	- (Java)Script bundling
 	- Extensionless imports using [specifier-resolution-node](https://github.com/Poyoman39/specifier-resolution-node)
-- [Style](https://github.com/kireerik/refo/tree/main/example/index/style)d components using [Emotion](https://emotion.sh/docs/introduction)
-	- [Short class names](https://github.com/kireerik/refo/blob/main/example/index/getShortName.js)
-	- [Class name label](https://github.com/kireerik/refo/blob/main/example/index/getModuleName.js) in `development` mode using [stack-tracer](https://github.com/bninni/stack-tracer)
-- [Image](https://github.com/kireerik/refo/blob/main/example/index/image.jsx) dimensions setting using [image-size](https://github.com/image-size/image-size)
+- [Style](https://github.com/kireerik/refo/tree/main/index/module/style)d components using [Emotion](https://emotion.sh/docs/introduction)
+	- [Short class name](https://github.com/kireerik/refo/blob/main/index/module/style/css/getShortName.js)s
+	- [Class name label](https://github.com/kireerik/refo/blob/main/index/module/style/css/getModuleName.js)s in `development` mode using [stack-tracer](https://github.com/bninni/stack-tracer)
+- [Image](https://github.com/kireerik/refo/blob/main/index/module/image.jsx) dimensions setting using [image-size](https://github.com/image-size/image-size)
 - HTML and inline CSS and JS minification using [HTMLMinifier terser](https://github.com/terser/html-minifier-terser)
 - (Java)Script minification using [UglifyJS](https://skalman.github.io/UglifyJS-online/)
 - Client side [navigation](blob/main/example/index/navigator.js)
@@ -71,7 +71,7 @@
 ## Getting Started
 - Initial steps
 	- Install <a title="Node.js" href="https://nodejs.org/en/"><img alt="Node.js" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="" height="18"></a>, <a title="Fast, disk space efficient package manager | pnpm" href="https://pnpm.io/"><img alt="pnpm" src="https://d33wubrfki0l68.cloudfront.net/aad219b6c931cebb53121dcda794f6180d9e4397/17f34/assets/images/pnpm-standard-79c9dbb2e99b8525ae55174580061e1b.svg" width="" height="18"></a> and <a title="Google Chrome" href="https://www.google.com/chrome/"><img alt="Google Chrome" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Google_Chrome_logo_and_wordmark_%282015%29.png" width="" height="18"></a>.
-	- [Download](https://github.com/kireerik/refo/archive/master.zip) or [clone](x-github-client://openRepo/https://github.com/kireerik/refo) this repository.
+	- [Download](https://github.com/kireerik/refo/archive/refs/heads/main.zip) or [clone](x-github-client://openRepo/https://github.com/kireerik/refo) this repository.
 	- Open a command prompt in this folder.
 
 > Install dependencies:
@@ -136,7 +136,7 @@ It can  be useful to separate the resume template and publish it as a new Refo p
 
 ## About
 
-This example uses Refo's JSON handler. So you can control how and whether certain properties are displayed from the [index/index/site/index/resume/data.js](https://github.com/kireerik/refo/blob/main/example/index/index/site/index/resume/data.js) file as described in Refo's readme at the [JSON handler](https://github.com/kireerik/refo#json-handler) Usage section.
+This example uses Refo's JSON handler. So you can control how and whether certain properties are displayed from the [index/index/site/index/resume/data.js](https://github.com/kireerik/refo/blob/main/index/index/resume/data.js) file as described in Refo's readme at the [JSON handler](https://github.com/kireerik/refo#json-handler) Usage section.
 
 ### Server
 
