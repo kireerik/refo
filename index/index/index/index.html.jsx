@@ -1,7 +1,7 @@
 import title from '#index/module/main/title'
 
-const slogan = 'Node.js based static site template.'
-, description = 'Node.js based static site (and resume) template with styled components.'
+const slogan = 'A website template for the modern web.'
+, description = 'Powerful developer experience meets lightweight output.'
 
 import use from '#@style'
 
