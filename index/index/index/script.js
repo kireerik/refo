@@ -1,30 +1,28 @@
-export default `
-	var displayImages = function (element) {
-		[].forEach.call(element.getElementsByTagName('img'), function (image) {
-			function show() {
-				image.classList.add('show')
-			}
+var displayImages = function (element) {
+	[].forEach.call(element.getElementsByTagName('img'), function (image) {
+		function show() {
+			image.classList.add('show')
+		}
 
-			if (image.complete)
-				show()
-			else
-				['load', 'error'].forEach(function (eventName) {
-					image.addEventListener(eventName, show)
-				})
-		})
-	}
+		if (image.complete)
+			show()
+		else
+			['load', 'error'].forEach(function (eventName) {
+				image.addEventListener(eventName, show)
+			})
+	})
+}
 
-	displayImages(document)
+displayImages(document)
 
-	var delay = function (method) {
-		return setTimeout(method, 1000)
-	}
+var delay = function (method) {
+	return setTimeout(method, 1000)
+}
 
-	if (!window.lazySizesConfig) {
-		window.lazySizesConfig = {ricTimeout: 100}
+if (!window.lazySizesConfig) {
+	window.lazySizesConfig = {ricTimeout: 100}
 
-		delay(function () {
-			window.lazySizesConfig.preloadAfterLoad = true
-		})
-	}
-`
+	delay(function () {
+		window.lazySizesConfig.preloadAfterLoad = true
+	})
+}

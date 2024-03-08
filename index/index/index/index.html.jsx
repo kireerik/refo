@@ -12,7 +12,7 @@ style(styling)
 
 const {styled} = styling
 
-import script from './script'
+import script from './script.js?raw'
 
 import Main from '#index/module/main'
 
