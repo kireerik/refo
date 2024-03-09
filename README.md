@@ -5,6 +5,20 @@
 	<br>Powerful developer experience meets lightweight output.
 </p>
 
+**Effortless Static Site Generation with Flexibility**
+
+Feeling overwhelmed by the static site generator landscape? Refo offers a refreshingly simple and customizable approach **built entirely on Node.js**.
+
+Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.js modules directly. This means you can generate any kind of website you can imagine, all with the flexibility of your favorite Node.js libraries and servers.
+
+**Key benefits:**
+- **Effortless Development**: Edit your modules and see instant updates thanks to hot reloading.
+- **Unmatched Flexibility**: Import `SVG`s, utilize `raw` imports, and `style` your components with ease.
+- **Data-Driven Content**: Craft resumes, portfolios, or any data-driven website with ease.
+- **Highly Customizable**: No rigid folder structures, minify class names, or even swap out SolidJS for React – it's entirely up to you.
+
+**Go beyond the limitations of traditional static site generators. Embrace the power and flexibility of `refo` for your next project!**
+
 <p align="center">
 	<a title="Node.js" href="https://nodejs.org/en/"><img alt="Node.js" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="" height="100"></a>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="Fast, disk space efficient package manager | pnpm" href="https://pnpm.io/"><img alt="pnpm" src="https://d33wubrfki0l68.cloudfront.net/aad219b6c931cebb53121dcda794f6180d9e4397/17f34/assets/images/pnpm-standard-79c9dbb2e99b8525ae55174580061e1b.svg" width="" height="100"></a>
