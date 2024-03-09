@@ -29,18 +29,6 @@ Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.j
 	<a title="Refo package downloads" href="https://www.npmjs.com/package/refo"><img alt="Refo package downloads" src="https://img.shields.io/npm/dt/refo.svg"></a>
 </p>
 
-| `import`                                                    |   | generated file |
-| --- | --- | --- |
-| index/                                                      |   | `static`/ |
-| &nbsp;&nbsp; • favicon`.ico` (icon `file` (Node.js module)) |   | &nbsp;&nbsp; • favicon`.ico` |
-| &nbsp;&nbsp; • main`.js`​`.js` (Node.js `module`)            | → | &nbsp;&nbsp; • main`.js` |
-| &nbsp;&nbsp; • index`.html`​`.jsx` (Node.js `module`)        |   | &nbsp;&nbsp; • index`.html` |
-| firebase`.json`​`.js` (Node.js `module`)                     |   | firebase`.json` |
-
-> The imported `file`s (which have a certain file extension (`ico`, `png`)) (Node.js) modules) copy the files themselves into the `static` folder when the modules are loaded. In module relading mode they remove them if they are not imported anymore.
-
-> The `default` `export` of (Node.js) `module`s (which have a certain file extension (`js`, `json`, `html`) in their base file name) are written as the contents of the output files (into the `static` folder). The full file names of the output files are the base file names of the (Node.js) `module`s.
-
 ## Features
 - (**H**ot) **M**odule **R**eloading using [dynohot](https://github.com/braidnetworks/dynohot)
 - JavaScript eXtensible markup language using <a title="SolidJS · Reactive Javascript Library" href="https://www.solidjs.com/"><img alt="SolidJS" src="https://www.solidjs.com/img/logo/with-wordmark/logo.svg" width="" height="18"></a> and [babel-preset-solid](https://github.com/solidjs/solid/tree/main/packages/babel-preset-solid)
@@ -97,6 +85,19 @@ Generate a static site:
 pnpm static
 ```
 Open the `index.html` within the `static` folder to access the website.
+
+## Main concept
+| `import`                                                    |   | generated file |
+| --- | --- | --- |
+| index/                                                      |   | `static`/ |
+| &nbsp;&nbsp; • favicon`.ico` (icon `file` (Node.js module)) |   | &nbsp;&nbsp; • favicon`.ico` |
+| &nbsp;&nbsp; • main`.js`​`.js` (Node.js `module`)            | → | &nbsp;&nbsp; • main`.js` |
+| &nbsp;&nbsp; • index`.html`​`.jsx` (Node.js `module`)        |   | &nbsp;&nbsp; • index`.html` |
+| firebase`.json`​`.js` (Node.js `module`)                     |   | firebase`.json` |
+
+> The imported `file`s (which have a certain file extension (`ico`, `png`)) (Node.js) modules) copy the files themselves into the `static` folder when the modules are loaded. In module relading mode they remove them if they are not imported anymore.
+
+> The `default` `export` of (Node.js) `module`s (which have a certain file extension (`js`, `json`, `html`) in their base file name) are written as the contents of the output files (into the `static` folder). The full file names of the output files are the base file names of the (Node.js) `module`s.
 
 ## Deployment
 
