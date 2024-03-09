@@ -5,6 +5,11 @@
 	<br>Powerful developer experience meets lightweight output.
 </p>
 
+<p align="center">
+	<a title="Refo maintainability details" href="https://codeclimate.com/github/kireerik/refo/maintainability"><img alt="Refo maintainability details" src="https://api.codeclimate.com/v1/badges/b6a2bf056f91db99df93/maintainability"></a>
+	<a title="Refo package downloads" href="https://www.npmjs.com/package/refo"><img alt="Refo package downloads" src="https://img.shields.io/npm/dt/refo.svg"></a>
+</p>
+
 **Effortless Static Site Generation with Flexibility**
 
 Feeling overwhelmed by the static site generator landscape? Refo offers a refreshingly simple and customizable approach **built entirely on Node.js**.
@@ -22,11 +27,6 @@ Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.j
 <p align="center">
 	<br><a title="GitPunch" href="https://gitpunch.com/"><img alt="GitPunch" src="https://raw.githubusercontent.com/vfeskov/gitpunch/master/client/src/big-logo.png" width="222" height="52"></a>
 	<br>⭐ Star and get notified about new releases via email.
-</p>
-
-<p align="center">
-	<a title="Refo maintainability details" href="https://codeclimate.com/github/kireerik/refo/maintainability"><img alt="Refo maintainability details" src="https://api.codeclimate.com/v1/badges/b6a2bf056f91db99df93/maintainability"></a>
-	<a title="Refo package downloads" href="https://www.npmjs.com/package/refo"><img alt="Refo package downloads" src="https://img.shields.io/npm/dt/refo.svg"></a>
 </p>
 
 ## Features
