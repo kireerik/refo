@@ -20,17 +20,6 @@ Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.j
 **Go beyond the limitations of traditional static site generators. Embrace the power and flexibility of `refo` for your next project!**
 
 <p align="center">
-	<a title="Node.js" href="https://nodejs.org/en/"><img alt="Node.js" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="Fast, disk space efficient package manager | pnpm" href="https://pnpm.io/"><img alt="pnpm" src="https://d33wubrfki0l68.cloudfront.net/aad219b6c931cebb53121dcda794f6180d9e4397/17f34/assets/images/pnpm-standard-79c9dbb2e99b8525ae55174580061e1b.svg" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="HTML5" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"><img alt="HTML5" src="https://www.w3.org/html/logo/downloads/HTML5_Logo.svg" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="SolidJS · Reactive Javascript Library" href="https://www.solidjs.com/"><img alt="SolidJS" src="https://www.solidjs.com/img/logo/with-wordmark/logo.svg" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="CSS" href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img alt="CSS" src="https://svgshare.com/i/ugQ.svg" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="Emotion" href="https://emotion.sh/docs/introduction"><img alt="Emotion" src="https://raw.githubusercontent.com/emotion-js/emotion/f3b268f7c52103979402da919c9c0dd3f9e0e189/site/public/logo-96x96.png" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="JavaScript" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img alt="JavaScript" src="https://svgshare.com/i/ug3.svg" width="" height="100"></a>
-	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a title="Puppeteer" href="https://developers.google.com/web/tools/puppeteer/"><img alt="Puppeteer" src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" width="" height="100"></a>
-</p>
-
-<p align="center">
 	<br><a title="GitPunch" href="https://gitpunch.com/"><img alt="GitPunch" src="https://raw.githubusercontent.com/vfeskov/gitpunch/master/client/src/big-logo.png" width="222" height="52"></a>
 	<br>⭐ Star and get notified about new releases via email.
 </p>
@@ -54,17 +43,17 @@ Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.j
 
 ## Features
 - (**H**ot) **M**odule **R**eloading using [dynohot](https://github.com/braidnetworks/dynohot)
-- JavaScript eXtensible markup language using [SolidJS](https://www.solidjs.com/) and [babel-preset-solid](https://github.com/solidjs/solid/tree/main/packages/babel-preset-solid)
+- JavaScript eXtensible markup language using <a title="SolidJS · Reactive Javascript Library" href="https://www.solidjs.com/"><img alt="SolidJS" src="https://www.solidjs.com/img/logo/with-wordmark/logo.svg" width="" height="18"></a> and [babel-preset-solid](https://github.com/solidjs/solid/tree/main/packages/babel-preset-solid)
 - [Node.js module customization](https://nodejs.org/api/module.html#customization-hooks)
 	- importing SVGs as components
 	- `raw` imports
 	- (Java)Script bundling
 	- Extensionless imports using [specifier-resolution-node](https://github.com/Poyoman39/specifier-resolution-node)
-- [Style](https://github.com/kireerik/refo/tree/main/index/module/style)d components using [Emotion](https://emotion.sh/docs/introduction)
+- [Style](https://github.com/kireerik/refo/tree/main/index/module/style)d components using <a title="Emotion" href="https://emotion.sh/docs/introduction"><img alt="Emotion" src="https://raw.githubusercontent.com/emotion-js/emotion/f3b268f7c52103979402da919c9c0dd3f9e0e189/site/public/logo-96x96.png" width="" height="18"> Emotion</a>
 	- [Short class name](https://github.com/kireerik/refo/blob/main/index/module/style/css/getShortName.js)s
 	- [Class name label](https://github.com/kireerik/refo/blob/main/index/module/style/css/getModuleName.js)s in `development` mode using [stack-tracer](https://github.com/bninni/stack-tracer)
 - [Image](https://github.com/kireerik/refo/blob/main/index/module/image.jsx) dimensions setting using [image-size](https://github.com/image-size/image-size)
-- HTML and inline CSS and JS minification using [HTMLMinifier terser](https://github.com/terser/html-minifier-terser)
+- <a title="HTML5" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"><img alt="HTML5" src="https://www.w3.org/html/logo/downloads/HTML5_Logo.svg" width="" height="18"> HTML</a> and inline <a title="CSS" href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img alt="CSS" src="https://svgshare.com/i/ugQ.svg" width="" height="18"> CSS</a> and <a title="JavaScript" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img alt="JavaScript" src="https://svgshare.com/i/ug3.svg" width="" height="18"> JS</a> minification using [HTMLMinifier terser](https://github.com/terser/html-minifier-terser)
 - (Java)Script minification using [UglifyJS](https://skalman.github.io/UglifyJS-online/)
 - Client side [navigation](blob/main/example/index/navigator.js)
 - Link prefetching using [Quicklink](https://getquick.link/)
@@ -72,7 +61,7 @@ Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.j
 <ul>
 	<li><code>Markdown</code> support for strings in <code>JSON</code> files with <a href="https://markdown-it.github.io/">markdown-it</a></li>
 		<ul><li>Duration calculation with <a href="https://momentjs.com/">Moment.js</a></li></ul>
-	<li><code>PDF</code> generation using <a href="https://github.com/suhaotian/tiny-puppeteer">Tiny puppeteer</a></li>
+	<li><code>PDF</code> generation using <a href="https://github.com/suhaotian/tiny-puppeteer">Tiny <a title="Puppeteer" href="https://developers.google.com/web/tools/puppeteer/"><img alt="Puppeteer" src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" width="" height="18"> puppeteer</a></a></li>
 </ul>
 
 #### Highlights
