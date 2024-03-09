@@ -29,13 +29,13 @@ Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.j
 	<a title="Refo package downloads" href="https://www.npmjs.com/package/refo"><img alt="Refo package downloads" src="https://img.shields.io/npm/dt/refo.svg"></a>
 </p>
 
-| `import`                                                               |   | generated file |
+| `import`                                                    |   | generated file |
 | --- | --- | --- |
-| index/                                                       |   | `static`/ |
+| index/                                                      |   | `static`/ |
 | &nbsp;&nbsp; • favicon`.ico` (icon `file` (Node.js module)) |   | &nbsp;&nbsp; • favicon`.ico` |
-| &nbsp;&nbsp; • main`.js`​`.js` (Node.js `module`)               | → | &nbsp;&nbsp; • main`.js` |
-| &nbsp;&nbsp; • index`.html`​`.jsx` (Node.js `module`)           |   | &nbsp;&nbsp; • index`.html` |
-| firebase`.json`​`.js` (Node.js `module`)                        |   | firebase`.json` |
+| &nbsp;&nbsp; • main`.js`​`.js` (Node.js `module`)            | → | &nbsp;&nbsp; • main`.js` |
+| &nbsp;&nbsp; • index`.html`​`.jsx` (Node.js `module`)        |   | &nbsp;&nbsp; • index`.html` |
+| firebase`.json`​`.js` (Node.js `module`)                     |   | firebase`.json` |
 
 > The imported `file`s (which have a certain file extension (`ico`, `png`)) (Node.js) modules) copy the files themselves into the `static` folder when the modules are loaded. In module relading mode they remove them if they are not imported anymore.
 
