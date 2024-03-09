@@ -61,7 +61,7 @@ Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.j
 <ul>
 	<li><code>Markdown</code> support for strings in <code>JSON</code> files with <a href="https://markdown-it.github.io/">markdown-it</a></li>
 		<ul><li>Duration calculation with <a href="https://momentjs.com/">Moment.js</a></li></ul>
-	<li><code>PDF</code> generation using <a href="https://github.com/suhaotian/tiny-puppeteer">Tiny <a title="Puppeteer" href="https://developers.google.com/web/tools/puppeteer/"><img alt="Puppeteer" src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" width="" height="18"> puppeteer</a></a></li>
+	<li><code>PDF</code> generation using <a title="Puppeteer" href="https://developers.google.com/web/tools/puppeteer/"><img alt="Puppeteer" src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" width="" height="18"> Puppeteer</a> with <a href="https://github.com/gwuhaolin/chrome-finder">chrome-finder</a></li>
 </ul>
 
 #### Highlights
