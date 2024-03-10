@@ -10,6 +10,9 @@
 	<a title="Refo package downloads" href="https://www.npmjs.com/package/refo"><img alt="Refo package downloads" src="https://img.shields.io/npm/dt/refo.svg"></a>
 	<a title="join the Refo community" href="https://github.com/kireerik/refo/discussions"><img alt="join the Refo community" src="https://img.shields.io/github/discussions/kireerik/refo?labelColor=%238a2be2&color=%238a2be2&label=%F0%9F%92%AC%20join%20the%20community"></a>
 </p>
+<p align="center">
+	<a title="⯅ Upvote to support our work!" href="https://www.producthunt.com/posts/refo?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-refo" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=443512&theme=light" alt="Refo - A&#0032;website&#0032;template&#0032;for&#0032;the&#0032;modern&#0032;web | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54"></a>
+</p>
 
 **Effortless Static Site Generation with Flexibility**
 
