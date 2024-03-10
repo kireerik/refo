@@ -8,7 +8,7 @@
 <p align="center">
 	<a title="Refo maintainability details" href="https://codeclimate.com/github/kireerik/refo/maintainability"><img alt="Refo maintainability details" src="https://api.codeclimate.com/v1/badges/b6a2bf056f91db99df93/maintainability"></a>
 	<a title="Refo package downloads" href="https://www.npmjs.com/package/refo"><img alt="Refo package downloads" src="https://img.shields.io/npm/dt/refo.svg"></a>
-	<a title="join the refo community" href="https://github.com/kireerik/refo/discussions"><img alt="join the refo community" src="https://img.shields.io/github/discussions/kireerik/refo?labelColor=%238a2be2&color=%238a2be2&label=%F0%9F%92%AC%20join%20the%20community"></a>
+	<a title="join the Refo community" href="https://github.com/kireerik/refo/discussions"><img alt="join the Refo community" src="https://img.shields.io/github/discussions/kireerik/refo?labelColor=%238a2be2&color=%238a2be2&label=%F0%9F%92%AC%20join%20the%20community"></a>
 </p>
 
 **Effortless Static Site Generation with Flexibility**
@@ -23,7 +23,7 @@ Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.j
 - **Data-Driven Content**: Craft resumes, portfolios, or any data-driven website with ease.
 - **Highly Customizable**: No rigid folder structures, minify class names, or even swap out SolidJS for React – it's entirely up to you.
 
-**Go beyond the limitations of traditional static site generators. Embrace the power and flexibility of `refo` for your next project!**
+**Go beyond the limitations of traditional static site generators. Embrace the power and flexibility of Refo for your next project!**
 
 <p align="center">
 	⭐️ Star to support our work!
