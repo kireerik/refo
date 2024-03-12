@@ -103,6 +103,8 @@ Open the `index.html` within the `static` folder to access the website.
 
 > The `default` `export` of (Node.js) `module`s (which have a certain file extension (`js`, `json`, `html`) in their base file name) are written as the contents of the output files (into the `static` folder). The full file names of the output files are the base file names of the (Node.js) `module`s.
 
+<p align="center">⭐️ Star to support our work!</p>
+
 ## Simple page example source code
 index`.html`​`.jsx` (`import`ed `module`):
 ```Node.js
@@ -133,8 +135,6 @@ index`.html` (generated file):
 ```HTML
 <!DOCTYPE HTML><html lang=en><head><style>.a{font-weight:700}</style></head><body class=a>example content</body></html>
 ```
-
-<p align="center">⭐️ Star to support our work!</p>
 
 ## Deployment
 
