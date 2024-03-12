@@ -10,8 +10,6 @@ const [styling, extract] = use()
 import style from './style'
 style(styling)
 
-const {styled} = styling
-
 import script from './script.js?raw'
 
 import Main from '#index/module/main'
