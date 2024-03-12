@@ -1,6 +1,6 @@
 import withModuleReloading from '#@withModuleReloading'
 
-import navigator from '#@navigator'
+import navigator from '#@navigator.js?raw'
 
 import quicklink from 'quicklink/dist/quicklink.umd.js?raw'
 
