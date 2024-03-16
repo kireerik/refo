@@ -18,13 +18,13 @@ if (!window.load) {
 
 	window.load = function (link) {
 		var request = new XMLHttpRequest()
+
 		request.open('GET', link)
 
 		request.send()
 
 		request.addEventListener('load', function () {
-			document.documentElement.innerHTML =
-				this.response
+			document.documentElement.innerHTML = this.response
 
 			script().forEach(
 				function (script) {
@@ -56,8 +56,7 @@ if (!window.load) {
 								)
 						}
 
-						replacement.innerHTML =
-							script.innerHTML
+						replacement.innerHTML = script.innerHTML
 
 						document.head.replaceChild(
 							replacement, script

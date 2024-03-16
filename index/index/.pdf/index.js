@@ -23,7 +23,8 @@ export default second => {
 			const staticDirectory = await get(
 				'#staticDirectory'
 			)
-			const remove = await get('#@loader/remove')
+			const remove =
+				await get('#@loader/file/action/remove')
 
 			names.forEach(name =>
 				import.meta.hot.prune(
