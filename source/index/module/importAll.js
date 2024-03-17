@@ -1,4 +1,4 @@
-import trace from '#@trace'
+import trace from 'stack-tracer'
 
 import {dirname} from 'path'
 

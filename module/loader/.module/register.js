@@ -1,4 +1,4 @@
-import trace from '#@trace.js'
+import trace from 'stack-tracer'
 
 import {register} from 'module'
 

@@ -2,8 +2,6 @@ import {cwd} from 'process'
 import {fileURLToPath} from 'url'
 import {relative, sep} from 'path'
 
-import loader from '../../.module/loader'
-
 const separator = '/'
 
 export default ([sourceDirectory, staticDirectory], url) => {

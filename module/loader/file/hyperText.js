@@ -1,8 +1,6 @@
 import endsWith from '../.module/endsWith'
 import getLast from './module/getLast'
 
-import {transformSync} from '@babel/core'
-
 import loader from './module/loader/module'
 
 const HTML = 'html'
