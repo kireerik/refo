@@ -36,13 +36,16 @@
 	}
 	, "type": "module"
 	, "imports": {
-		"#*": "./index/*"
-		, "#@*": "./index/module/*"
+		"#@*": "./module/*"
+
+		, "#*": "./source/*"
 	}
 	, "scripts": {
-		"static": "node --import ./loaders.js ."
+		"index": "node --import"
 
-		, "dev": "pnpm static withModuleReloading"
+		, "static": "pnpm index ./index/loader.js ./index/index.js"
+
+		, "dev": "pnpm index ./index/development/loader.js ./index/development/index.js"
 
 		, "serve": "superstatic serve --port 80"
 

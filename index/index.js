@@ -1,3 +1,5 @@
-import './firebase.json'
+import staticDirectory from './module/directory/static'
 
-import './index/index'
+global.staticDirectory = staticDirectory
+
+await import('#index')
