@@ -3,7 +3,7 @@ import getName from './getName'
 import generate from './generate'
 
 export default second => {
-	const names = [, true].reduce((result, value) => [
+	const names = [...[, ], true].reduce((result, value) => [
 		...result
 		, getName(value, second)
 	], [])
