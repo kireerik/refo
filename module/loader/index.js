@@ -13,5 +13,5 @@ export default async (directory, withModuleReloading) => {
 		.default([directory, withModuleReloading])
 
 	if (withModuleReloading)
-		register('dynohot')
+		register('dynohot/loader')
 }

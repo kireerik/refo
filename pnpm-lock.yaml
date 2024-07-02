@@ -62,7 +62,7 @@ importers:
     devDependencies:
       dynohot:
         specifier: 1.x
-        version: 1.1.5
+        version: 1.2.0
       superstatic:
         specifier: 9.x
         version: 9.0.3(encoding@0.1.13)
@@ -623,8 +623,8 @@ packages:
   duplexer2@0.1.4:
     resolution: {integrity: sha512-asLFVfWWtJ90ZyOUHMqk7/S2w2guQKxUI2itj3d92ADHhxUSbCMGi1f1cBcJ7xM1To+pE/Khbwo1yuNbMEPKeA==}
 
-  dynohot@1.1.5:
-    resolution: {integrity: sha512-tUmD8N5c/E2Ije9ltWQ2X7Rq+0NRsuGjOzFXfOCmdYPr3R+ZNn0pJm5noGuOtvqRLRuSuF/SRuAW346ywQfRTQ==}
+  dynohot@1.2.0:
+    resolution: {integrity: sha512-si3iPyACD7y6lNCyKY2VK0O5qDw35oRILz5V9EIusXDGzDhmCjZvr/80BfFQjaoNJQl8DWHnATADALQDRDbVnQ==}
 
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -2374,7 +2374,7 @@ snapshots:
     dependencies:
       readable-stream: 2.3.8
 
-  dynohot@1.1.5:
+  dynohot@1.2.0:
     dependencies:
       '@babel/core': 7.24.7
       '@babel/generator': 7.24.7
