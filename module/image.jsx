@@ -1,10 +1,14 @@
-import size from 'image-size'
+import {readFileSync} from 'fs'
+
+import {imageSize} from 'image-size'
 
 export default ({class: name, lazyload, alt, src}) => {
 	const {
 		width, height
 	} =
-		size('source' + '/index/index/' + src)
+		imageSize(
+			readFileSync('source' + '/index/index/' + src)
+		)
 
 	return <img {...{
 		...((name || lazyload) && {

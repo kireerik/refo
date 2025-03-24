@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"image-size": "1.x"
+		"image-size": "2.x"
 
 		, "@emotion/css": "11.x"
 		, "@emotion/styled": "11.x"
@@ -13,7 +13,7 @@
 		, "uglify-js": "3.x"
 
 		, "chrome-finder": "1.x"
-		, "puppeteer-core": "22.x"
+		, "puppeteer-core": "24.x"
 
 		, "specifier-resolution-node": "1.x"
 
