@@ -1,3 +1,3 @@
-import page from '#index/module/page'
+import page from '##@/page'
 
 page('full', 'index')

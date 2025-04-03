@@ -1,10 +1,10 @@
-import data from '#index/resume/data'
+import data from '##index/resume/data'
 
-import full from '#index/resume/full.html/name'
+import full from '##index/resume/full.html/name'
 
 import A4 from './A4'
 
-import name from '#index/resume/name'
+import name from '##index/resume/name'
 
 import capitalize from '#@capitalize'
 

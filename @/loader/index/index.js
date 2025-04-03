@@ -1,6 +1,6 @@
 import {env} from 'process'
 
-import register from './.module/register.js'
+import register from './register.js'
 
 env.KNOWN_EXTS = ['ico', 'png', 'svg', 'js', 'jsx']
 

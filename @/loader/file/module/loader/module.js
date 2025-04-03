@@ -2,11 +2,11 @@ import use from '../use'
 
 import getLast from '../getLast'
 
-import endsWith from '../../../.module/endsWith'
+import endsWith from '../../../@/endsWith'
 
 import createDirectory from '../source/createDirectory'
 
-import usedLoader from '../../../.module/loader/source'
+import usedLoader from '../../../@/loader/source'
 
 import loader from '.'
 

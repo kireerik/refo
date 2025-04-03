@@ -10,9 +10,9 @@ import handle from './handle'
 
 import index from './index/index'
 
-import prefixum from '#index/prefixum'
+import prefixum from '##index/prefixum'
 
-import Main from '#index/module/main'
+import Main from '##@/main'
 
 import pdf from '../../.pdf'
 

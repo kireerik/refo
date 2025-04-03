@@ -1,10 +1,10 @@
-import endsWith from '../.module/endsWith'
+import endsWith from '../@/endsWith'
 
 import use from './module/use'
 
 import createDirectory from './module/source/createDirectory'
 
-import usedLoader from '../.module/loader'
+import usedLoader from '../@/loader'
 
 import loader from './module/loader'
 

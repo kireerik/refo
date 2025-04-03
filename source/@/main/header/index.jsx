@@ -3,12 +3,12 @@ import brand from './brand'
 import page from './page'
 import selected from './selected'
 
-import prefixum from '#index/prefixum'
+import prefixum from '##index/prefixum'
 
 import title from '../title'
 
-import view from '#index/resume/index/index/view'
-import resumeName from '#index/resume/name'
+import view from '##index/resume/index/index/view'
+import resumeName from '##index/resume/name'
 
 export default ({styled, index, resume}) => {
 	const Header = styled.nav`

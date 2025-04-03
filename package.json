@@ -36,9 +36,9 @@
 	}
 	, "type": "module"
 	, "imports": {
-		"#@*": "./module/*"
+		"#@*": "./@/*"
 
-		, "#*": "./source/*"
+		, "##*": "./source/*"
 	}
 	, "scripts": {
 		"index": "node --import"

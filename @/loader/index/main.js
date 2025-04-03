@@ -1,4 +1,4 @@
-import register from './.module/register'
+import register from './register'
 
 export default data => {
 	const parameters = {data}
@@ -25,6 +25,6 @@ export default data => {
 		)
 	].map(
 		([name, parameters]) =>
-			register('./' + name, parameters)
+			register('../' + name, parameters)
 	)
 }

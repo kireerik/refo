@@ -4,7 +4,7 @@ import getHeader from './header'
 
 import template from '#@SolidJS/template'
 
-import prefixum from '#index/prefixum'
+import prefixum from '##index/prefixum'
 
 import brand from './title'
 

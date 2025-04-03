@@ -1,4 +1,4 @@
-import endsWith from '../.module/endsWith'
+import endsWith from '../@/endsWith'
 import getLast from './module/getLast'
 
 import loader from './module/loader/module'

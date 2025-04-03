@@ -1,5 +1,5 @@
-import staticDirectory from './module/directory/static'
+import staticDirectory from './@/directory/static'
 
 global.staticDirectory = staticDirectory
 
-await import('#index')
+await import('##index')

@@ -1,4 +1,4 @@
-import data from '#index/resume/data'
+import data from '##index/resume/data'
 
 import full from '../../full.html/name'
 import name from '../../name'

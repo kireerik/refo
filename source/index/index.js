@@ -1,4 +1,4 @@
-import importAll from '#index/module/importAll'
+import importAll from '##@/importAll'
 
 importAll([
 	'favicon'

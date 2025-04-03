@@ -1,4 +1,4 @@
-import icon from '#index/module/icon'
+import icon from '##@/icon'
 
 import template from '#@SolidJS/template'
 

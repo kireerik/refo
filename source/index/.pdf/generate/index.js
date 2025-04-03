@@ -1,6 +1,6 @@
-import full from '#index/resume/full.html/name'
+import full from '##index/resume/full.html/name'
 
-import resume from '#index/resume/name'
+import resume from '##index/resume/name'
 
 import {resolve} from 'path'
 

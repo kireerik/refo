@@ -1,4 +1,4 @@
-import title from '#index/module/main/title'
+import title from '##@/main/title'
 
 const slogan = 'A website template for the modern web.'
 , description = 'Powerful developer experience meets lightweight output.'
@@ -12,7 +12,7 @@ style(styling)
 
 import script from './script.js?raw'
 
-import Main from '#index/module/main'
+import Main from '##@/main'
 
 export default <Main index {...{
 	title

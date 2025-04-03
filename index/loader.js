@@ -1,3 +1,3 @@
-import loader from './module/loader.js'
+import loader from './@/loader.js'
 
 loader()

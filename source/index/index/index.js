@@ -1,4 +1,4 @@
-import page from '#index/module/page'
+import page from '##@/page'
 
 import './asset'
 page('index')
