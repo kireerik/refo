@@ -1,12 +1,12 @@
 import endsWith from '../@/endsWith'
 
-import use from './module/use'
+import use from './@/use'
 
-import createDirectory from './module/source/createDirectory'
+import createDirectory from './@/createDirectory'
 
 import usedLoader from '../@/loader'
 
-import loader from './module/loader'
+import loader from './@/loader/index'
 
 export const [initialize, load] = loader(usedLoader
 	, url =>

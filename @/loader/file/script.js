@@ -1,6 +1,6 @@
 import endsWith from '../@/endsWith'
 
-import loader from './module/loader/module'
+import loader from './@/loader/module'
 
 const JS = 'js'
 , JSON = 'json'

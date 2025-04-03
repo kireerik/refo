@@ -1,7 +1,7 @@
 import endsWith from '../@/endsWith'
-import getLast from './module/getLast'
+import getLast from './@/getLast'
 
-import loader from './module/loader/module'
+import loader from './@/loader/module'
 
 const HTML = 'html'
 

@@ -5,7 +5,7 @@ export default (loader, condition, main) => [
 		directory = directoryParameter
 
 		if (withModuleReloading)
-			remove = (await import('../source/remove')).default
+			remove = (await import('./remove')).default
 	}
 	, loader(
 		condition

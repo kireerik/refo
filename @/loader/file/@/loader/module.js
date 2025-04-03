@@ -4,11 +4,11 @@ import getLast from '../getLast'
 
 import endsWith from '../../../@/endsWith'
 
-import createDirectory from '../source/createDirectory'
+import createDirectory from '../createDirectory'
 
 import usedLoader from '../../../@/loader/source'
 
-import loader from '.'
+import loader from './index'
 
 export default (condition, extension, getParameters) =>
 	loader(usedLoader, condition
