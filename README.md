@@ -295,21 +295,23 @@ Some code editors like [Atom](https://atom.io/) and GitHub, for example, highlig
 	```JSON
 	{
 		"configurations": {
-			"jsx": true
-			, "custom_templates": {
-				"styled_components": true
-				, "lookaheads": {
-					"\\<": "scope:text.html.basic"
+			"Default": {
+				"jsx": true
+				, "custom_templates": {
+					"styled_components": true
+					, "lookaheads": {
+						"\\<": "scope:text.html.basic"
 
-					, "\\.|height|padding|margin": "scope:source.js.css"
+						, "\\.|height|padding|margin": "scope:source.js.css"
 
-					, "import|minify|await|export|if|window|\\(|,": "scope:source.js"
-				}
-				, "tags": {
-					"injectGlobal": "scope:source.js.css"
-					, "css": "scope:source.js.css"
+						, "import|minify|await|export|if|window|\\(|,": "scope:source.js"
+					}
+					, "tags": {
+						"injectGlobal": "scope:source.js.css"
+						, "css": "scope:source.js.css"
 
-					, "html": "scope:text.html.basic"
+						, "html": "scope:text.html.basic"
+					}
 				}
 			}
 		}
