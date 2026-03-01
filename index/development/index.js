@@ -6,7 +6,7 @@ global.withModuleReloading = withModuleReloading
 
 global.development = true
 
-await import('..')
+await import('../../source/index.js')
 
 const server = createServer({port: 80}).listen()
 

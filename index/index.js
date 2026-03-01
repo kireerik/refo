@@ -2,4 +2,4 @@ import staticDirectory from './@/directory/static'
 
 global.staticDirectory = staticDirectory
 
-await import('##index')
+await import('../source/index.js')

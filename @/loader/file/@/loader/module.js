@@ -42,7 +42,7 @@ export default (condition, extension, getParameters) =>
 						import
 							minify
 						from
-							'#@loader/file/action/minify/${type}'
+							'#@loader/file/action/minify/${type}.js'
 					` : ''}
 
 					${createDirectory(target)}

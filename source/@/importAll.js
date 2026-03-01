@@ -1,9 +1,36 @@
-import trace from 'stack-tracer'
-
 import {dirname} from 'path'
 
-export default function (names, depth = 0) {
-	const folder = dirname(trace(1 + depth).fileName) + '/'
+import {existsSync} from 'fs'
 
-	names.map(name => import(folder + name))
+import {fileURLToPath} from 'url'
+
+const extension = [
+	''
+	, '.js'
+	, '.jsx'
+	, '.json'
+	, '.ico'
+	, '.png'
+	, '.svg'
+]
+
+const index = [
+	''
+	, '/index.js'
+	, '/index.jsx'
+]
+
+const getPath = base =>
+	[
+		...extension.map(value => base + value)
+		, ...index.map(value => base + value)
+	]
+		.find(path => existsSync(path))
+	?? base
+
+export default async function (names, from) {
+	const folder = dirname(fileURLToPath(from)) + '/'
+
+	for (const name of names)
+		await import(getPath(folder + name))
 }

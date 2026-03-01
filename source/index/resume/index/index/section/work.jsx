@@ -1,4 +1,4 @@
-import Component from '#@SolidJS/component'
+import Component from '#@SolidJS/component.jsx'
 
 import period from '../period'
 
@@ -6,7 +6,7 @@ const Summary = ({children}) =>
 	children &&
 		<p class="summary">{children}</p>
 
-import template from '#@SolidJS/template'
+import template from '#@SolidJS/template.js'
 
 const Company = ({as, children, location}) =>
 	<Component {...{as}}>

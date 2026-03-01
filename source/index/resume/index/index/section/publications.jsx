@@ -1,4 +1,4 @@
-import template from '#@SolidJS/template'
+import template from '#@SolidJS/template.js'
 
 export default publications => publications && <section>
 	<h2>Publications</h2>

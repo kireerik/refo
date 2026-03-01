@@ -1,4 +1,5 @@
-import page from '##@/page'
+import page from '../../@/page.js'
 
 import './asset'
-page('index')
+
+await page(import.meta.url, 'index')

@@ -1,5 +1,5 @@
-import importAll from './importAll'
+import importAll from './importAll.js'
 
-export default function (...names) {
-	importAll(names.map(name => name + '.html'), 1)
+export default async function (from, ...names) {
+	await importAll(names.map(name => name + '.html'), from)
 }

@@ -1,6 +1,6 @@
-import icon from '##@/icon'
+import icon from '../../../../../@/icon/index.jsx'
 
-import template from '#@SolidJS/template'
+import template from '#@SolidJS/template.js'
 
 export default (
 	styling

@@ -1,4 +1,4 @@
-import template from '#@SolidJS/template'
+import template from '#@SolidJS/template.js'
 
 export default awards => awards && <section>
 	<h2>Awards</h2>

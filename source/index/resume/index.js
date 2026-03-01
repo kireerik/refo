@@ -1,3 +1,3 @@
-import page from '##@/page'
+import page from '../../@/page.js'
 
-page('full', 'index')
+await page(import.meta.url, 'full', 'index')

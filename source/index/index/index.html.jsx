@@ -1,9 +1,9 @@
-import title from '##@/main/title'
+import title from '../../@/main/title.js'
 
 const slogan = 'A website template for the modern web.'
 , description = 'Powerful developer experience meets lightweight output.'
 
-import use from '#@style'
+import use from '#@style/index.jsx'
 
 const [styling, extract] = use()
 
@@ -12,7 +12,7 @@ style(styling)
 
 import script from './script.js?raw'
 
-import Main from '##@/main'
+import Main from '../../@/main/index.jsx'
 
 export default <Main index {...{
 	title

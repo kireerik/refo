@@ -1,7 +1,7 @@
 const svg = '<svg'
 
 export default source => `
-	import template from '#@SolidJS/template'
+	import template from '#@SolidJS/template.js'
 
 	export default properties =>
 		template(
