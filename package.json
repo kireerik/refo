@@ -1,56 +1,37 @@
 {
 	"dependencies": {
-		"image-size": "2.x"
-
-		, "@emotion/css": "11.x"
-		, "@emotion/styled": "11.x"
-
-		, "stack-tracer": "1.x"
-
-		, "@emotion/server": "11.x"
-
-		, "html-minifier-terser": "7.x"
-		, "uglify-js": "3.x"
-
-		, "chrome-finder": "1.x"
-		, "puppeteer-core": "24.x"
-
-		, "specifier-resolution-node": "1.x"
-
-		, "babel-preset-solid": "1.x"
-		, "@babel/core": "7.x"
-
-		, "solid-js": "1.x"
-
-		, "quicklink": "3.x"
-
-		, "lazysizes": "5.x"
-
-		, "markdown-it": "14.x"
-		, "moment": "2.x"
-	}
-	, "devDependencies": {
-		"dynohot": "1.x"
-
-		, "superstatic": "10.x"
-	}
-	, "type": "module"
-	, "imports": {
+		"image-size": "2.x",
+		"@emotion/css": "11.x",
+		"@emotion/styled": "11.x",
+		"stack-tracer": "1.x",
+		"@emotion/server": "11.x",
+		"html-minifier-terser": "7.x",
+		"uglify-js": "3.x",
+		"chrome-finder": "1.x",
+		"puppeteer-core": "24.x",
+		"specifier-resolution-node": "1.x",
+		"babel-preset-solid": "1.x",
+		"@babel/core": "7.x",
+		"solid-js": "1.x",
+		"quicklink": "3.x",
+		"lazysizes": "5.x",
+		"markdown-it": "14.x",
+		"moment": "2.x"
+	},
+	"devDependencies": {
+		"dynohot": "1.x",
+		"superstatic": "10.x"
+	},
+	"type": "module",
+	"imports": {
 		"#@*": "./@/*"
-
-		, "##*": "./source/*"
-	}
-	, "scripts": {
-		"index": "node --import"
-
-		, "static": "pnpm index ./index/loader.js ./index/index.js"
-
-		, "dev": "pnpm index ./index/development/loader.js ./index/development/index.js"
-
-		, "serve": "superstatic serve --port 80"
-
-		, "start": "pnpm static && pnpm serve"
-
-		, "deploy": "pnpm static && firebase deploy"
+	},
+	"scripts": {
+		"index": "bun --preload ./index/bun/preload.js --preload",
+		"static": "bun run index ./index/loader.js ./index/index.js",
+		"dev": "bun run index ./index/development/loader.js ./index/development/index.js",
+		"serve": "bunx superstatic serve --port 80",
+		"start": "bun run static && bun run serve",
+		"deploy": "bun run static && firebase deploy"
 	}
 }

@@ -2,7 +2,7 @@ import create from './instance'
 
 import main from './css'
 
-import Component from '#@SolidJS/component'
+import Component from '#@SolidJS/component.jsx'
 import {
 	tags
 } from

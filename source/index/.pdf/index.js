@@ -14,7 +14,7 @@ export default second => {
 		(async () => {
 			const remove =
 				(
-					await import('#@loader/file/action/remove')
+					await import('#@loader/file/action/remove.js')
 				)
 					.default
 

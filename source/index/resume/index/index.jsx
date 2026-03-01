@@ -1,4 +1,4 @@
-import use from '#@style'
+import use from '#@style/index.jsx'
 
 const [styling, extract] = use()
 
@@ -10,9 +10,9 @@ import handle from './handle'
 
 import index from './index/index'
 
-import prefixum from '##index/prefixum'
+import prefixum from '../../prefixum.js'
 
-import Main from '##@/main'
+import Main from '../../../@/main/index.jsx'
 
 import pdf from '../../.pdf'
 

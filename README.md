@@ -16,9 +16,9 @@
 
 **Effortless Static Site Generation with Flexibility**
 
-Feeling overwhelmed by the static site generator landscape? Refo offers a refreshingly simple and customizable approach **built entirely on Node.js**.
+Feeling overwhelmed by the static site generator landscape? Refo offers a refreshingly simple and customizable approach **powered by Bun**.
 
-Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.js modules directly. This means you can generate any kind of website you can imagine, all with the flexibility of your favorite Node.js libraries and servers.
+Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of modern JavaScript modules directly. This means you can generate any kind of website you can imagine, all with the flexibility of your favorite Node.js libraries and servers.
 
 **Key benefits:**
 - **Effortless Development**: Edit your modules and see instant updates thanks to hot reloading.
@@ -36,11 +36,11 @@ Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.j
 ## Features
 - (**H**ot) **M**odule **R**eloading using [dynohot](https://github.com/braidnetworks/dynohot)
 - JavaScript eXtensible markup language using <a title="SolidJS · Reactive Javascript Library" href="https://www.solidjs.com/"><img alt="SolidJS" src="https://www.solidjs.com/img/logo/with-wordmark/logo.svg" width="" height="18"></a> and [babel-preset-solid](https://github.com/solidjs/solid/tree/main/packages/babel-preset-solid)
-- [Node.js module customization](https://nodejs.org/api/module.html#customization-hooks)
+- [Bun runtime preloading](https://bun.sh/docs/runtime/cli#--preload)
 	- importing SVGs as components
 	- `raw` imports
 	- (Java)Script bundling
-	- Extensionless imports using [specifier-resolution-node](https://github.com/Poyoman39/specifier-resolution-node)
+	- Extensionless imports
 - [Style](https://github.com/kireerik/refo/tree/main/index/module/style)d components using <a title="Emotion" href="https://emotion.sh/docs/introduction"><img alt="Emotion" src="https://raw.githubusercontent.com/emotion-js/emotion/f3b268f7c52103979402da919c9c0dd3f9e0e189/site/public/logo-96x96.png" width="" height="18"> Emotion</a>
 	- [Short class name](https://github.com/kireerik/refo/blob/main/index/module/style/css/getShortName.js)s (like `a`, `b`, `c`, ..., `aa`, `ab`, ...)
 	- [Class name label](https://github.com/kireerik/refo/blob/main/index/module/style/css/getModuleName.js)s in `development` mode using [stack-tracer](https://github.com/bninni/stack-tracer)
@@ -65,20 +65,20 @@ Unlike Jekyll, Gatsby, Astro and others, we let you leverage the power of Node.j
 
 ## Getting Started
 - Initial steps
-	- Install <a title="Node.js" href="https://nodejs.org/en/"><img alt="Node.js" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="" height="18"></a>, <a title="Fast, disk space efficient package manager | pnpm" href="https://pnpm.io/"><img alt="pnpm" src="https://d33wubrfki0l68.cloudfront.net/aad219b6c931cebb53121dcda794f6180d9e4397/17f34/assets/images/pnpm-standard-79c9dbb2e99b8525ae55174580061e1b.svg" width="" height="18"></a> and <a title="Google Chrome" href="https://www.google.com/chrome/"><img alt="Google Chrome" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Google_Chrome_logo_and_wordmark_%282015%29.png" width="" height="18"></a>.
+	- Install <a title="Bun" href="https://bun.sh/">Bun</a> and <a title="Google Chrome" href="https://www.google.com/chrome/"><img alt="Google Chrome" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Google_Chrome_logo_and_wordmark_%282015%29.png" width="" height="18"></a>.
 	- [Download](https://github.com/kireerik/refo/archive/refs/heads/main.zip) or [clone](x-github-client://openRepo/https://github.com/kireerik/refo) this repository.
 	- Open a command prompt in this folder.
 
 > Install dependencies:
 > ```shell
-> pnpm install
+> bun install
 > ```
 
 > Are you on some kind of Unix based system? Mac? Linux? If so you might want to change the `port` in the `index` module, which is set to `80` which works on Windows. [Superstatic](https://github.com/firebase/superstatic/)'s default is `3474` so you can remove it if you prefer.
 
 Start the server in development mode:
 > ```shell
-> pnpm dev
+> bun run dev
 > ```
 
 Visit http://localhost/ to access the website.
@@ -86,7 +86,7 @@ Visit http://localhost/ to access the website.
 ### Static site generation
 Generate a static site:
 ```shell
-pnpm static
+bun run static
 ```
 Open the `index.html` within the `static` folder to access the website.
 
@@ -94,19 +94,19 @@ Open the `index.html` within the `static` folder to access the website.
 | `import`                                                    |   | generated file |
 | --- | --- | --- |
 | index/                                                      |   | `static`/ |
-| &nbsp;&nbsp; • favicon`.ico` (icon `file` (Node.js module)) |   | &nbsp;&nbsp; • favicon`.ico` |
-| &nbsp;&nbsp; • main`.js`​`.js` (Node.js `module`)            | → | &nbsp;&nbsp; • main`.js` |
-| &nbsp;&nbsp; • index`.html`​`.jsx` (Node.js `module`)        |   | &nbsp;&nbsp; • index`.html` |
-| firebase`.json`​`.js` (Node.js `module`)                     |   | firebase`.json` |
+| &nbsp;&nbsp; • favicon`.ico` (icon `file` (Bun module)) |   | &nbsp;&nbsp; • favicon`.ico` |
+| &nbsp;&nbsp; • main`.js`​`.js` (Bun `module`)            | → | &nbsp;&nbsp; • main`.js` |
+| &nbsp;&nbsp; • index`.html`​`.jsx` (Bun `module`)        |   | &nbsp;&nbsp; • index`.html` |
+| firebase`.json`​`.js` (Bun `module`)                     |   | firebase`.json` |
 
-> The imported `file`s (which have a certain file extension (`ico`, `png`)) (Node.js) modules) copy the files themselves into the `static` folder when the modules are loaded. In module relading mode they remove them if they are not imported anymore.
+> The imported `file`s (which have a certain file extension (`ico`, `png`)) Bun modules) copy the files themselves into the `static` folder when the modules are loaded. In module relading mode they remove them if they are not imported anymore.
 
-> The `default` `export` of (Node.js) `module`s (which have a certain file extension (`js`, `json`, `html`) in their base file name) are written as the contents of the output files (into the `static` folder). The full file names of the output files are the base file names of the (Node.js) `module`s.
+> The `default` `export` of Bun `module`s (which have a certain file extension (`js`, `json`, `html`) in their base file name) are written as the contents of the output files (into the `static` folder). The full file names of the output files are the base file names of the Bun `module`s.
 
 <p align="center">⭐️ Star to support our work!</p>
 
 ## Simple page example source code
-index`.html`​`.jsx` (`import`ed `module`):
+index`.html`​`.jsx` (`import`ed Bun `module`):
 ```Node.js
 import template from '#@SolidJS/template'
 
@@ -167,7 +167,7 @@ You can completely remove the `prefixum` in case you are publishing a `user or a
 
 > Deploy your site to Firebase Hosting:
 > ```shell
-> pnpm deploy
+> bun run deploy
 > ```
 
 ## Contribution

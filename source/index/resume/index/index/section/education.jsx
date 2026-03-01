@@ -1,6 +1,6 @@
 import period from '../period'
 
-import template from '#@SolidJS/template'
+import template from '#@SolidJS/template.js'
 
 export default education => education && <section>
 	<h2>Education</h2>

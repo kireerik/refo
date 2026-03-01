@@ -1,3 +1,3 @@
-import index from '../index/index'
+import render from '../index/index.jsx'
 
-export default index('full')
+export default render('full')

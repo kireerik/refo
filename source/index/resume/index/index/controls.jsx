@@ -2,14 +2,14 @@ import view from './view'
 
 import getDocumentName from './documentName'
 
-import prefixum from '##index/prefixum'
+import prefixum from '../../../prefixum.js'
 
 import resume from '../../name'
 import full from '../../full.html/name'
 
-import capitalize from '#@capitalize'
+import capitalize from '#@capitalize.js'
 
-import getName from '##index/.pdf/getName'
+import getName from '../../../.pdf/getName.js'
 
 const or = ' or'
 

@@ -2,9 +2,9 @@ import style from './style'
 
 import getHeader from './header'
 
-import template from '#@SolidJS/template'
+import template from '#@SolidJS/template.js'
 
-import prefixum from '##index/prefixum'
+import prefixum from '../../index/prefixum.js'
 
 import brand from './title'
 

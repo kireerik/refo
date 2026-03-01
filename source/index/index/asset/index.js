@@ -1,3 +1,3 @@
-import './lazysizes.js'
+import './lazysizes.js.js'
 
-import './placeholder'
+import './placeholder.png'
